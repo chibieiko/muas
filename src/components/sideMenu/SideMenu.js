@@ -14,11 +14,18 @@ import PrimaryButton from "../primaryButton/PrimaryButton";
 
 export default class RankingScreen extends Component {
     openScreen = screenName => {
-        this.props.navigator.push({
+        // todo check screenName and compare to currently visible screen
+
+        this.props.navigator.toggleDrawer({
+            side: 'left',
+            animated: true,
+            to: 'closed'
+        })
+       /* this.props.navigator.push({
             screen: screenName,
             title: strings.title,
             navigatorStyle: mainStyle.navigatorStyle,
-        })
+        })*/
     };
 
     render() {
