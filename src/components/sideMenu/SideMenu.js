@@ -23,8 +23,10 @@ export default class RankingScreen extends Component {
 
     render() {
         return (
-            <View>
-
+            <View style={sideMenuStyle.container}>
+                <Text>
+                    Moi
+                </Text>
             </View>
         );
     }
