@@ -1,0 +1,37 @@
+{
+  "firstname": "Firstname",
+  "lastname": "Lastname",
+
+  "friends": [
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" }
+  ],
+
+  "consumption": {
+    "my_ranking_total": {
+      "electricity": 100,
+      "gas": 100
+    },
+    "recent": {
+      "today": [
+        {"time": "00:00", "electricity": 100, "gas": 100},
+        {"time": "00:15", "electricity": 100, "gas": 100},
+        {"time": "00:30", "electricity": 100, "gas": 100},
+        {"time": "00:45", "electricity": 100, "gas": 100},
+        {"time": "01:00", "electricity": 100, "gas": 100},
+        {"time": "01:15", "electricity": 100, "gas": 100},
+        {"time": "01:30", "electricity": 100, "gas": 100},
+        {"time": "01:45", "electricity": 100, "gas": 100},
+        {"time": "02:00", "electricity": 100, "gas": 100},
+        {"time": "hh:mm", "electricity": 100, "gas": 100}
+      ],
+      "yesterday": []
+    },
+    "history": [
+      "Akash!!!"
+    ]
+  }
+}

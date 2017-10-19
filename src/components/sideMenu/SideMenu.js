@@ -12,6 +12,11 @@ import {
     View
 } from 'react-native';
 
+import {mainStyle} from "../../appStyles";
+
+import * as strings from '../../res/strings.json';
+import PrimaryButton from "../primaryButton/PrimaryButton";
+
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -20,6 +25,15 @@ const instructions = Platform.select({
 });
 
 export default class RankingScreen extends Component {
+
+    openTips = () => {
+        this.props.navigator.push({
+            screen: 'app.TipsScreen',
+            title: strings.title,
+            navigatorStyle: mainStyle.navigatorStyle,
+        })
+    };
+
     render() {
         return (
             <View style={styles.container}>
@@ -29,6 +43,7 @@ export default class RankingScreen extends Component {
                 <Text style={styles.instructions}>
                     To get started, edit SideMenu.js
                 </Text>
+                <PrimaryButton onPress={this.openTips}>Tips here</PrimaryButton>
                 <Text style={styles.instructions}>
                     {instructions}
                 </Text>
