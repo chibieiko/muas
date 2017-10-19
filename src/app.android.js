@@ -7,6 +7,7 @@ import configureStore from './store/configureStore';
 
 import * as colors from './res/colors.json';
 import * as strings from './res/strings.json';
+import * as dimensions from './res/dimensions.json';
 
 const store = configureStore();
 
@@ -19,12 +20,33 @@ const navigatorStyle = {
     navBarBackgroundColor: colors.primary,
     navBarTextColor: 'white',
     navBarButtonColor: 'white',
+
+    topTabTextColor: colors.textSecondary,
+    selectedTopTabTextColor: colors.textLight,
+    selectedTopTabIndicatorHeight: dimensions.indicatorHeight,
+    selectedTopTabIndicatorColor: colors.textLight,
+    tabBarHidden: false,
+    drawUnderTabBar: true
 };
 
 Navigation.startSingleScreenApp({
     screen: {
         screen: 'app.HomeScreen',
         title: strings.title,
-        navigatorStyle
+        navigatorStyle,
+        topTabs: [
+            {
+                title: strings.homeScreen,
+                screenId: 'app.HomeScreen',
+            },
+            {
+                title: strings.consumptionScreen,
+                screenId: 'app.ConsumptionScreen',
+            },
+            {
+                title: strings.rankingScreen,
+                screenId: 'app.RankingScreen',
+            }
+        ]
     }
 });
