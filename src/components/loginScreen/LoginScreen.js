@@ -15,11 +15,11 @@ import * as strings from '../../res/strings.json';
 import * as dimensions from '../../res/dimensions.json';
 import {mainStyle} from "../../appStyles";
 
-import {InputField} from "./InputField";
 import PrimaryButton from "../primaryButton/PrimaryButton";
 import Spinner from "react-native-loading-spinner-overlay";
 import {setData} from "../../store/actions";
 import {connect} from "react-redux";
+import {TextField} from "react-native-material-textfield";
 
 
 class LoginScreen extends Component {
@@ -83,13 +83,42 @@ class LoginScreen extends Component {
             <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={50} behavior="padding">
                 <Spinner visible={this.state.loading} />
 
-                <Text style={styles.intro}>
-                    LOGIN WITH E-ON ACCOUNT
-                </Text>
+                <View style={styles.intro}>
+                    <Text style={styles.header}>
+                        Login with your e-on account
+                    </Text>
+
+                    <Text style={styles.subHeader}>
+                        No real credentials needed
+                    </Text>
+                </View>
+
 
                 <View style={styles.inputs}>
-                    <InputField label="Email address"/>
-                    <InputField label="Password"/>
+                    <TextField
+                        autoCapitalize="none"
+                        label="Email address"
+                        returnKeyType="next"
+                        onSubmitEditing={() => {
+                            this.refs.password.focus();
+                        }}
+                        keyboardType="email-address"
+                        value={this.state.value}
+                        tintColor={colors.primary}
+                        onChangeText={this.onChange}
+                    />
+
+                    <TextField
+                        autoCapitalize="none"
+                        label="Password"
+                        ref="password"
+                        returnKeyType="go"
+                        secureTextEntry={true}
+                        value={this.state.value}
+                        tintColor={colors.primary}
+                        onChangeText={this.onChange}
+                        onSubmitEditing={this.openApp}
+                    />
                 </View>
 
                 <PrimaryButton onPress={this.openApp}>Login</PrimaryButton>
@@ -105,14 +134,20 @@ const styles = StyleSheet.create({
         marginVertical: dimensions.verticalMargin
     },
     intro: {
-        textAlign: "center",
-        fontSize: 20,
-        color: colors.primary,
         marginTop: 16,
         marginBottom: 8
     },
+    header: {
+        textAlign: "center",
+        fontSize: 20,
+        color: colors.primary,
+    },
+    subHeader: {
+        marginTop: 4,
+        textAlign: "center"
+    },
     inputs: {
-        marginBottom: 24
+        marginBottom: 20
     }
 });
 
