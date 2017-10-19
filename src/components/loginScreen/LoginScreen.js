@@ -24,8 +24,6 @@ import {connect} from "react-redux";
 
 class LoginScreen extends Component {
     state = {
-        email: "",
-        password: "",
         loading: false
     };
 
