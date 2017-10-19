@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import {
+    KeyboardAvoidingView,
     Platform,
     StyleSheet,
     Text,
@@ -28,12 +29,16 @@ class LoginScreen extends Component {
         loading: false
     };
 
-    openApp = async () => {
+    toggleLoading = () => {
+        this.setState({
+            loading: !this.state.loading
+        });
+    };
+
+    fetchData = async () => {
         let response;
 
-        this.setState({
-            loading: true
-        });
+        this.toggleLoading();
 
         try {
             response = await fetch('https://jsonblob.com/api/jsonBlob/6bc26c55-b4ba-11e7-8ddf-15cd636b9d91');
@@ -44,11 +49,15 @@ class LoginScreen extends Component {
             response = data;
         }
 
-        this.props.setData(response);
+        this.toggleLoading();
 
-        this.setState({
-            loading: false
-        });
+        return response;
+    };
+
+    openApp = async () => {
+        const result = await this.fetchData();
+
+        this.props.setData(result);
 
         this.props.navigator.resetTo({
             screen: 'app.HomeScreen',
@@ -73,42 +82,40 @@ class LoginScreen extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={50} behavior="padding">
                 <Spinner visible={this.state.loading} />
-                <Text style={styles.welcome}>
-                    Login with your e-on account
+
+                <Text style={styles.intro}>
+                    LOGIN WITH E-ON ACCOUNT
                 </Text>
 
-                <InputField/>
+                <View style={styles.inputs}>
+                    <InputField label="Email address"/>
+                    <InputField label="Password"/>
+                </View>
 
                 <PrimaryButton onPress={this.openApp}>Login</PrimaryButton>
-            </View>
+            </KeyboardAvoidingView>
         );
     }
 }
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         marginHorizontal: dimensions.horizontalMargin,
         marginVertical: dimensions.verticalMargin
-    }
-    /*
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
     },
-    welcome: {
+    intro: {
+        textAlign: "center",
         fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
+        color: colors.primary,
+        marginTop: 16,
+        marginBottom: 8
     },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },*/
+    inputs: {
+        marginBottom: 24
+    }
 });
 
 const mapStateToProps = (state) => ({

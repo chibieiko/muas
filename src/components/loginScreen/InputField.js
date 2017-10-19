@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 import { TextField } from 'react-native-material-textfield';
 
+import * as colors from '../../res/colors.json';
+
 export class InputField extends Component {
     state = {
-        phone: '',
+        value: "",
+    };
+
+    onChange = (value) => {
+        this.setState({
+            value
+        });
     };
 
     render() {
-        let { phone } = this.state;
-
         return (
             <TextField
-                label='Phone number'
-                value={phone}
-                onChangeText={ (phone) => this.setState({ phone }) }
+                label={this.props.label}
+                value={this.state.value}
+                tintColor={colors.primary}
+                onChangeText={this.onChange}
             />
         );
     }
