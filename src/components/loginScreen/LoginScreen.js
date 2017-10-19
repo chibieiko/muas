@@ -11,7 +11,13 @@ import {
     Text,
     View
 } from 'react-native';
-import {Button} from 'react-native-elements';
+import {
+    Button,
+    FormLabel,
+    FormInput,
+    FormValidationMessage
+} from 'react-native-elements';
+
 import * as colors from '../../res/colors.json';
 import * as strings from '../../res/strings.json';
 import * as dimensions from '../../res/dimensions.json';
@@ -20,7 +26,6 @@ import {mainStyle} from "../../appStyles";
 
 export default class RankingScreen extends Component {
     openApp = () => {
-        console.log("trying to open tab app");
         this.props.navigator.resetTo({
             screen: 'app.HomeScreen',
             title: strings.title,
@@ -42,17 +47,37 @@ export default class RankingScreen extends Component {
         })
     };
 
+    onChange = (input) => {
+        console.log(input);
+    };
+
+    openTips = () => {
+        this.props.navigator.push({
+            screen: 'app.TipsScreen',
+            title: strings.title,
+            navigatorStyle: mainStyle.navigatorStyle,
+        })
+    };
+
     render() {
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    We make together:D
+                    Login with your e-on account
                 </Text>
+
+                <FormLabel>Email</FormLabel>
+                <FormInput onChangeText={this.onChange}/>
+                <Button
+                    raised
+                    title='Login'
+                    onPress={this.openApp}
+                    backgroundColor={colors.primary}/>
 
                 <Button
                     raised
-                    title='Press me:3'
-                    onPress={this.openApp}/>
+                    title='TipsAndTricksHereForNow'
+                    onPress={this.openTips}/>
             </View>
         );
     }
