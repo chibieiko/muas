@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
-    Platform,
-    StyleSheet,
     Text,
-    View
+    View,
+    ScrollView
 } from 'react-native';
 
 import {mainStyle} from "../../appStyles";
 import {sideMenuStyle} from "./SideMenuStyles";
+import SideMenuButton from './SideMenuButton'
 
 import * as strings from '../../res/strings.json';
 import PrimaryButton from "../primaryButton/PrimaryButton";
 
 export default class RankingScreen extends Component {
-    openTips = () => {
+    openScreen = screenName => {
         this.props.navigator.push({
-            screen: 'app.TipsScreen',
+            screen: screenName,
             title: strings.title,
             navigatorStyle: mainStyle.navigatorStyle,
         })
@@ -23,11 +23,28 @@ export default class RankingScreen extends Component {
 
     render() {
         return (
-            <View style={sideMenuStyle.container}>
-                <Text>
-                    Moi
-                </Text>
-            </View>
+            <ScrollView contentContainerStyle={sideMenuStyle.container}>
+                <View style={sideMenuStyle.pictureContainer}>
+                    <Text>
+                        E ON
+                    </Text>
+                </View>
+                <View>
+                    <SideMenuButton title='Test screen'
+                                    onPress={() => this.openScreen('app.RankingScreen')}
+                                    iconName='home'/>
+                    <SideMenuButton title='Test screen'
+                                    onPress={() => this.openScreen('app.RankingScreen')}
+                                    iconName='flash-on'/>
+                    <SideMenuButton title='Test screen'
+                                    onPress={() => this.openScreen('app.RankingScreen')}
+                                    iconName='people'/>
+                    <SideMenuButton title='Test screen'
+                                    onPress={() => this.openScreen('app.RankingScreen')}
+                                    iconName='euro-symbol'/>
+                </View>
+
+            </ScrollView>
         );
     }
 }
