@@ -1,7 +1,7 @@
 import * as types from './actionTypes';
 
 // Example action.
-export const fetchData = exampleData => ({
-    type: types.FETCH_EXAMPLE_DATA,
+export const setData = exampleData => ({
+    type: types.SET_EXAMPLE_DATA,
     payload: exampleData
 });

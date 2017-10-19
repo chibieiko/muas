@@ -1,5 +1,5 @@
-import {createStore, applyMiddleware } from 'redux';
-import reducers from './reducers';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
+import exampleData from './dataReducer';
 import {createLogger} from 'redux-logger';
 import {composeWithDevTools} from 'remote-redux-devtools';
 
@@ -15,7 +15,7 @@ if (__DEV__) {
 
 export default function configureStore(initialState) {
     return createStore(
-        reducers,
+        combineReducers({exampleData}),
         initialState,
         composeWithDevTools(applyMiddleware(...middleware))
     );
