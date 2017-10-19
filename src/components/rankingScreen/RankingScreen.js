@@ -27,7 +27,7 @@ export default class RankingScreen extends Component {
                     Vili designs and implements
                 </Text>
                 <Text style={styles.instructions}>
-                    To get started, edit App.js
+                    To get started, edit RankingScreen.js
                 </Text>
                 <Text style={styles.instructions}>
                     {instructions}

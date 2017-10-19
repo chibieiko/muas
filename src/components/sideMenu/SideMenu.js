@@ -27,7 +27,7 @@ export default class RankingScreen extends Component {
                     Erika designs and implements
                 </Text>
                 <Text style={styles.instructions}>
-                    To get started, edit App.js
+                    To get started, edit SideMenu.js
                 </Text>
                 <Text style={styles.instructions}>
                     {instructions}

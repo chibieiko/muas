@@ -27,7 +27,7 @@ export default class HomeScreen extends Component {
           Toni designs and implements
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit App.js
+          To get started, edit HomeScreen.js
         </Text>
         <Text style={styles.instructions}>
           {instructions}

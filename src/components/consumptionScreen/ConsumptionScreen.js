@@ -27,7 +27,7 @@ export default class ConsumptionScreen extends Component {
                     Akash designs and implements
                 </Text>
                 <Text style={styles.instructions}>
-                    To get started, edit App.js
+                    To get started, edit ConsumptionScreen.js
                 </Text>
                 <Text style={styles.instructions}>
                     {instructions}
