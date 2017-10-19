@@ -19,12 +19,12 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class ConsumptionScreen extends Component {
+export default class RankingScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Akash designs and implements
+                    Waltsu designs and implements
                 </Text>
                 <Text style={styles.instructions}>
                     To get started, edit App.js

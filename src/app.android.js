@@ -20,6 +20,7 @@ const navigatorStyle = {
     navBarBackgroundColor: colors.primary,
     navBarTextColor: 'white',
     navBarButtonColor: 'white',
+    navBarHiddenOnScroll: true,
 
     topTabTextColor: colors.textSecondary,
     selectedTopTabTextColor: colors.textLight,
@@ -31,22 +32,13 @@ const navigatorStyle = {
 
 Navigation.startSingleScreenApp({
     screen: {
-        screen: 'app.HomeScreen',
+        screen: 'app.LoginScreen',
         title: strings.title,
-        navigatorStyle,
-        topTabs: [
-            {
-                title: strings.homeScreen,
-                screenId: 'app.HomeScreen',
-            },
-            {
-                title: strings.consumptionScreen,
-                screenId: 'app.ConsumptionScreen',
-            },
-            {
-                title: strings.rankingScreen,
-                screenId: 'app.RankingScreen',
-            }
-        ]
+        navigatorStyle
+    },
+    drawer: {
+        left: {
+            screen: 'app.SideMenu'
+        }
     }
 });
