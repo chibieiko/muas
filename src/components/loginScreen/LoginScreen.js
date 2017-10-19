@@ -30,7 +30,7 @@ class LoginScreen extends Component {
 
     openApp = async () => {
         let response;
-
+/*
         this.setState({
             loading: true
         });
@@ -49,6 +49,8 @@ class LoginScreen extends Component {
         this.setState({
             loading: false
         });
+*/
+        this.props.setData({});
 
         this.props.navigator.resetTo({
             screen: 'app.HomeScreen',
