@@ -6,49 +6,95 @@ import {
 } from 'react-native';
 
 import {mainStyle} from "../../appStyles";
-import {sideMenuStyle} from "./SideMenuStyles";
+import {sideMenuStyle as styles} from "./SideMenuStyles";
 import SideMenuButton from './SideMenuButton'
 
 import * as strings from '../../res/strings.json';
-import PrimaryButton from "../primaryButton/PrimaryButton";
 
 export default class RankingScreen extends Component {
+    state = {
+        screens: [
+            {
+                icon: 'home',
+                title: 'Home screen',
+                name: 'app.HomeScreen'
+            },
+            {
+                icon: 'euro-symbol',
+                title: 'Consumption tips',
+                name: 'app.ConsumptionScreen'
+            },
+            {
+                icon: 'list',
+                title: 'Prices',
+                name: 'app.PricesScreen'
+            }
+        ]
+    };
+
     openScreen = screenName => {
         // todo check screenName and compare to currently visible screen
+
+        switch (screenName) {
+            case 'app.HomeScreen':
+                this.props.navigator.resetTo({
+                    screen: 'app.HomeScreen',
+                    title: strings.title,
+                    navigatorStyle: mainStyle.navigatorStyle,
+                    topTabs: [
+                        {
+                            title: strings.homeScreen,
+                            screenId: 'app.HomeScreen',
+                        },
+                        {
+                            title: strings.consumptionScreen,
+                            screenId: 'app.ConsumptionScreen',
+                        },
+                        {
+                            title: strings.rankingScreen,
+                            screenId: 'app.RankingScreen',
+                        }
+                    ]
+                });
+
+            default:
+                this.props.navigator.push({
+                    screen: screenName,
+                    title: strings.title,
+                    navigatorStyle: mainStyle.navigatorStyle,
+                })
+        }
 
         this.props.navigator.toggleDrawer({
             side: 'left',
             animated: true,
             to: 'closed'
         })
-       /* this.props.navigator.push({
-            screen: screenName,
-            title: strings.title,
-            navigatorStyle: mainStyle.navigatorStyle,
-        })*/
     };
 
     render() {
         return (
-            <ScrollView contentContainerStyle={sideMenuStyle.container}>
-                <View style={sideMenuStyle.pictureContainer}>
+            <ScrollView contentContainerStyle={styles.container}>
+                <View style={styles.pictureContainer}>
                     <Text>
                         E ON
                     </Text>
                 </View>
                 <View>
-                    <SideMenuButton title='Test screen'
-                                    onPress={() => this.openScreen('app.RankingScreen')}
-                                    iconName='home'/>
-                    <SideMenuButton title='Test screen'
-                                    onPress={() => this.openScreen('app.RankingScreen')}
-                                    iconName='flash-on'/>
-                    <SideMenuButton title='Test screen'
-                                    onPress={() => this.openScreen('app.RankingScreen')}
-                                    iconName='people'/>
-                    <SideMenuButton title='Test screen'
-                                    onPress={() => this.openScreen('app.RankingScreen')}
-                                    iconName='euro-symbol'/>
+                    {
+                        this.state.screens.map((screen, index) => {
+                            return <SideMenuButton
+                                key={index}
+                                title={screen.title}
+                                onPress={() => this.openScreen(screen.screen)}
+                                iconName={screen.icon}/>
+                        })
+                    }
+                    <View style={styles.divider}/>
+                    <SideMenuButton title='Logout'
+                                    bu
+                                    onPress={() => this.openScreen('app.LogoutScreen')}/>
+
                 </View>
 
             </ScrollView>
