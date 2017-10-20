@@ -12,5 +12,9 @@ export const sideMenuStyle = {
     },
     listContainer: {
 
+    },
+    divider: {
+        borderBottomColor: '#CFD8DC',
+        borderBottomWidth: 1,
     }
 };
