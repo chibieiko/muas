@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {
     Text,
     View,
-    ScrollView
+    ScrollView,
+    Switch
 } from 'react-native';
 
 import {mainStyle} from "../../appStyles";
@@ -10,65 +11,83 @@ import {sideMenuStyle as styles} from "./SideMenuStyles";
 import SideMenuButton from './SideMenuButton'
 
 import * as strings from '../../res/strings.json';
+import * as colors from '../../res/colors.json';
 
 export default class RankingScreen extends Component {
     state = {
         screens: [
             {
                 icon: 'home',
-                title: 'Home screen',
-                name: 'app.HomeScreen'
+                title: strings.drawerHomeTitle,
+                name: strings.homeScreen
             },
             {
                 icon: 'euro-symbol',
-                title: 'Consumption tips',
-                name: 'app.ConsumptionScreen'
+                title: strings.drawerConsumptionTitle,
+                name: strings.consumptionScreen
             },
             {
                 icon: 'list',
-                title: 'Prices',
-                name: 'app.PricesScreen'
+                title: strings.drawerPricesTitle,
+                name: strings.pricesScreen
             }
-        ]
+        ],
+        notifications: true
     };
 
-    openScreen = screenName => {
+    openScreen = screen => {
         // todo check screenName and compare to currently visible screen
-
-        switch (screenName) {
-            case 'app.HomeScreen':
+        switch (screen.name) {
+            case strings.homeScreen:
                 this.props.navigator.resetTo({
-                    screen: 'app.HomeScreen',
+                    screen: strings.homeScreen,
                     title: strings.title,
                     navigatorStyle: mainStyle.navigatorStyle,
                     topTabs: [
                         {
-                            title: strings.homeScreen,
-                            screenId: 'app.HomeScreen',
+                            title: strings.budgetTab,
+                            screenId: strings.homeScreen,
                         },
                         {
-                            title: strings.consumptionScreen,
-                            screenId: 'app.ConsumptionScreen',
+                            title: strings.consumptionTab,
+                            screenId: strings.consumptionScreen,
                         },
                         {
-                            title: strings.rankingScreen,
-                            screenId: 'app.RankingScreen',
+                            title: strings.rankingTab,
+                            screenId: strings.rankingScreen,
                         }
                     ]
                 });
+                break;
+
+            case strings.loginScreen:
+                this.props.navigator.resetTo({
+                    screen: strings.loginScreen,
+                    title: strings.title,
+                    navigatorStyle: mainStyle.navigatorStyle,
+                });
+                // todo clear redux
+                break;
 
             default:
                 this.props.navigator.push({
-                    screen: screenName,
-                    title: strings.title,
+                    screen: screen.name,
+                    title: screen.title,
                     navigatorStyle: mainStyle.navigatorStyle,
-                })
+                });
+                break;
         }
 
         this.props.navigator.toggleDrawer({
             side: 'left',
             animated: true,
             to: 'closed'
+        })
+    };
+
+    updateNotifications = () => {
+        this.setState({
+            notifications: !this.state.notifications
         })
     };
 
@@ -86,14 +105,23 @@ export default class RankingScreen extends Component {
                             return <SideMenuButton
                                 key={index}
                                 title={screen.title}
-                                onPress={() => this.openScreen(screen.screen)}
+                                onPress={() => this.openScreen(screen)}
                                 iconName={screen.icon}/>
                         })
                     }
                     <View style={styles.divider}/>
-                    <SideMenuButton title='Logout'
-                                    bu
-                                    onPress={() => this.openScreen('app.LogoutScreen')}/>
+                    <View style={styles.notificationContainer}>
+                        <Text style={styles.notificationText}>
+                            Notifications
+                        </Text>
+                        <Switch onValueChange={this.updateNotifications}
+                                onTintColor={colors.textSecondary}
+                                thumbTintColor={colors.primary}
+                                value={this.state.notifications}
+                        style={styles.switch}/>
+                    </View>
+                    <SideMenuButton title={strings.drawerLogoutTitle}
+                                    onPress={() => this.openScreen(strings.loginScreen)}/>
 
                 </View>
 

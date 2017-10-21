@@ -32,13 +32,13 @@ const navigatorStyle = {
 
 Navigation.startSingleScreenApp({
     screen: {
-        screen: 'app.LoginScreen',
+        screen: strings.loginScreen,
         title: strings.title,
         navigatorStyle
     },
     drawer: {
         left: {
-            screen: 'app.SideMenu'
+            screen: strings.sideMenu
         }
     }
 });

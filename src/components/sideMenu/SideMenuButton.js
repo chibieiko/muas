@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     Text,
     View,
@@ -15,8 +15,11 @@ export default class SideMenuButton extends Component {
                 onPress={this.props.onPress}
                 background={TouchableNativeFeedback.SelectableBackground()}
                 disabled={this.props.disabled}>
-                <View style={[styles.container, this.props.buttonStyle]} >
-                    <Icon name={this.props.iconName} style={styles.icon}/>
+                <View style={[styles.container, this.props.buttonStyle]}>
+                    {
+                        this.props.iconName &&
+                        <Icon name={this.props.iconName} style={styles.icon}/>
+                    }
                     <Text style={styles.content}>{this.props.title}</Text>
                 </View>
             </TouchableNativeFeedback>
