@@ -17,7 +17,7 @@ import {mainStyle} from "../../appStyles";
 import {InputField} from "./InputField";
 import PrimaryButton from "../primaryButton/PrimaryButton";
 import Spinner from "react-native-loading-spinner-overlay";
-import {setData} from "../../store/actions";
+import {setData, loggedIn} from "../../store/actions";
 import {connect} from "react-redux";
 
 
@@ -50,6 +50,7 @@ class LoginScreen extends Component {
             loading: false
         });
 */
+        this.props.loggedIn(true);
         this.props.setData({});
 
         this.props.navigator.resetTo({
@@ -117,7 +118,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    setData: (exampleData) => dispatch(setData(exampleData))
+    setData: (exampleData) => dispatch(setData(exampleData)),
+    loggedIn: (loggedState) => dispatch(loggedIn(loggedState))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);

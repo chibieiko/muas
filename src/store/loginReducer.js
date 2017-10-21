@@ -1,8 +1,8 @@
 import * as types from './actionTypes';
 
-export default function (state = {}, action) {
+export default function (state = false, action) {
     switch (action.type) {
-        case types.SET_EXAMPLE_DATA:
+        case types.LOGGEDIN:
             return action.payload;
 
         default:
