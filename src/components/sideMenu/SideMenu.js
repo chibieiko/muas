@@ -70,7 +70,7 @@ export class SideMenu extends Component {
                     navigatorStyle: mainStyle.navigatorStyle,
                 });
 
-                this.props.loggedIn(false);
+                this.props.logout(false);
                 break;
 
             default:
@@ -102,39 +102,43 @@ export class SideMenu extends Component {
                     style={styles.logo}
                     resizeMode={'contain'}
                     source={require('../../res/img/e-on-logo.png')}/>
-                <View>
-                    {
-                        this.state.screens.map((screen, index) => {
-                            return <SideMenuButton
-                                key={index}
-                                title={screen.title}
-                                onPress={() => this.openScreen(screen)}
-                                iconName={screen.icon}/>
-                        })
-                    }
-                    <View style={styles.divider}/>
-                    <View style={styles.notificationContainer}>
-                        <Text style={styles.notificationText}>
-                            Notifications
-                        </Text>
-                        <Switch onValueChange={this.updateNotifications}
-                                onTintColor={colors.textSecondary}
-                                thumbTintColor={colors.primary}
-                                value={this.state.notifications}/>
+                {
+                    this.props.loggedIn &&
+                    <View>
+                        {
+                            this.state.screens.map((screen, index) => {
+                                return <SideMenuButton
+                                    key={index}
+                                    title={screen.title}
+                                    onPress={() => this.openScreen(screen)}
+                                    iconName={screen.icon}/>
+                            })
+                        }
+                        <View style={styles.divider}/>
+                        <View style={styles.notificationContainer}>
+                            <Text style={styles.notificationText}>
+                                Notifications
+                            </Text>
+                            <Switch onValueChange={this.updateNotifications}
+                                    onTintColor={colors.textSecondary}
+                                    thumbTintColor={colors.primary}
+                                    value={this.state.notifications}/>
+                        </View>
+                        <SideMenuButton title={strings.drawerLogoutTitle}
+                                        onPress={() => this.openScreen({name: strings.loginScreen})}/>
                     </View>
-                    <SideMenuButton title={strings.drawerLogoutTitle}
-                                    onPress={() => this.openScreen({name: strings.loginScreen})}/>
-                </View>
+                }
             </ScrollView>
         );
     }
 }
 
 const mapStateToProps = (state) => ({
+    loggedIn: state.loggedIn
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    loggedIn: (loggedState) => dispatch(loggedIn(loggedState))
+    logout: (loggedState) => dispatch(loggedIn(loggedState))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SideMenu);
