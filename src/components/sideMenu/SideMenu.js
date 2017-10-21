@@ -3,7 +3,8 @@ import {
     Text,
     View,
     ScrollView,
-    Switch
+    Switch,
+    Image
 } from 'react-native';
 
 import {mainStyle} from "../../appStyles";
@@ -22,12 +23,12 @@ export default class RankingScreen extends Component {
                 name: strings.homeScreen
             },
             {
-                icon: 'euro-symbol',
+                icon: 'lightbulb-outline',
                 title: strings.drawerConsumptionTitle,
                 name: strings.consumptionScreen
             },
             {
-                icon: 'list',
+                icon: 'euro-symbol',
                 title: strings.drawerPricesTitle,
                 name: strings.pricesScreen
             }
@@ -94,11 +95,10 @@ export default class RankingScreen extends Component {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.container}>
-                <View style={styles.pictureContainer}>
-                    <Text>
-                        E ON
-                    </Text>
-                </View>
+                <Image
+                    style={styles.logo}
+                    resizeMode={'contain'}
+                    source={require('../../res/img/e-on-logo.png')}/>
                 <View>
                     {
                         this.state.screens.map((screen, index) => {
@@ -118,7 +118,7 @@ export default class RankingScreen extends Component {
                                 onTintColor={colors.textSecondary}
                                 thumbTintColor={colors.primary}
                                 value={this.state.notifications}
-                        style={styles.switch}/>
+                                style={styles.switch}/>
                     </View>
                     <SideMenuButton title={strings.drawerLogoutTitle}
                                     onPress={() => this.openScreen(strings.loginScreen)}/>

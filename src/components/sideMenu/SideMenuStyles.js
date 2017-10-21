@@ -6,31 +6,33 @@ export const sideMenuStyle = {
         flex: 1,
         backgroundColor: '#F5FCFF',
     },
-    pictureContainer: {
+
+    // Image box
+    logo: {
         height: 150,
         width: 350,
-        backgroundColor: colors.primary
+        backgroundColor: colors.logoRed,
+        alignSelf: 'center'
     },
+
+    // Divider
     divider: {
         borderBottomColor: '#CFD8DC',
         borderBottomWidth: 1,
-        marginBottom: 10
+        marginVertical: 10
     },
+
+    // Notification
     notificationContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingLeft: 8,
-        paddingRight: 8
-    },
-    switch: {
-        padding: 10,
-        paddingLeft: 0
+        alignItems: 'center',
+        paddingHorizontal: 18,
+        paddingVertical: 14
     },
     notificationText: {
         color: colors.textDark,
         fontWeight: 'bold',
         fontSize: dimensions.fontNormal,
-        padding: 10,
-    }
-
+    },
 };
