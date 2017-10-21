@@ -4,5 +4,7 @@
 
   "textLight": "#fafafa",
   "textDark": "#212121",
-  "textSecondary": "#fb7163"
+  "textSecondary": "#fb7163",
+
+  "logoRed": "#f00"
 }
