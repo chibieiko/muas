@@ -10,11 +10,13 @@ import {
 import {mainStyle} from "../../appStyles";
 import {sideMenuStyle as styles} from "./SideMenuStyles";
 import SideMenuButton from './SideMenuButton'
+import {loggedIn} from "../../store/actions";
+import {connect} from "react-redux";
 
 import * as strings from '../../res/strings.json';
 import * as colors from '../../res/colors.json';
 
-export default class RankingScreen extends Component {
+export class SideMenu extends Component {
     state = {
         screens: [
             {
@@ -67,7 +69,8 @@ export default class RankingScreen extends Component {
                     title: strings.title,
                     navigatorStyle: mainStyle.navigatorStyle,
                 });
-                // todo clear redux
+
+                this.props.loggedIn(false);
                 break;
 
             default:
@@ -126,3 +129,12 @@ export default class RankingScreen extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => ({
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    loggedIn: (loggedState) => dispatch(loggedIn(loggedState))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SideMenu);
