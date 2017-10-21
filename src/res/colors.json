@@ -6,5 +6,7 @@
   "textDark": "#212121",
   "textSecondary": "#fb7163",
 
-  "logoRed": "#f00"
+  "logoRed": "#f00",
+  "drawerBackground": "#F5FCFF",
+  "drawerDivider": "#CFD8DC"
 }
