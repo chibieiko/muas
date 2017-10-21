@@ -21,6 +21,24 @@ const instructions = Platform.select({
 });
 
 class HomeScreen extends Component {
+    static navigatorButtons = {
+        leftButtons: [
+            {
+                id: 'sideMenu'
+            }
+        ]
+    };
+
+    constructor(props) {
+        super(props);
+        //  For listening navigator events.
+        this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+    }
+
+    onNavigatorEvent(event) {
+        console.log(event.type);
+    }
+
     render() {
         return (
             <View style={styles.container}>

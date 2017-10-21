@@ -1,7 +1,21 @@
 {
   "title": "EnergieApp",
 
-  "homeScreen": "Budget",
-  "consumptionScreen": "Consumption",
-  "rankingScreen": "Ranking"
+  "budgetTab": "Budget",
+  "consumptionTab": "Consumption",
+  "rankingTab": "Ranking",
+
+  "homeScreen": "app.HomeScreen",
+  "consumptionScreen": "app.ConsumptionScreen",
+  "rankingScreen": "app.RankingScreen",
+  "sideMenu": "app.SideMenu",
+  "loginScreen": "app.LoginScreen",
+  "pricesScreen": "app.PricesScreen",
+  "tipsScreen": "app.TipsScreen",
+
+  "drawerHomeTitle": "Home screen",
+  "drawerConsumptionTitle": "Consumption tips",
+  "drawerPricesTitle": "Prices",
+  "drawerLogoutTitle": "Logout",
+  "drawerNotifications": "Notifications"
 }

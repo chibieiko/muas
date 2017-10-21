@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import {
     KeyboardAvoidingView,
-    Platform,
     StyleSheet,
     Text,
     View
@@ -17,7 +16,7 @@ import {mainStyle} from "../../appStyles";
 
 import PrimaryButton from "../primaryButton/PrimaryButton";
 import Spinner from "react-native-loading-spinner-overlay";
-import {setData} from "../../store/actions";
+import {setData, loggedIn} from "../../store/actions";
 import {connect} from "react-redux";
 import {TextField} from "react-native-material-textfield";
 
@@ -55,24 +54,25 @@ class LoginScreen extends Component {
     openApp = async () => {
         const result = await this.fetchData();
 
+        this.props.loggedIn(true);
         this.props.setData(result);
 
         this.props.navigator.resetTo({
-            screen: 'app.HomeScreen',
+            screen: strings.homeScreen,
             title: strings.title,
             navigatorStyle: mainStyle.navigatorStyle,
             topTabs: [
                 {
-                    title: strings.homeScreen,
-                    screenId: 'app.HomeScreen',
+                    title: strings.budgetTab,
+                    screenId: strings.homeScreen,
                 },
                 {
-                    title: strings.consumptionScreen,
-                    screenId: 'app.ConsumptionScreen',
+                    title: strings.consumptionTab,
+                    screenId: strings.consumptionScreen,
                 },
                 {
-                    title: strings.rankingScreen,
-                    screenId: 'app.RankingScreen',
+                    title: strings.rankingTab,
+                    screenId: strings.rankingScreen,
                 }
             ]
         });
@@ -155,7 +155,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    setData: (exampleData) => dispatch(setData(exampleData))
+    setData: (exampleData) => dispatch(setData(exampleData)),
+    loggedIn: (loggedState) => dispatch(loggedIn(loggedState))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);
