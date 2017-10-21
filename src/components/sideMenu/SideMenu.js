@@ -27,7 +27,7 @@ export class SideMenu extends Component {
             {
                 icon: 'lightbulb-outline',
                 title: strings.drawerConsumptionTitle,
-                name: strings.consumptionScreen
+                name: strings.tipsScreen
             },
             {
                 icon: 'euro-symbol',
@@ -39,7 +39,6 @@ export class SideMenu extends Component {
     };
 
     openScreen = screen => {
-        // todo check screenName and compare to currently visible screen
         switch (screen.name) {
             case strings.homeScreen:
                 this.props.navigator.resetTo({
@@ -101,7 +100,7 @@ export class SideMenu extends Component {
                 <Image
                     style={styles.logo}
                     resizeMode={'contain'}
-                    source={require('../../res/img/e-on-logo.png')}/>
+                    source={require('./e-on-logo.png')}/>
                 {
                     this.props.loggedIn &&
                     <View>

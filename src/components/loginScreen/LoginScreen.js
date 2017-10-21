@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import {
     KeyboardAvoidingView,
-    Platform,
     StyleSheet,
     Text,
     View
@@ -59,7 +58,7 @@ class LoginScreen extends Component {
         this.props.setData(result);
 
         this.props.navigator.resetTo({
-            screen: 'app.HomeScreen',
+            screen: strings.homeScreen,
             title: strings.title,
             navigatorStyle: mainStyle.navigatorStyle,
             topTabs: [
