@@ -1,4 +1,5 @@
 import * as colors from '../../res/colors.json'
+import * as dimensions from '../../res/dimensions.json'
 
 export const sideMenuStyle = {
     container: {
@@ -10,11 +11,26 @@ export const sideMenuStyle = {
         width: 350,
         backgroundColor: colors.primary
     },
-    listContainer: {
-
-    },
     divider: {
         borderBottomColor: '#CFD8DC',
         borderBottomWidth: 1,
+        marginBottom: 10
+    },
+    notificationContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingLeft: 8,
+        paddingRight: 8
+    },
+    switch: {
+        padding: 10,
+        paddingLeft: 0
+    },
+    notificationText: {
+        color: colors.textDark,
+        fontWeight: 'bold',
+        fontSize: dimensions.fontNormal,
+        padding: 10,
     }
+
 };

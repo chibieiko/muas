@@ -58,16 +58,16 @@ class LoginScreen extends Component {
             navigatorStyle: mainStyle.navigatorStyle,
             topTabs: [
                 {
-                    title: strings.homeScreen,
-                    screenId: 'app.HomeScreen',
+                    title: strings.budgetTab,
+                    screenId: strings.homeScreen,
                 },
                 {
-                    title: strings.consumptionScreen,
-                    screenId: 'app.ConsumptionScreen',
+                    title: strings.consumptionTab,
+                    screenId: strings.consumptionScreen,
                 },
                 {
-                    title: strings.rankingScreen,
-                    screenId: 'app.RankingScreen',
+                    title: strings.rankingTab,
+                    screenId: strings.rankingScreen,
                 }
             ]
         });
