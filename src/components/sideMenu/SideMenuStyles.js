@@ -4,7 +4,7 @@ import * as dimensions from '../../res/dimensions.json'
 export const sideMenuStyle = {
     container: {
         flex: 1,
-        backgroundColor: '#F5FCFF',
+        backgroundColor: colors.drawerBackground,
     },
 
     // Image box
@@ -12,12 +12,13 @@ export const sideMenuStyle = {
         height: 150,
         width: 350,
         backgroundColor: colors.logoRed,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        marginBottom: 10
     },
 
     // Divider
     divider: {
-        borderBottomColor: '#CFD8DC',
+        borderBottomColor: colors.drawerDivider,
         borderBottomWidth: 1,
         marginVertical: 10
     },

@@ -117,14 +117,11 @@ export default class RankingScreen extends Component {
                         <Switch onValueChange={this.updateNotifications}
                                 onTintColor={colors.textSecondary}
                                 thumbTintColor={colors.primary}
-                                value={this.state.notifications}
-                                style={styles.switch}/>
+                                value={this.state.notifications}/>
                     </View>
                     <SideMenuButton title={strings.drawerLogoutTitle}
-                                    onPress={() => this.openScreen(strings.loginScreen)}/>
-
+                                    onPress={() => this.openScreen({name: strings.loginScreen})}/>
                 </View>
-
             </ScrollView>
         );
     }
