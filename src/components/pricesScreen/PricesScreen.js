@@ -12,42 +12,42 @@ export default class PricesScreen extends Component {
     state = {
         electricityPrices: [
                 {
-                    time: '8.00 - 20.00',
+                    time: '8:00 - 20:00',
                     price: 20.53,
                     icon: 'wb-sunny',
-                    stateIcon: 'arrow-upward'
+                    hasRisen: true
                 },
                 {
-                    time: '20.00 - 8.00',
+                    time: '20:00 - 8:00',
                     price: 17.73,
                     icon: 'brightness-3',
-                    stateIcon: 'arrow-downward'
+                    hasRisen: false
                 },
                 {
                     time: 'weekend',
                     price: 17.73,
                     icon: 'star',
-                    stateIcon: 'arrow-downward'
+                    hasRisen: false
                 }
             ],
         gasPrices: [
                 {
-                    time: '8.00 - 20.00',
+                    time: '8:00 - 20:00',
                     price: 53,
                     icon: 'wb-sunny',
-                    stateIcon: 'arrow-downward'
+                    hasRisen: false
                 },
                 {
-                    time: '20.00 - 8.00',
+                    time: '20:00 - 8:00',
                     price: 50,
                     icon: 'brightness-3',
-                    stateIcon: 'arrow-upward'
+                    hasRisen: true
                 },
                 {
                     time: 'weekend',
                     price: 50,
                     icon: 'star',
-                    stateIcon: 'arrow-downward'
+                    hasRisen: false
                 }
             ]
     };

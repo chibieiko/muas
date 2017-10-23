@@ -13,11 +13,15 @@ export const PriceBlockStyles = {
     },
     text: {
         color: colors.textDark,
-        fontSize: dimensions.fontNormal
+        fontSize: dimensions.fontNormal,
+        paddingHorizontal: 8
     },
     icon: {
         color: colors.primary,
-        fontSize: 20,
-        paddingHorizontal: 8
+        fontSize: 20
+    },
+    iconPositive: {
+        color: colors.positive,
+        fontSize: 20
     }
 };
