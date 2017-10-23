@@ -9,9 +9,12 @@ import {
     Platform,
     StyleSheet,
     Text,
-    View
+    View,
+    ScrollView
 } from 'react-native';
 import {connect} from "react-redux";
+import {VictoryChart, VictoryBar, VictoryScatter, VictoryTheme, VictoryPie, VictoryLegend} from "victory-native"
+import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
@@ -39,18 +42,60 @@ class HomeScreen extends Component {
         console.log(event.type);
     }
 
+    onAdjustBudget() {
+        console.log("Go to adjust budget");
+    }
+
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Toni designs and implements
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit HomeScreen.js.
-                    {JSON.stringify(this.props.exampleData)}
-                </Text>
-            </View>
+            <ScrollView contentContainerStyle={styles.container2}>
+                <VictoryPie
+                    style={{
+                        labels: {
+                        fill: "white",
+                        stroke: "black",
+                        fontSize: 32,
+                        fontWeight: "bold"
+                        }
+                    }}
+                    data={[
+                        { x: "1.2€", y: 1.2 },
+                        { x: "4.5€", y: 4.5 },
+                        { x: "3€", y: 3 }
+                    ]}
+                    innerRadius={60}
+                    labelRadius={90}
+                    colorScale={[
+                        "#D85F49",
+                        "#F66D3B",
+                        "#aaFFaa",
+                        "#D73C4C",
+                        "#FFAF59",
+                        "#E28300",
+                        "#F6A57F"
+                    ]}
+                />
+                <VictoryLegend height={150}
+                    centerTitle
+                    orientation="vertical"
+                    style={{ labels: {fontSize: 20} }}
+                    data={[
+                    { name: "Used gas" }, { name: "Used electricity" }, { name: "Remaining budget" }
+                    ]}
+                    colorScale={[
+                        "#D85F49",
+                        "#F66D3B",
+                        "#aaffaa"
+                    ]}
+                />
+                <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
+                <View style={styles.scrollFixer}></View>
+            </ScrollView>
         );
+
+        // <Text>
+        // {JSON.stringify(this.props.exampleData.consumption.recent.today)}
+        // </Text>
     }
 }
 
@@ -60,6 +105,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
+    },
+    container2: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: 30,
     },
     welcome: {
         fontSize: 20,
@@ -71,6 +121,15 @@ const styles = StyleSheet.create({
         color: '#333333',
         marginBottom: 5,
     },
+    scrollFixer: {
+        backgroundColor: 'black', 
+        opacity: 0,
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        right: 0,
+        left: 0,
+    }
 });
 
 const mapStateToProps = (state) => ({
