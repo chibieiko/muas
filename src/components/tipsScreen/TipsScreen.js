@@ -9,33 +9,57 @@ import {
     Platform,
     StyleSheet,
     Text,
-    View
+    View,
+    FlatList,
 } from 'react-native';
+import {connect} from "react-redux";
+import * as strings from "../../res/strings.json";
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+onCardPress = (card) => {
+    this.props.navigator.push({
+        screen: strings.tipScreen,
+        title: card.title,
+        navigatorStyle: mainStyle.navigatorStyle,
+    });
+}
 
-export default class RankingScreen extends Component {
+class TipCard extends Component {
+  render() {
+    return (
+      <View style={styles.tipCard}>
+        <Text style={styles.tipCardTitle}>
+          {this.props.title}
+        </Text>
+        <Text
+          style={styles.tipCardText}
+          numberOfLines={3}>
+          {this.props.text}
+        </Text>
+      </View>
+    )
+  }
+}
+
+class TipsScreen extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Waltsu designs and implements
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit TipsScreen.js
-                </Text>
-                <Text style={styles.instructions}>
-                    {instructions}
-                </Text>
-            </View>
+            <FlatList
+              data={this.props.exampleData.consumption_tips}
+              renderItem={({item}) => <TipCard
+                                        title={item.title}
+                                        text={item.text}
+                                        onPress={() => this.onCardPress(item)}
+                                      />}
+            />
         );
     }
 }
+
+const mapStateToProps = (state) => ({
+    exampleData: state.exampleData
+});
+
+export default connect(mapStateToProps)(TipsScreen);
 
 const styles = StyleSheet.create({
     container: {
@@ -44,14 +68,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
+    tipCard: {
+      borderWidth: 2,
+      borderColor: 'black',
+      margin: 5,
+      padding: 10,
     },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
+    tipCardTitle: {
+      fontSize: 20,
+      textAlign: 'right',
+    },
+    tipCardText: {
+
     },
 });
