@@ -3,11 +3,11 @@
   "lastname": "Lastname",
 
   "friends": [
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" }
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "http://koti.tamk.fi/~c4vkinnu/avatars/1.png" },
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "http://koti.tamk.fi/~c4vkinnu/avatars/2.png" },
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "http://koti.tamk.fi/~c4vkinnu/avatars/3.png" },
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "http://koti.tamk.fi/~c4vkinnu/avatars/4.png" },
+    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "http://koti.tamk.fi/~c4vkinnu/avatars/5.png" }
   ],
 
   "consumption": {
