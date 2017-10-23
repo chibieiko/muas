@@ -52,10 +52,8 @@ class LoginScreen extends Component {
     };
 
     openApp = async () => {
-        /*
         const result = await this.fetchData();
-*/
-        const result = {};
+
         this.props.loggedIn(true);
         this.props.setData(result);
 
