@@ -23,7 +23,13 @@ export default class PriceBlock extends Component {
                     <Text style={styles.text}>
                         {item.price}
                     </Text>
-                    <Icon name={item.stateIcon} style={styles.icon}/>
+                    {
+                        item.hasRisen ?
+                            <Icon name='arrow-upward' style={styles.icon}/>
+                            :
+                            <Icon name='arrow-downward' style={styles.iconPositive}/>
+                    }
+
                 </View>
             </View>
         );
