@@ -17,5 +17,8 @@
   "drawerConsumptionTitle": "Consumption tips",
   "drawerPricesTitle": "Prices",
   "drawerLogoutTitle": "Logout",
-  "drawerNotifications": "Notifications"
+  "drawerNotifications": "Notifications",
+
+  "electricityPrices": "Electricity prices (Cent/kWh)",
+  "gasPrices": "Gas prices (Cent/Liter)"
 }

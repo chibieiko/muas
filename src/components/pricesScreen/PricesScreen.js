@@ -1,57 +1,78 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
-    Platform,
-    StyleSheet,
     Text,
     View
 } from 'react-native';
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import * as strings from '../../res/strings.json';
+import {PricesScreenStyles as styles} from "./PricesScreenStyles";
+import PriceBlock from './PriceBlock';
 
-export default class RankingScreen extends Component {
+export default class PricesScreen extends Component {
+    state = {
+        electricityPrices: [
+                {
+                    time: '8:00 - 20:00',
+                    price: 20.53,
+                    icon: 'wb-sunny',
+                    hasRisen: true
+                },
+                {
+                    time: '20:00 - 8:00',
+                    price: 17.73,
+                    icon: 'brightness-3',
+                    hasRisen: false
+                },
+                {
+                    time: 'weekend',
+                    price: 17.73,
+                    icon: 'star',
+                    hasRisen: false
+                }
+            ],
+        gasPrices: [
+                {
+                    time: '8:00 - 20:00',
+                    price: 53,
+                    icon: 'wb-sunny',
+                    hasRisen: false
+                },
+                {
+                    time: '20:00 - 8:00',
+                    price: 50,
+                    icon: 'brightness-3',
+                    hasRisen: true
+                },
+                {
+                    time: 'weekend',
+                    price: 50,
+                    icon: 'star',
+                    hasRisen: false
+                }
+            ]
+    };
+
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Erika designs and implements
+                <Text style={styles.title}>
+                    {strings.electricityPrices}
                 </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit PricesScreen.js
+                {
+                    this.state.electricityPrices.map((item, index) => {
+                        return <PriceBlock item={item} key={index}/>
+                    })
+                }
+
+                <Text style={styles.title}>
+                    {strings.gasPrices}
                 </Text>
-                <Text style={styles.instructions}>
-                    {instructions}
-                </Text>
+                {
+                    this.state.gasPrices.map((item, index) =>
+                        <PriceBlock item={item} key={index} />
+                    )
+                }
             </View>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
-});

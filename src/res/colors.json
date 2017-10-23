@@ -4,9 +4,11 @@
 
   "textLight": "#fafafa",
   "textDark": "#212121",
-  "textSecondary": "#fb7163",
+  "textSecondary": "#fca899",
 
   "logoRed": "#f00",
   "drawerBackground": "#F5FCFF",
-  "drawerDivider": "#CFD8DC"
+  "drawerDivider": "#CFD8DC",
+
+  "positive": "#388E3C"
 }
