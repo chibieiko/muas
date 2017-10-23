@@ -1,57 +1,80 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
-    Platform,
     StyleSheet,
     Text,
+    ScrollView,
     View
 } from 'react-native';
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import {Button, List, ListItem} from 'react-native-elements';
 
-export default class RankingScreen extends Component {
+import Octicon from 'react-native-vector-icons/Octicons'
+import Entypo from 'react-native-vector-icons/Entypo'
+
+import {connect} from 'react-redux';
+
+import styles from './RankingScreenStyles';
+import {facebookLogin} from "../../store/actions";
+
+class RankingScreen extends Component {
+    loginWithFacebook = () => {
+        console.log("login with fb");
+        this.props.facebookLogin();
+    };
+
     render() {
-        return (
+        return this.props.facebookLoggedIn ?
+            <List>
+                {
+                    this.props.friends.map((friend, i) => (
+                        <ListItem
+                            hideChevron
+                            roundAvatar
+                            avatar={{uri: friend.image}}
+                            key={i}
+                            badge={{
+                                element: <View style={styles.icons}>
+                                    <Octicon name="flame" style={styles.icon}/>
+                                    <Text style={styles.iconText}>
+                                        {
+                                            friend.gas
+                                        }
+                                    </Text>
+                                    <Entypo name="flash" style={styles.icon}/>
+                                    <Text style={styles.iconText}>
+                                        {
+                                            friend.electricity
+                                        }
+                                    </Text>
+                                </View>
+                            }}
+                            title={friend.name}
+                        />
+                    ))
+                }
+            </List>
+            :
             <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Vili designs and implements
+                <Text style={styles.info}>
+                    To compare energy consumption with your friends, please login with Facebook.
                 </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit RankingScreen.js
-                </Text>
-                <Text style={styles.instructions}>
-                    {instructions}
-                </Text>
-            </View>
-        );
+                <Button large
+                        iconLeft
+                        backgroundColor="#3B5998"
+                        icon={{name: 'facebook', type: 'font-awesome'}}
+                        onPress={this.loginWithFacebook}
+                        title='Login with Facebook' />
+            </View>;
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
+const mapStateToProps = (state) => ({
+    facebookLoggedIn: state.facebookLoggedIn,
+    friends: state.exampleData.friends
 });
+
+const mapDispatchToProps = {
+    facebookLogin
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(RankingScreen);

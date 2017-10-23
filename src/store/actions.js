@@ -10,3 +10,7 @@ export const loggedIn = loggedIn => ({
     type: types.LOGGEDIN,
     payload: loggedIn
 });
+
+export const facebookLogin = () => ({
+    type: types.FACEBOOK_LOGIN
+});
