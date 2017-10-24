@@ -12,6 +12,7 @@
   "loginScreen": "app.LoginScreen",
   "pricesScreen": "app.PricesScreen",
   "tipsScreen": "app.TipsScreen",
+  "tipScreen": "app.TipScreen",
 
   "drawerHomeTitle": "Home screen",
   "drawerConsumptionTitle": "Consumption tips",
