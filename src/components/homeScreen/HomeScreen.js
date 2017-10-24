@@ -79,7 +79,7 @@ class HomeScreen extends Component {
                         ]}
                     />
                 </Svg>
-                <Svg width={400} height={150} viewBox="0 0 400 400" style={{ width: "100%", height: "auto" }}>
+                <Svg width={400} height={150} viewBox="0 0 400 150" style={{ width: "100%", height: "auto"}}>
                     <VictoryLegend height={150}
                         standalone={false}
                         centerTitle
