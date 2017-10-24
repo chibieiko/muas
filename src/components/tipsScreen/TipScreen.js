@@ -9,17 +9,17 @@ import {
     Platform,
     StyleSheet,
     Text,
-    View,
+    ScrollView,
 } from 'react-native';
 
 export default class TipScreen extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
               <Text>
-                hello
+                {this.props.text}
               </Text>
-            </View>
+            </ScrollView>
         );
     }
 }
@@ -27,8 +27,6 @@ export default class TipScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
 });

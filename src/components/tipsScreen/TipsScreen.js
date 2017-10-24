@@ -11,36 +11,43 @@ import {
     Text,
     View,
     FlatList,
+    TouchableWithoutFeedback,
 } from 'react-native';
 import {connect} from "react-redux";
 import * as strings from "../../res/strings.json";
-
-onCardPress = (card) => {
-    this.props.navigator.push({
-        screen: strings.tipScreen,
-        title: card.title,
-        navigatorStyle: mainStyle.navigatorStyle,
-    });
-}
+import {mainStyle} from "../../appStyles";
 
 class TipCard extends Component {
   render() {
     return (
-      <View style={styles.tipCard}>
-        <Text style={styles.tipCardTitle}>
-          {this.props.title}
-        </Text>
-        <Text
-          style={styles.tipCardText}
-          numberOfLines={3}>
-          {this.props.text}
-        </Text>
-      </View>
+      <TouchableWithoutFeedback
+        onPress={this.props.onPress}>
+        <View style={styles.tipCard}>
+          <Text style={styles.tipCardTitle}>
+            {this.props.title}
+          </Text>
+          <Text
+            style={styles.tipCardText}
+            numberOfLines={3}>
+            {this.props.text}
+          </Text>
+        </View>
+      </TouchableWithoutFeedback>
     )
   }
 }
 
 class TipsScreen extends Component {
+
+    onCardPress = (card) => {
+        this.props.navigator.push({
+            screen: strings.tipScreen,
+            title: card.title,
+            passProps: {text: card.text},
+            navigatorStyle: mainStyle.navigatorStyle,
+        });
+    }
+
     render() {
         return (
             <FlatList
