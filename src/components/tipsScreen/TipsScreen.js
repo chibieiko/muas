@@ -15,10 +15,7 @@ import {
 } from 'react-native';
 import {connect} from "react-redux";
 import * as strings from "../../res/strings.json";
-<<<<<<< HEAD
-=======
 import {mainStyle} from "../../appStyles";
->>>>>>> Add navigation to TipScreen and show full tip in that view
 
 class TipCard extends Component {
   render() {
@@ -42,7 +39,6 @@ class TipCard extends Component {
 
 class TipsScreen extends Component {
 
-<<<<<<< HEAD
     componentWillMount() {
         this.props.navigator.setDrawerEnabled({
             side: 'left',
@@ -57,16 +53,11 @@ class TipsScreen extends Component {
         });
     }
 
-=======
->>>>>>> Add navigation to TipScreen and show full tip in that view
     onCardPress = (card) => {
         this.props.navigator.push({
             screen: strings.tipScreen,
             title: card.title,
-<<<<<<< HEAD
-=======
             passProps: {text: card.text},
->>>>>>> Add navigation to TipScreen and show full tip in that view
             navigatorStyle: mainStyle.navigatorStyle,
         });
     }
