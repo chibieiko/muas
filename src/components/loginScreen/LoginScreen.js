@@ -22,6 +22,13 @@ import {TextField} from "react-native-material-textfield";
 
 
 class LoginScreen extends Component {
+    componentWillMount() {
+        this.props.navigator.setDrawerEnabled({
+            side: 'left',
+            enabled: false
+        });
+    }
+
     state = {
         loading: false
     };
@@ -56,6 +63,11 @@ class LoginScreen extends Component {
 
         this.props.loggedIn(true);
         this.props.setData(result);
+
+        this.props.navigator.setDrawerEnabled({
+            side: 'left',
+            enabled: true
+        });
 
         this.props.navigator.resetTo({
             screen: strings.homeScreen,

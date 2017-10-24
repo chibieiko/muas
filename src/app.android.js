@@ -40,5 +40,8 @@ Navigation.startSingleScreenApp({
         left: {
             screen: strings.sideMenu
         }
+    },
+    appStyle: {
+        orientation: "portrait"
     }
 });

@@ -20,6 +20,20 @@ const instructions = Platform.select({
 });
 
 export default class RankingScreen extends Component {
+    componentWillMount() {
+        this.props.navigator.setDrawerEnabled({
+            side: 'left',
+            enabled: false
+        });
+    }
+
+    componentWillUnmount() {
+        this.props.navigator.setDrawerEnabled({
+            side: 'left',
+            enabled: true
+        });
+    }
+
     render() {
         return (
             <View style={styles.container}>
