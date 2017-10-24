@@ -112,9 +112,6 @@ class ConsumptionScreen extends Component {
           </VictoryChart>
 
         </Svg>
-        <Text>
-          {this.state.mode}
-        </Text>
         <PrimaryButton onPress={this.handleModeWeek}>
           Week
         </PrimaryButton>
