@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import {connect} from "react-redux";
 import {Svg} from 'react-native-svg'
-import {VictoryChart, VictoryBar, VictoryScatter, VictoryTheme, VictoryPie, VictoryLegend} from "victory-native"
+import {VictoryChart, VictoryBar, VictoryScatter, VictoryTheme, VictoryPie, VictoryLegend, VictoryLabel} from "victory-native"
 import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 
 const instructions = Platform.select({
@@ -93,6 +93,7 @@ class HomeScreen extends Component {
                             "#F66D3B",
                             "#aaffaa"
                         ]}
+                        labelComponent={<VictoryLabel dy={-10}/>}
                     />
                 </Svg>
                 <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
