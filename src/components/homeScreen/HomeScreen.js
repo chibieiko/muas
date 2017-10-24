@@ -93,6 +93,7 @@ class HomeScreen extends Component {
                             "#F66D3B",
                             "#aaffaa"
                         ]}
+                        labelComponent={<VictoryLabel dy={-10}/>}
                     />
                 </Svg>
                 <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
