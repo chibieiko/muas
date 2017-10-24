@@ -13,6 +13,7 @@ import {
     ScrollView
 } from 'react-native';
 import {connect} from "react-redux";
+import {Svg} from 'react-native-svg'
 import {VictoryChart, VictoryBar, VictoryScatter, VictoryTheme, VictoryPie, VictoryLegend} from "victory-native"
 import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 
@@ -49,50 +50,56 @@ class HomeScreen extends Component {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.container2}>
-                <VictoryPie
-                    style={{
-                        labels: {
-                        fill: "white",
-                        stroke: "black",
-                        fontSize: 32,
-                        fontWeight: "bold"
-                        }
-                    }}
-                    data={[
-                        { x: "1.2€", y: 1.2 },
-                        { x: "4.5€", y: 4.5 },
-                        { x: "3€", y: 3 }
-                    ]}
-                    innerRadius={60}
-                    labelRadius={90}
-                    colorScale={[
-                        "#D85F49",
-                        "#F66D3B",
-                        "#aaFFaa",
-                        "#D73C4C",
-                        "#FFAF59",
-                        "#E28300",
-                        "#F6A57F"
-                    ]}
-                />
-                <VictoryLegend height={150}
-                    centerTitle
-                    orientation="vertical"
-                    style={{ labels: {fontSize: 20} }}
-                    data={[
-                    { name: "Used gas" }, { name: "Used electricity" }, { name: "Remaining budget" }
-                    ]}
-                    colorScale={[
-                        "#D85F49",
-                        "#F66D3B",
-                        "#aaffaa"
-                    ]}
-                />
+                <Svg width={400} height={400} viewBox="0 0 400 400" style={{ width: "100%", height: "auto" }}>
+                    <VictoryPie
+                        standalone={false}
+                        style={{
+                            labels: {
+                            fill: "white",
+                            stroke: "black",
+                            fontSize: 32,
+                            fontWeight: "bold"
+                            }
+                        }}
+                        data={[
+                            { x: "1.2€", y: 1.2 },
+                            { x: "4.5€", y: 4.5 },
+                            { x: "3€", y: 3 }
+                        ]}
+                        innerRadius={60}
+                        labelRadius={90}
+                        colorScale={[
+                            "#D85F49",
+                            "#F66D3B",
+                            "#aaFFaa",
+                            "#D73C4C",
+                            "#FFAF59",
+                            "#E28300",
+                            "#F6A57F"
+                        ]}
+                    />
+                </Svg>
+                <Svg width={400} height={150} viewBox="0 0 400 400" style={{ width: "100%", height: "auto" }}>
+                    <VictoryLegend height={150}
+                        standalone={false}
+                        centerTitle
+                        orientation="vertical"
+                        style={{ labels: {fontSize: 20} }}
+                        data={[
+                        { name: "Used gas" }, { name: "Used electricity" }, { name: "Remaining budget" }
+                        ]}
+                        colorScale={[
+                            "#D85F49",
+                            "#F66D3B",
+                            "#aaffaa"
+                        ]}
+                    />
+                </Svg>
                 <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
-                <View style={styles.scrollFixer}></View>
             </ScrollView>
         );
 
+        // <View style={styles.scrollFixer}></View>
         // <Text>
         // {JSON.stringify(this.props.exampleData.consumption.recent.today)}
         // </Text>
