@@ -1,15 +1,38 @@
 {
   "firstname": "Firstname",
   "lastname": "Lastname",
-
   "friends": [
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" },
-    { "name": "John Doe", "electricity": 100, "gas": 100, "image": "src" }
+    {
+      "name": "John Doe",
+      "electricity": 100,
+      "gas": 100,
+      "image": "src"
+    },
+    {
+      "name": "John Doe",
+      "electricity": 100,
+      "gas": 100,
+      "image": "src"
+    },
+    {
+      "name": "John Doe",
+      "electricity": 100,
+      "gas": 100,
+      "image": "src"
+    },
+    {
+      "name": "John Doe",
+      "electricity": 100,
+      "gas": 100,
+      "image": "src"
+    },
+    {
+      "name": "John Doe",
+      "electricity": 100,
+      "gas": 100,
+      "image": "src"
+    }
   ],
-
   "consumption": {
     "my_ranking_total": {
       "electricity": 100,
@@ -17,21 +40,156 @@
     },
     "recent": {
       "today": [
-        {"time": "00:00", "electricity": 100, "gas": 100},
-        {"time": "00:15", "electricity": 100, "gas": 100},
-        {"time": "00:30", "electricity": 100, "gas": 100},
-        {"time": "00:45", "electricity": 100, "gas": 100},
-        {"time": "01:00", "electricity": 100, "gas": 100},
-        {"time": "01:15", "electricity": 100, "gas": 100},
-        {"time": "01:30", "electricity": 100, "gas": 100},
-        {"time": "01:45", "electricity": 100, "gas": 100},
-        {"time": "02:00", "electricity": 100, "gas": 100},
-        {"time": "hh:mm", "electricity": 100, "gas": 100}
+        {
+          "time": "00:00",
+          "electricity": 100,
+          "gas": 100
+        },
+        {
+          "time": "00:15",
+          "electricity": 100,
+          "gas": 100
+        },
+        {
+          "time": "00:30",
+          "electricity": 100,
+          "gas": 100
+        },
+        {
+          "time": "00:45",
+          "electricity": 100,
+          "gas": 100
+        },
+        {
+          "time": "01:00",
+          "electricity": 100,
+          "gas": 100
+        },
+        {
+          "time": "01:15",
+          "electricity": 100,
+          "gas": 100
+        },
+        {
+          "time": "01:30",
+          "electricity": 100,
+          "gas": 100
+        },
+        {
+          "time": "01:45",
+          "electricity": 100,
+          "gas": 100
+        },
+        {
+          "time": "02:00",
+          "electricity": 100,
+          "gas": 100
+        },
+        {
+          "time": "hh:mm",
+          "electricity": 100,
+          "gas": 100
+        }
       ],
       "yesterday": []
     },
-    "history": [
-      "Akash!!!"
-    ]
+    "history": {
+      "year": {
+        "january": [
+          167.86,
+          168.24,
+          102.13,
+          121.49,
+          193.2,
+          101.4,
+          130.84,
+          175.83,
+          181.61,
+          134.24,
+          108.17,
+          150.72,
+          173.69,
+          185.33,
+          195,
+          183.69,
+          119.41,
+          126.46,
+          105.88,
+          192.71,
+          189.82,
+          131.4,
+          180.46,
+          106.41,
+          164.51,
+          121.11,
+          192.89,
+          192.07,
+          195.86,
+          180.8
+        ],
+        "february": [
+          405.84,
+          452.6,
+          424.0,
+          337.38,
+          358.14,
+          387.27,
+          405.64,
+          474.43,
+          448.8,
+          350.49,
+          347.76,
+          461.76,
+          419.25,
+          330.53,
+          401.97,
+          352.05,
+          387.3,
+          411.09,
+          460.09,
+          378.26,
+          371.09,
+          361.22,
+          486.65,
+          468.88,
+          367.35,
+          351.88,
+          329.93,
+          356.91,
+          351.51,
+          438.99
+        ],
+        "march": [
+          400
+        ],
+        "april": [
+          450
+        ],
+        "may": [
+          300
+        ],
+        "june": [
+          200
+        ],
+        "july": [
+          350
+        ],
+        "august": [
+          390
+        ],
+        "september": [
+          268
+        ],
+        "october": [
+          445
+        ],
+        "november": [
+          345
+        ],
+        "december": [
+          236
+        ]
+      }
+    }
   }
 }
