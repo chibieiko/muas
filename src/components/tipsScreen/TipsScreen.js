@@ -11,29 +11,38 @@ import {
     Text,
     View,
     FlatList,
+    TouchableWithoutFeedback,
 } from 'react-native';
 import {connect} from "react-redux";
 import * as strings from "../../res/strings.json";
+<<<<<<< HEAD
+=======
+import {mainStyle} from "../../appStyles";
+>>>>>>> Add navigation to TipScreen and show full tip in that view
 
 class TipCard extends Component {
   render() {
     return (
-      <View style={styles.tipCard}>
-        <Text style={styles.tipCardTitle}>
-          {this.props.title}
-        </Text>
-        <Text
-          style={styles.tipCardText}
-          numberOfLines={3}>
-          {this.props.text}
-        </Text>
-      </View>
+      <TouchableWithoutFeedback
+        onPress={this.props.onPress}>
+        <View style={styles.tipCard}>
+          <Text style={styles.tipCardTitle}>
+            {this.props.title}
+          </Text>
+          <Text
+            style={styles.tipCardText}
+            numberOfLines={3}>
+            {this.props.text}
+          </Text>
+        </View>
+      </TouchableWithoutFeedback>
     )
   }
 }
 
 class TipsScreen extends Component {
 
+<<<<<<< HEAD
     componentWillMount() {
         this.props.navigator.setDrawerEnabled({
             side: 'left',
@@ -48,10 +57,16 @@ class TipsScreen extends Component {
         });
     }
 
+=======
+>>>>>>> Add navigation to TipScreen and show full tip in that view
     onCardPress = (card) => {
         this.props.navigator.push({
             screen: strings.tipScreen,
             title: card.title,
+<<<<<<< HEAD
+=======
+            passProps: {text: card.text},
+>>>>>>> Add navigation to TipScreen and show full tip in that view
             navigatorStyle: mainStyle.navigatorStyle,
         });
     }
