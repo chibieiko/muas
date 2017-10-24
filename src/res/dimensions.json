@@ -1,5 +1,8 @@
 {
   "indicatorHeight": 8,
   "horizontalMargin": 16,
-  "verticalMargin": 16
+  "verticalMargin": 16,
+
+  "fontNormal": 16,
+  "fontBig": 20
 }
