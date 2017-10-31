@@ -142,8 +142,9 @@ class LoginScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginHorizontal: dimensions.horizontalMargin,
-        marginVertical: dimensions.verticalMargin
+        backgroundColor: "#F5FCFF",
+        paddingHorizontal: dimensions.horizontalMargin,
+        paddingVertical: dimensions.verticalMargin
     },
     intro: {
         marginTop: 16,
