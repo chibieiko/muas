@@ -6,7 +6,7 @@ import {
     View
 } from 'react-native';
 
-import {Button, List, ListItem} from 'react-native-elements';
+import {Avatar, Button, List, ListItem} from 'react-native-elements';
 
 import Octicon from 'react-native-vector-icons/Octicons'
 import Entypo from 'react-native-vector-icons/Entypo'
@@ -29,8 +29,10 @@ class RankingScreen extends Component {
                     this.props.friends.map((friend, i) => (
                         <ListItem
                             hideChevron
-                            roundAvatar
-                            avatar={{uri: friend.image}}
+                            avatar={<View style={styles.avatar}>
+                                <Text style={styles.ranking}>{i+1}</Text>
+                                <Avatar rounded source={{uri: friend.image}}/>
+                            </View>}
                             key={i}
                             badge={{
                                 element: <View style={styles.icons}>
@@ -49,6 +51,10 @@ class RankingScreen extends Component {
                                 </View>
                             }}
                             title={friend.name}
+                            titleStyle={{
+                                paddingLeft: 14,
+                                fontSize: 16
+                            }}
                         />
                     ))
                 }
