@@ -44,15 +44,15 @@ class LoginScreen extends Component {
 
         this.toggleLoading();
 
-        try {
-            response = await fetch('https://jsonblob.com/api/jsonBlob/6bc26c55-b4ba-11e7-8ddf-15cd636b9d91');
-            response = await response.json();
-            console.log("Success");
-        } catch (err) {
-            console.log("Error");
-            response = data;
-        }
-
+        //try {
+        //    response = await fetch('https://jsonblob.com/api/jsonBlob/6bc26c55-b4ba-11e7-8ddf-15cd636b9d91');
+        //    response = await response.json();
+        //    console.log("Success");
+        //} catch (err) {
+        //    console.log("Error");
+        //    response = data;
+        //}
+        response = data;
         this.toggleLoading();
 
         return response;

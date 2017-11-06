@@ -11,13 +11,14 @@ import {
     Text,
     View,
     ScrollView,
-    List,
-    ListItem,
     TouchableNativeFeedback,
 } from 'react-native';
+import {List, ListItem} from 'react-native-elements';
+
 import {connect} from "react-redux";
 import * as strings from "../../res/strings.json";
 import {mainStyle} from "../../appStyles";
+import * as colors from '../../res/colors.json';
 
 class TipCard extends Component {
   render() {
@@ -66,26 +67,18 @@ class TipsScreen extends Component {
 
     render() {
         return (
-            <ScrollView contentContainerStyle={styles.container}>
-              <List>
-                {this.props.exampleData.consumption_tips.map((tip, i) => (
-                    <ListItem
-                      hideChevron
-                      roundAvatar
-                      key={i}
-                      badge={{
-                          element: <TipCard
-                            title={tip.title}
-                            text={tip.text}
-                            onPress={() => this.onCardPress(tip)}/>
-                      }}
-                      title={tip.title}
-                  />
-              ))
-              }
-              </List>
-            </ScrollView>
-        );
+          <View style={styles.container}>
+          <ScrollView>
+          {this.props.exampleData.consumption_tips.map((tip, i) => (
+            <TipCard
+              title={tip.title}
+              text={tip.text}
+              onPress={() => this.onCardPress(tip)}/>
+        ))
+        }
+          </ScrollView>
+          </View>
+      );
     }
 }
 
@@ -103,12 +96,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF',
     },
     tipCard: {
-      margin: 5,
-      padding: 10,
+      padding: 15,
+      borderBottomWidth: 1,
+      borderBottomColor: '#7a7a52',
     },
     tipCardTitle: {
       fontSize: 20,
       textAlign: 'left',
+      color: colors.primary,
     },
     tipCardText: {
 
