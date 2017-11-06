@@ -1,3 +1,9 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Svg from "react-native-svg";
@@ -12,11 +18,16 @@ import {
   VictoryLegend
 } from "victory-native";
 import PrimaryButton from "../../components/primaryButton/PrimaryButton";
+import SecondaryButton from "../../components/secondaryButton";
+import styles from "./ConsumptionScreenStyles";
 
-import * as colors from '../../res/colors.json';
+const CATEGORY = {
+  ELECTRICITY: "electricity",
+  GAS: "gas"
+};
 
 const MODE = {
-  WEEK: 0,
+  WEEK: "WEEK",
   MONTH: 1,
   YEAR: 2
 };
@@ -26,6 +37,7 @@ class ConsumptionScreen extends Component {
     super(props);
 
     this.state = {
+      category: CATEGORY.ELECTRICITY,
       mode: MODE.WEEK
     };
 
@@ -33,45 +45,62 @@ class ConsumptionScreen extends Component {
     this.handleModeWeek = this.handleModeWeek.bind(this);
     this.handleModeMonth = this.handleModeMonth.bind(this);
     this.handleModeYear = this.handleModeYear.bind(this);
+    this.handleCategoryElectricity = this.handleCategoryElectricity.bind(this);
+    this.handleModeGas = this.handleModeGas.bind(this);
   }
 
   renderChartLine() {
     const {
       january,
-      february
+      february,
+      march,
+      april,
+      may,
+      june,
+      july,
+      august,
+      september,
+      october,
+      november,
+      december
     } = this.props.exampleData.consumption.history.year;
     const { year } = this.props.exampleData.consumption.history;
+    const { category } = this.state;
 
-    const data = [];
+    const data = [0];
     switch (this.state.mode) {
       case MODE.WEEK:
-        january.slice(0, 8).forEach((element, index, array) => {
+        january[category].slice(0, 7).forEach((element, index, array) => {
           data.push(element);
         });
         break;
       case MODE.MONTH:
-        february.forEach((element, index, array) => {
+        january[category].forEach((element, index, array) => {
           data.push(element);
         });
         break;
-      /*      case MODE.YEAR:
-        february.forEach((element, index, array) => {
-          data.push(element);
-        });
-        break;*/
+      case MODE.YEAR:
+        for (const [key, value] of Object.entries(year)) {
+          const monthTotal = value[category].reduce(
+            (sum, value) => sum + value
+          );
+          const monthAverage = monthTotal / value[category].length;
+          data.push(monthAverage);
+        }
+        break;
     }
 
-    const max = data.reduce((a, b, i, arr) => Math.max(a, b));
     const min = data.reduce((a, b, i, arr) => Math.min(a, b));
+    const max = data.reduce((a, b, i, arr) => Math.max(a, b));
 
     return (
       <VictoryLine
         animate={{
-          duration: 2000,
+          duration: 1000,
           onLoad: { duration: 2000 }
         }}
-        categories={{ x: [1, data.length] }}
-        domain={{ x: [1, data.length - 1], y: [min, max + max / 5] }}
+        categories={{ x: [1, data.length - 1] }}
+        domain={{ y: [min, max + max / 5] }}
         style={{
           data: { stroke: "#c43a31" },
           parent: { border: "1px solid #ccc" }
@@ -99,47 +128,65 @@ class ConsumptionScreen extends Component {
     });
   }
 
+  handleCategoryElectricity() {
+    this.setState({
+      category: CATEGORY.ELECTRICITY
+    });
+  }
+
+  handleModeGas() {
+    this.setState({
+      category: CATEGORY.GAS
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Svg width={400} height={400}>
+        <Text style={styles.header}>Consumption Category</Text>
+
+        <View style={styles.buttonContainer}>
+          <View style={styles.primaryButton}>
+            <PrimaryButton onPress={this.handleCategoryElectricity}>
+              Electricity
+            </PrimaryButton>
+          </View>
+          <View style={styles.primaryButton}>
+            <PrimaryButton onPress={this.handleModeGas}>
+              Gas
+            </PrimaryButton>
+          </View>
+        </View>
+
+        <Svg width={400} height={400} marginBottom={"-10%"}>
           <VictoryChart theme={VictoryTheme.material} standalone={false}>
             {this.renderChartLine()}
           </VictoryChart>
-
         </Svg>
-        <PrimaryButton onPress={this.handleModeWeek}>
-          Week
-        </PrimaryButton>
-        <PrimaryButton onPress={this.handleModeMonth}>
-          Month
-        </PrimaryButton>
-        {/*<PrimaryButton onPress={this.handleModeYear}>
-          Year
-        </PrimaryButton>*/}
+
+        <Text style={styles.header}>Show Timeline</Text>
+
+        <View style={styles.buttonContainer}>
+          <View style={styles.secondaryButton}>
+            <SecondaryButton onPress={this.handleModeWeek}>
+              Week
+            </SecondaryButton>
+          </View>
+          <View style={styles.secondaryButton}>
+            <SecondaryButton onPress={this.handleModeMonth}>
+              Month
+            </SecondaryButton>
+          </View>
+          <View style={styles.secondaryButton}>
+            <SecondaryButton onPress={this.handleModeYear}>
+              Year
+            </SecondaryButton>
+          </View>
+        </View>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: colors.backgroundColor
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: "center",
-    margin: 10
-  },
-  instructions: {
-    textAlign: "center",
-    color: "#333333",
-    marginBottom: 5
-  }
-});
 
 const mapStateToProps = state => ({
   exampleData: state.exampleData
