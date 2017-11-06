@@ -10,8 +10,10 @@ import {
     StyleSheet,
     Text,
     View,
-    FlatList,
-    TouchableWithoutFeedback,
+    ScrollView,
+    List,
+    ListItem,
+    TouchableNativeFeedback,
 } from 'react-native';
 import {connect} from "react-redux";
 import * as strings from "../../res/strings.json";
@@ -20,7 +22,7 @@ import {mainStyle} from "../../appStyles";
 class TipCard extends Component {
   render() {
     return (
-      <TouchableWithoutFeedback
+      <TouchableNativeFeedback
         onPress={this.props.onPress}>
         <View style={styles.tipCard}>
           <Text style={styles.tipCardTitle}>
@@ -32,7 +34,7 @@ class TipCard extends Component {
             {this.props.text}
           </Text>
         </View>
-      </TouchableWithoutFeedback>
+      </TouchableNativeFeedback>
     )
   }
 }
@@ -64,14 +66,25 @@ class TipsScreen extends Component {
 
     render() {
         return (
-            <FlatList
-              data={this.props.exampleData.consumption_tips}
-              renderItem={({item}) => <TipCard
-                                        title={item.title}
-                                        text={item.text}
-                                        onPress={() => this.onCardPress(item)}
-                                      />}
-            />
+            <ScrollView contentContainerStyle={styles.container}>
+              <List>
+                {this.props.exampleData.consumption_tips.map((tip, i) => (
+                    <ListItem
+                      hideChevron
+                      roundAvatar
+                      key={i}
+                      badge={{
+                          element: <TipCard
+                            title={tip.title}
+                            text={tip.text}
+                            onPress={() => this.onCardPress(tip)}/>
+                      }}
+                      title={tip.title}
+                  />
+              ))
+              }
+              </List>
+            </ScrollView>
         );
     }
 }
@@ -90,14 +103,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#F5FCFF',
     },
     tipCard: {
-      borderWidth: 2,
-      borderColor: 'black',
       margin: 5,
       padding: 10,
     },
     tipCardTitle: {
       fontSize: 20,
-      textAlign: 'right',
+      textAlign: 'left',
     },
     tipCardText: {
 
