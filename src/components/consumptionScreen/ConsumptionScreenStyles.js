@@ -1,0 +1,27 @@
+import { StyleSheet } from "react-native";
+import * as dimensions from "../../res/dimensions.json";
+import * as colors from "../../res/colors.json";
+
+export default StyleSheet.create({
+  container: {
+    flex: 1
+  },
+  buttonContainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-around"
+  },
+  primaryButton: {
+    width: "45%"
+  },
+  secondaryButton: {
+    width: "30%",
+    borderColor: "#ef2400"
+  },
+  header: {
+    textAlign: "center",
+    fontSize: 18,
+    marginTop: 5,
+    marginBottom: 5
+  }
+});

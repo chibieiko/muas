@@ -2,6 +2,8 @@
   "primary": "#ef2400",
   "primaryDark": "#ad1b02",
 
+  "secondary": "#757575",
+
   "textLight": "#fafafa",
   "textDark": "#212121",
   "textSecondary": "#fca899",
