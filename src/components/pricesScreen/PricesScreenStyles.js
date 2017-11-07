@@ -4,7 +4,7 @@ import * as colors from '../../res/colors.json';
 export const PricesScreenStyles = {
     container: {
         flex: 1,
-            backgroundColor: '#F5FCFF',
+            backgroundColor: colors.backgroundColor,
     },
     title: {
         fontSize: dimensions.fontBig,

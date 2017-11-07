@@ -33,6 +33,48 @@
       "image": "http://koti.tamk.fi/~c4vkinnu/avatars/5.png"
     }
   ],
+  "prices": {
+    "electricityPrices": [
+      {
+        "time": "8:00 - 20:00",
+        "price": 20.53,
+        "icon": "wb-sunny",
+        "hasRisen": true
+      },
+      {
+        "time": "20:00 - 8:00",
+        "price": 17.73,
+        "icon": "brightness-3",
+        "hasRisen": false
+      },
+      {
+        "time": "weekend",
+        "price": 17.73,
+        "icon": "star",
+        "hasRisen": false
+      }
+    ],
+    "gasPrices": [
+      {
+        "time": "8:00 - 20:00",
+        "price": 53,
+        "icon": "wb-sunny",
+        "hasRisen": false
+      },
+      {
+        "time": "20:00 - 8:00",
+        "price": 50,
+        "icon": "brightness-3",
+        "hasRisen": true
+      },
+      {
+        "time": "weekend",
+        "price": 50,
+        "icon": "star",
+        "hasRisen": false
+      }
+    ]
+  },
   "consumption": {
     "my_ranking_total": {
       "electricity": 100,

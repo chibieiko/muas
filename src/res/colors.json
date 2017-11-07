@@ -7,8 +7,8 @@
   "textSecondary": "#fca899",
 
   "logoRed": "#f00",
-  "drawerBackground": "#F5FCFF",
-  "drawerDivider": "#CFD8DC",
+  "backgroundColor": "#F5FCFF",
+  "divider": "#CFD8DC",
 
   "positive": "#388E3C"
 }
