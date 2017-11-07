@@ -7,7 +7,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Svg from "react-native-svg";
-import { Platform, StyleSheet, Text, View } from "react-native";
+import { Platform, StyleSheet, Text, View, ScrollView } from "react-native";
 
 import {
   VictoryChart,
@@ -142,7 +142,7 @@ class ConsumptionScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text style={styles.header}>Consumption Category</Text>
 
         <View style={styles.buttonContainer}>
@@ -183,7 +183,7 @@ class ConsumptionScreen extends Component {
             </SecondaryButton>
           </View>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
