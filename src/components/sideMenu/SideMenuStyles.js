@@ -11,7 +11,7 @@ export const sideMenuStyle = {
     logo: {
         height: 150,
         width: 350,
-        backgroundColor: colors.logoRed,
+        backgroundColor: colors.primary,
         alignSelf: 'center',
         marginBottom: 10
     },
