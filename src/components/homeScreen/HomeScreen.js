@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, {Component} from 'react';
 import {
     Platform,
@@ -17,12 +11,7 @@ import {Svg} from 'react-native-svg'
 import {VictoryChart, VictoryBar, VictoryScatter, VictoryTheme, VictoryPie, VictoryLegend, VictoryLabel} from "victory-native"
 import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import * as colors from '../../res/colors.json';
 
 class HomeScreen extends Component {
     static navigatorButtons = {
@@ -99,11 +88,6 @@ class HomeScreen extends Component {
                 <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
             </ScrollView>
         );
-
-        // <View style={styles.scrollFixer}></View>
-        // <Text>
-        // {JSON.stringify(this.props.exampleData.consumption.recent.today)}
-        // </Text>
     }
 }
 
@@ -112,12 +96,13 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: colors.backgroundColor,
     },
     container2: {
         justifyContent: 'center',
         alignItems: 'center',
         paddingBottom: 30,
+        backgroundColor: colors.backgroundColor
     },
     welcome: {
         fontSize: 20,

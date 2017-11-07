@@ -4,7 +4,7 @@ import * as dimensions from '../../res/dimensions.json'
 export const sideMenuStyle = {
     container: {
         flex: 1,
-        backgroundColor: colors.drawerBackground,
+        backgroundColor: colors.backgroundColor,
     },
 
     // Image box
@@ -18,7 +18,7 @@ export const sideMenuStyle = {
 
     // Divider
     divider: {
-        borderBottomColor: colors.drawerDivider,
+        borderBottomColor: colors.divider,
         borderBottomWidth: 1,
         marginVertical: 10
     },

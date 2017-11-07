@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Svg from "react-native-svg";
@@ -18,6 +12,8 @@ import {
   VictoryLegend
 } from "victory-native";
 import PrimaryButton from "../../components/primaryButton/PrimaryButton";
+
+import * as colors from '../../res/colors.json';
 
 const MODE = {
   WEEK: 0,
@@ -131,7 +127,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: colors.backgroundColor
   },
   welcome: {
     fontSize: 20,

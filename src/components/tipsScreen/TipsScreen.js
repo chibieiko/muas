@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
     Platform,
@@ -63,7 +57,7 @@ class TipsScreen extends Component {
             passProps: {text: card.text},
             navigatorStyle: mainStyle.navigatorStyle,
         });
-    }
+    };
 
     render() {
         return (
@@ -93,12 +87,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: colors.backgroundColor,
     },
     tipCard: {
       padding: 15,
       borderBottomWidth: 1,
-      borderBottomColor: '#7a7a52',
+      borderBottomColor: colors.divider,
     },
     tipCardTitle: {
       fontSize: 20,
