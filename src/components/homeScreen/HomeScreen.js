@@ -26,14 +26,39 @@ class HomeScreen extends Component {
         super(props);
         //  For listening navigator events.
         this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
+        this.state = {
+            hours: 10,
+            minutes: 31,
+        }
+    }
+
+    componentDidMount() {
+        
     }
 
     onNavigatorEvent(event) {
-        console.log(event.type);
+        switch (event.id) {
+            case 'didAppear':
+                this.updateDataFromTime();
+                break;
+        
+            default:
+                break;
+        }
     }
 
     onAdjustBudget() {
         console.log("Go to adjust budget");
+    }
+
+    updateDataFromTime() {
+        const date = new Date();
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        this.setState({
+            hours: hours,
+            minutes: minutes,
+        })   
     }
 
     render() {
@@ -86,8 +111,20 @@ class HomeScreen extends Component {
                     />
                 </Svg>
                 <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
+                <Text>
+                    {this.state.hours + ":" + this.state.minutes}
+                </Text>
             </ScrollView>
+<<<<<<< HEAD
         );
+=======
+            );
+
+        // <View style={styles.scrollFixer}></View>
+        // <Text>
+        // {JSON.stringify(this.props.exampleData.consumption.recent.today)}
+        // </Text>
+>>>>>>> Add current time to local state in BudgetView
     }
 }
 
