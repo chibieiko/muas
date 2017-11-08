@@ -93,23 +93,7 @@ class HomeScreen extends Component {
                         ]}
                     />
                 </Svg>
-                <Svg width={400} height={150} viewBox="0 0 400 150" style={{ width: "100%", height: "auto"}}>
-                    <VictoryLegend height={150}
-                        standalone={false}
-                        centerTitle
-                        orientation="vertical"
-                        style={{ labels: {fontSize: 20} }}
-                        data={[
-                        { name: "Used gas" }, { name: "Used electricity" }, { name: "Remaining budget" }
-                        ]}
-                        colorScale={[
-                            "#D85F49",
-                            "#F66D3B",
-                            "#aaffaa"
-                        ]}
-                        labelComponent={<VictoryLabel dy={-10}/>}
-                    />
-                </Svg>
+         
                 <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
                 <Text>
                     {this.state.hours + ":" + this.state.minutes}
@@ -120,6 +104,24 @@ class HomeScreen extends Component {
 =======
             );
 
+
+        // <Svg width={400} height={150} viewBox="0 0 400 150" style={{ width: "100%", height: "auto"}}>
+        //     <VictoryLegend height={150}
+        //         standalone={false}
+        //         centerTitle
+        //         orientation="vertical"
+        //         style={{ labels: {fontSize: 20} }}
+        //         data={[
+        //         { name: "Used gas" }, { name: "Used electricity" }, { name: "Remaining budget" }
+        //         ]}
+        //         colorScale={[
+        //             "#D85F49",
+        //             "#F66D3B",
+        //             "#aaffaa"
+        //         ]}
+        //         labelComponent={<VictoryLabel dy={-10}/>}
+        //     />
+        // </Svg>
         // <View style={styles.scrollFixer}></View>
         // <Text>
         // {JSON.stringify(this.props.exampleData.consumption.recent.today)}
