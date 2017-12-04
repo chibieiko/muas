@@ -126,6 +126,7 @@ class HomeScreen extends Component {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.container2}>
+            <Text style={styles.title}>Today's budget</Text>
                 <Svg width={400} height={400} viewBox="0 0 400 400" style={{ width: "100%", height: "auto" }}>
                     <VictoryPie
                         standalone={false}
@@ -172,6 +173,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingBottom: 30,
+        paddingTop: 5,
         backgroundColor: colors.backgroundColor
     },
     welcome: {
@@ -197,6 +199,9 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         fontSize: 25,
     },
+    title: {
+        fontSize: 30,
+    }
 });
 
 const mapStateToProps = (state) => ({
