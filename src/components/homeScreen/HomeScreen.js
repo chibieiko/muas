@@ -87,8 +87,8 @@ class HomeScreen extends Component {
         const today = this.props.exampleData.consumption.recent.today;
         today.forEach(entry => {
             if (entry.time <= time) {
-                eTotal += entry.electricity;
-                gasTotal += entry.gas;
+                eTotal += entry.electricityWH;
+                gasTotal += entry.gasL;
             } 
         });
 
