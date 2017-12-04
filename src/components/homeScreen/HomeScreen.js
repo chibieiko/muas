@@ -12,7 +12,10 @@ import {VictoryChart, VictoryBar, VictoryScatter, VictoryTheme, VictoryPie, Vict
 import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 import SvgLegend from '../../components/svgLegend/SvgLegend'
 
+import {mainStyle} from "../../appStyles";
+
 import * as colors from '../../res/colors.json';
+import * as strings from '../../res/strings.json';
 
 class HomeScreen extends Component {
     static navigatorButtons = {
@@ -46,8 +49,8 @@ class HomeScreen extends Component {
                 "#E28300",
                 "#F6A57F"
             ],
-            electricityPrice: 20,
-            gasPrice: 50,
+            electricityPrice: props.exampleData.prices.electricityPrices[0].price,
+            gasPrice: props.exampleData.prices.gasPrices[0].price,
             dailyBudget: 3,
             budgetData: [
                 { x: "1.2€", y: 1.2 },
@@ -58,25 +61,41 @@ class HomeScreen extends Component {
     }
 
     componentDidMount() {
-        
+        this.setState({dailyBudget: this.props.budget / 30});
     }
 
     onNavigatorEvent(event) {
         switch (event.id) {
             case 'didAppear':
+                console.log(event.id);
                 this.updateDataFromTime();
                 break;
         
             default:
+                console.log("default");
+                console.log(event.id);
                 break;
         }
     }
 
-    onAdjustBudget() {
+    onAdjustBudget = () => {
         console.log("Go to adjust budget");
+        console.dir(this.props);
+        this.props.navigator.push({
+            screen: strings.budgetEditScreen,
+            title: "Edit Budget",
+            // passProps: {text: card.text},
+            navigatorStyle: mainStyle.navigatorStyle,
+        });
     }
 
     updateDataFromTime() {
+        console.group("updateData");
+        console.log("before daily: ", this.state.dailyBudget);
+        console.log("before budget: ", this.state.budget);
+        this.setState({dailyBudget: this.props.budget / 30});
+        console.log("after daily: ", this.state.dailyBudget);
+        console.groupEnd();
         const date = new Date();
         const hours = date.getHours();
         const minutes = date.getMinutes();
@@ -126,7 +145,7 @@ class HomeScreen extends Component {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.container2}>
-            <Text style={styles.title}>Today's budget</Text>
+            <Text style={styles.title}>Today's budget: {this.props.budget}</Text>
                 <Svg width={400} height={400} viewBox="0 0 400 400" style={styles.svg}>
                     <VictoryPie
                         standalone={false}
@@ -205,7 +224,8 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state) => ({
-    exampleData: state.exampleData
+    exampleData: state.exampleData,
+    budget: state.budget,
 });
 
 export default connect(mapStateToProps)(HomeScreen);

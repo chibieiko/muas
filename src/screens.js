@@ -1,6 +1,7 @@
 import {Navigation} from 'react-native-navigation';
 
 import HomeScreen from "./components/homeScreen/HomeScreen";
+import BudgetEditScreen from "./components/budgetEditScreen/BudgetEditScreen";
 import ConsumptionScreen from "./components/consumptionScreen/ConsumptionScreen";
 import RankingScreen from "./components/rankingScreen/RankingScreen";
 import SideMenu from "./components/sideMenu/SideMenu";
@@ -14,6 +15,7 @@ import * as strings from "./res/strings.json";
 // Register all components here
 export function registerScreens(store, Provider) {
     Navigation.registerComponent(strings.homeScreen, () => HomeScreen, store, Provider);
+    Navigation.registerComponent(strings.budgetEditScreen, () => BudgetEditScreen, store, Provider);
     Navigation.registerComponent(strings.consumptionScreen, () => ConsumptionScreen, store, Provider);
     Navigation.registerComponent(strings.rankingScreen, () => RankingScreen, store, Provider);
     Navigation.registerComponent(strings.sideMenu, () => SideMenu, store, Provider);
