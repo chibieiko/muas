@@ -1,1080 +1,1860 @@
 {
-  "firstname": "Firstname",
-  "lastname": "Lastname",
-  "friends": [
-    {
-      "name": "John Doe",
-      "electricity": 100,
-      "gas": 100,
-      "image": "http://koti.tamk.fi/~c4vkinnu/avatars/1.png"
-    },
-    {
-      "name": "John Doe",
-      "electricity": 100,
-      "gas": 100,
-      "image": "http://koti.tamk.fi/~c4vkinnu/avatars/2.png"
-    },
-    {
-      "name": "John Doe",
-      "electricity": 100,
-      "gas": 100,
-      "image": "http://koti.tamk.fi/~c4vkinnu/avatars/3.png"
-    },
-    {
-      "name": "John Doe",
-      "electricity": 100,
-      "gas": 100,
-      "image": "http://koti.tamk.fi/~c4vkinnu/avatars/4.png"
-    },
-    {
-      "name": "John Doe",
-      "electricity": 100,
-      "gas": 100,
-      "image": "http://koti.tamk.fi/~c4vkinnu/avatars/5.png"
-    }
-  ],
-  "prices": {
-    "electricityPrices": [
-      {
-        "time": "8:00 - 20:00",
-        "price": 20.53,
-        "icon": "wb-sunny",
-        "hasRisen": true
-      },
-      {
-        "time": "20:00 - 8:00",
-        "price": 17.73,
-        "icon": "brightness-3",
-        "hasRisen": false
-      },
-      {
-        "time": "weekend",
-        "price": 17.73,
-        "icon": "star",
-        "hasRisen": false
-      }
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "friends": [
+        {
+            "name": "John Doe",
+            "electricity": 100,
+            "gas": 100,
+            "image": "http://koti.tamk.fi/~c4vkinnu/avatars/1.png"
+        },
+        {
+            "name": "John Doe",
+            "electricity": 100,
+            "gas": 100,
+            "image": "http://koti.tamk.fi/~c4vkinnu/avatars/2.png"
+        },
+        {
+            "name": "John Doe",
+            "electricity": 100,
+            "gas": 100,
+            "image": "http://koti.tamk.fi/~c4vkinnu/avatars/3.png"
+        },
+        {
+            "name": "John Doe",
+            "electricity": 100,
+            "gas": 100,
+            "image": "http://koti.tamk.fi/~c4vkinnu/avatars/4.png"
+        },
+        {
+            "name": "John Doe",
+            "electricity": 100,
+            "gas": 100,
+            "image": "http://koti.tamk.fi/~c4vkinnu/avatars/5.png"
+        }
     ],
-    "gasPrices": [
-      {
-        "time": "8:00 - 20:00",
-        "price": 53,
-        "icon": "wb-sunny",
-        "hasRisen": false
-      },
-      {
-        "time": "20:00 - 8:00",
-        "price": 50,
-        "icon": "brightness-3",
-        "hasRisen": true
-      },
-      {
-        "time": "weekend",
-        "price": 50,
-        "icon": "star",
-        "hasRisen": false
-      }
+    "prices": {
+        "electricityPrices": [
+            {
+                "time": "8:00 - 20:00",
+                "price": 20.53,
+                "icon": "wb-sunny",
+                "hasRisen": true
+            },
+            {
+                "time": "20:00 - 8:00",
+                "price": 17.73,
+                "icon": "brightness-3",
+                "hasRisen": false
+            },
+            {
+                "time": "weekend",
+                "price": 17.73,
+                "icon": "star",
+                "hasRisen": false
+            }
+        ],
+        "gasPrices": [
+            {
+                "time": "8:00 - 20:00",
+                "price": 53,
+                "icon": "wb-sunny",
+                "hasRisen": false
+            },
+            {
+                "time": "20:00 - 8:00",
+                "price": 50,
+                "icon": "brightness-3",
+                "hasRisen": true
+            },
+            {
+                "time": "weekend",
+                "price": 50,
+                "icon": "star",
+                "hasRisen": false
+            }
+        ]
+    },
+    "consumption": {
+        "my_ranking_total": {
+            "electricity": 100,
+            "gas": 100
+        },
+        "recent": {
+            "today": [
+                {
+                    "time": "00:00",
+                    "electricityWH": 30,
+                    "gasL": 8
+                },
+                {
+                    "time": "00:15",
+                    "electricityWH": 37,
+                    "gasL": 11
+                },
+                {
+                    "time": "00:30",
+                    "electricityWH": 38,
+                    "gasL": 5
+                },
+                {
+                    "time": "00:45",
+                    "electricityWH": 38,
+                    "gasL": 13
+                },
+                {
+                    "time": "01:00",
+                    "electricityWH": 32,
+                    "gasL": 10
+                },
+                {
+                    "time": "01:15",
+                    "electricityWH": 30,
+                    "gasL": 9
+                },
+                {
+                    "time": "01:30",
+                    "electricityWH": 36,
+                    "gasL": 6
+                },
+                {
+                    "time": "01:45",
+                    "electricityWH": 33,
+                    "gasL": 6
+                },
+                {
+                    "time": "02:00",
+                    "electricityWH": 36,
+                    "gasL": 11
+                },
+                {
+                    "time": "02:15",
+                    "electricityWH": 39,
+                    "gasL": 12
+                },
+                {
+                    "time": "02:30",
+                    "electricityWH": 34,
+                    "gasL": 6
+                },
+                {
+                    "time": "02:45",
+                    "electricityWH": 33,
+                    "gasL": 5
+                },
+                {
+                    "time": "03:00",
+                    "electricityWH": 30,
+                    "gasL": 9
+                },
+                {
+                    "time": "03:15",
+                    "electricityWH": 38,
+                    "gasL": 7
+                },
+                {
+                    "time": "03:30",
+                    "electricityWH": 35,
+                    "gasL": 7
+                },
+                {
+                    "time": "03:45",
+                    "electricityWH": 30,
+                    "gasL": 12
+                },
+                {
+                    "time": "04:00",
+                    "electricityWH": 38,
+                    "gasL": 13
+                },
+                {
+                    "time": "04:15",
+                    "electricityWH": 36,
+                    "gasL": 13
+                },
+                {
+                    "time": "04:30",
+                    "electricityWH": 38,
+                    "gasL": 7
+                },
+                {
+                    "time": "04:45",
+                    "electricityWH": 36,
+                    "gasL": 13
+                },
+                {
+                    "time": "05:00",
+                    "electricityWH": 36,
+                    "gasL": 8
+                },
+                {
+                    "time": "05:15",
+                    "electricityWH": 34,
+                    "gasL": 14
+                },
+                {
+                    "time": "05:30",
+                    "electricityWH": 31,
+                    "gasL": 14
+                },
+                {
+                    "time": "05:45",
+                    "electricityWH": 36,
+                    "gasL": 14
+                },
+                {
+                    "time": "06:00",
+                    "electricityWH": 32,
+                    "gasL": 8
+                },
+                {
+                    "time": "06:15",
+                    "electricityWH": 34,
+                    "gasL": 10
+                },
+                {
+                    "time": "06:30",
+                    "electricityWH": 38,
+                    "gasL": 13
+                },
+                {
+                    "time": "06:45",
+                    "electricityWH": 38,
+                    "gasL": 6
+                },
+                {
+                    "time": "07:00",
+                    "electricityWH": 37,
+                    "gasL": 12
+                },
+                {
+                    "time": "07:15",
+                    "electricityWH": 36,
+                    "gasL": 9
+                },
+                {
+                    "time": "07:30",
+                    "electricityWH": 39,
+                    "gasL": 10
+                },
+                {
+                    "time": "07:45",
+                    "electricityWH": 36,
+                    "gasL": 6
+                },
+                {
+                    "time": "08:00",
+                    "electricityWH": 33,
+                    "gasL": 12
+                },
+                {
+                    "time": "08:15",
+                    "electricityWH": 36,
+                    "gasL": 8
+                },
+                {
+                    "time": "08:30",
+                    "electricityWH": 32,
+                    "gasL": 8
+                },
+                {
+                    "time": "08:45",
+                    "electricityWH": 36,
+                    "gasL": 11
+                },
+                {
+                    "time": "09:00",
+                    "electricityWH": 33,
+                    "gasL": 9
+                },
+                {
+                    "time": "09:15",
+                    "electricityWH": 37,
+                    "gasL": 7
+                },
+                {
+                    "time": "09:30",
+                    "electricityWH": 39,
+                    "gasL": 13
+                },
+                {
+                    "time": "09:45",
+                    "electricityWH": 30,
+                    "gasL": 11
+                },
+                {
+                    "time": "10:00",
+                    "electricityWH": 39,
+                    "gasL": 8
+                },
+                {
+                    "time": "10:15",
+                    "electricityWH": 30,
+                    "gasL": 7
+                },
+                {
+                    "time": "10:30",
+                    "electricityWH": 38,
+                    "gasL": 5
+                },
+                {
+                    "time": "10:45",
+                    "electricityWH": 39,
+                    "gasL": 9
+                },
+                {
+                    "time": "11:00",
+                    "electricityWH": 34,
+                    "gasL": 14
+                },
+                {
+                    "time": "11:15",
+                    "electricityWH": 36,
+                    "gasL": 9
+                },
+                {
+                    "time": "11:30",
+                    "electricityWH": 34,
+                    "gasL": 7
+                },
+                {
+                    "time": "11:45",
+                    "electricityWH": 34,
+                    "gasL": 12
+                },
+                {
+                    "time": "12:00",
+                    "electricityWH": 33,
+                    "gasL": 7
+                },
+                {
+                    "time": "12:15",
+                    "electricityWH": 35,
+                    "gasL": 6
+                },
+                {
+                    "time": "12:30",
+                    "electricityWH": 38,
+                    "gasL": 8
+                },
+                {
+                    "time": "12:45",
+                    "electricityWH": 37,
+                    "gasL": 13
+                },
+                {
+                    "time": "13:00",
+                    "electricityWH": 38,
+                    "gasL": 14
+                },
+                {
+                    "time": "13:15",
+                    "electricityWH": 37,
+                    "gasL": 11
+                },
+                {
+                    "time": "13:30",
+                    "electricityWH": 35,
+                    "gasL": 12
+                },
+                {
+                    "time": "13:45",
+                    "electricityWH": 38,
+                    "gasL": 13
+                },
+                {
+                    "time": "14:00",
+                    "electricityWH": 39,
+                    "gasL": 8
+                },
+                {
+                    "time": "14:15",
+                    "electricityWH": 35,
+                    "gasL": 11
+                },
+                {
+                    "time": "14:30",
+                    "electricityWH": 39,
+                    "gasL": 7
+                },
+                {
+                    "time": "14:45",
+                    "electricityWH": 31,
+                    "gasL": 14
+                },
+                {
+                    "time": "15:00",
+                    "electricityWH": 39,
+                    "gasL": 8
+                },
+                {
+                    "time": "15:15",
+                    "electricityWH": 33,
+                    "gasL": 8
+                },
+                {
+                    "time": "15:30",
+                    "electricityWH": 37,
+                    "gasL": 8
+                },
+                {
+                    "time": "15:45",
+                    "electricityWH": 34,
+                    "gasL": 5
+                },
+                {
+                    "time": "16:00",
+                    "electricityWH": 34,
+                    "gasL": 8
+                },
+                {
+                    "time": "16:15",
+                    "electricityWH": 33,
+                    "gasL": 6
+                },
+                {
+                    "time": "16:30",
+                    "electricityWH": 39,
+                    "gasL": 8
+                },
+                {
+                    "time": "16:45",
+                    "electricityWH": 37,
+                    "gasL": 11
+                },
+                {
+                    "time": "17:00",
+                    "electricityWH": 32,
+                    "gasL": 12
+                },
+                {
+                    "time": "17:15",
+                    "electricityWH": 31,
+                    "gasL": 13
+                },
+                {
+                    "time": "17:30",
+                    "electricityWH": 36,
+                    "gasL": 13
+                },
+                {
+                    "time": "17:45",
+                    "electricityWH": 36,
+                    "gasL": 8
+                },
+                {
+                    "time": "18:00",
+                    "electricityWH": 33,
+                    "gasL": 8
+                },
+                {
+                    "time": "18:15",
+                    "electricityWH": 35,
+                    "gasL": 5
+                },
+                {
+                    "time": "18:30",
+                    "electricityWH": 34,
+                    "gasL": 6
+                },
+                {
+                    "time": "18:45",
+                    "electricityWH": 38,
+                    "gasL": 14
+                },
+                {
+                    "time": "19:00",
+                    "electricityWH": 37,
+                    "gasL": 9
+                },
+                {
+                    "time": "19:15",
+                    "electricityWH": 33,
+                    "gasL": 9
+                },
+                {
+                    "time": "19:30",
+                    "electricityWH": 34,
+                    "gasL": 7
+                },
+                {
+                    "time": "19:45",
+                    "electricityWH": 32,
+                    "gasL": 10
+                },
+                {
+                    "time": "20:00",
+                    "electricityWH": 33,
+                    "gasL": 10
+                },
+                {
+                    "time": "20:15",
+                    "electricityWH": 30,
+                    "gasL": 7
+                },
+                {
+                    "time": "20:30",
+                    "electricityWH": 36,
+                    "gasL": 7
+                },
+                {
+                    "time": "20:45",
+                    "electricityWH": 37,
+                    "gasL": 14
+                },
+                {
+                    "time": "21:00",
+                    "electricityWH": 33,
+                    "gasL": 10
+                },
+                {
+                    "time": "21:15",
+                    "electricityWH": 36,
+                    "gasL": 12
+                },
+                {
+                    "time": "21:30",
+                    "electricityWH": 36,
+                    "gasL": 10
+                },
+                {
+                    "time": "21:45",
+                    "electricityWH": 34,
+                    "gasL": 10
+                },
+                {
+                    "time": "22:00",
+                    "electricityWH": 38,
+                    "gasL": 12
+                },
+                {
+                    "time": "22:15",
+                    "electricityWH": 38,
+                    "gasL": 5
+                },
+                {
+                    "time": "22:30",
+                    "electricityWH": 35,
+                    "gasL": 12
+                },
+                {
+                    "time": "22:45",
+                    "electricityWH": 31,
+                    "gasL": 10
+                },
+                {
+                    "time": "23:00",
+                    "electricityWH": 37,
+                    "gasL": 6
+                },
+                {
+                    "time": "23:15",
+                    "electricityWH": 33,
+                    "gasL": 14
+                },
+                {
+                    "time": "23:30",
+                    "electricityWH": 33,
+                    "gasL": 13
+                },
+                {
+                    "time": "23:45",
+                    "electricityWH": 36,
+                    "gasL": 11
+                }
+            ],
+            "yesterday": [
+                {
+                    "time": "00:00",
+                    "electricityWH": 30,
+                    "gasL": 8
+                },
+                {
+                    "time": "00:15",
+                    "electricityWH": 38,
+                    "gasL": 13
+                },
+                {
+                    "time": "00:30",
+                    "electricityWH": 33,
+                    "gasL": 5
+                },
+                {
+                    "time": "00:45",
+                    "electricityWH": 39,
+                    "gasL": 12
+                },
+                {
+                    "time": "01:00",
+                    "electricityWH": 39,
+                    "gasL": 11
+                },
+                {
+                    "time": "01:15",
+                    "electricityWH": 37,
+                    "gasL": 8
+                },
+                {
+                    "time": "01:30",
+                    "electricityWH": 33,
+                    "gasL": 13
+                },
+                {
+                    "time": "01:45",
+                    "electricityWH": 30,
+                    "gasL": 10
+                },
+                {
+                    "time": "02:00",
+                    "electricityWH": 31,
+                    "gasL": 10
+                },
+                {
+                    "time": "02:15",
+                    "electricityWH": 34,
+                    "gasL": 5
+                },
+                {
+                    "time": "02:30",
+                    "electricityWH": 37,
+                    "gasL": 13
+                },
+                {
+                    "time": "02:45",
+                    "electricityWH": 30,
+                    "gasL": 11
+                },
+                {
+                    "time": "03:00",
+                    "electricityWH": 30,
+                    "gasL": 10
+                },
+                {
+                    "time": "03:15",
+                    "electricityWH": 33,
+                    "gasL": 9
+                },
+                {
+                    "time": "03:30",
+                    "electricityWH": 31,
+                    "gasL": 8
+                },
+                {
+                    "time": "03:45",
+                    "electricityWH": 36,
+                    "gasL": 12
+                },
+                {
+                    "time": "04:00",
+                    "electricityWH": 36,
+                    "gasL": 7
+                },
+                {
+                    "time": "04:15",
+                    "electricityWH": 33,
+                    "gasL": 10
+                },
+                {
+                    "time": "04:30",
+                    "electricityWH": 32,
+                    "gasL": 9
+                },
+                {
+                    "time": "04:45",
+                    "electricityWH": 35,
+                    "gasL": 6
+                },
+                {
+                    "time": "05:00",
+                    "electricityWH": 36,
+                    "gasL": 6
+                },
+                {
+                    "time": "05:15",
+                    "electricityWH": 33,
+                    "gasL": 5
+                },
+                {
+                    "time": "05:30",
+                    "electricityWH": 30,
+                    "gasL": 10
+                },
+                {
+                    "time": "05:45",
+                    "electricityWH": 36,
+                    "gasL": 9
+                },
+                {
+                    "time": "06:00",
+                    "electricityWH": 35,
+                    "gasL": 11
+                },
+                {
+                    "time": "06:15",
+                    "electricityWH": 30,
+                    "gasL": 14
+                },
+                {
+                    "time": "06:30",
+                    "electricityWH": 35,
+                    "gasL": 10
+                },
+                {
+                    "time": "06:45",
+                    "electricityWH": 39,
+                    "gasL": 10
+                },
+                {
+                    "time": "07:00",
+                    "electricityWH": 32,
+                    "gasL": 7
+                },
+                {
+                    "time": "07:15",
+                    "electricityWH": 32,
+                    "gasL": 9
+                },
+                {
+                    "time": "07:30",
+                    "electricityWH": 37,
+                    "gasL": 11
+                },
+                {
+                    "time": "07:45",
+                    "electricityWH": 39,
+                    "gasL": 14
+                },
+                {
+                    "time": "08:00",
+                    "electricityWH": 34,
+                    "gasL": 14
+                },
+                {
+                    "time": "08:15",
+                    "electricityWH": 36,
+                    "gasL": 7
+                },
+                {
+                    "time": "08:30",
+                    "electricityWH": 34,
+                    "gasL": 14
+                },
+                {
+                    "time": "08:45",
+                    "electricityWH": 32,
+                    "gasL": 13
+                },
+                {
+                    "time": "09:00",
+                    "electricityWH": 36,
+                    "gasL": 10
+                },
+                {
+                    "time": "09:15",
+                    "electricityWH": 33,
+                    "gasL": 5
+                },
+                {
+                    "time": "09:30",
+                    "electricityWH": 39,
+                    "gasL": 14
+                },
+                {
+                    "time": "09:45",
+                    "electricityWH": 32,
+                    "gasL": 9
+                },
+                {
+                    "time": "10:00",
+                    "electricityWH": 32,
+                    "gasL": 13
+                },
+                {
+                    "time": "10:15",
+                    "electricityWH": 38,
+                    "gasL": 7
+                },
+                {
+                    "time": "10:30",
+                    "electricityWH": 33,
+                    "gasL": 8
+                },
+                {
+                    "time": "10:45",
+                    "electricityWH": 35,
+                    "gasL": 13
+                },
+                {
+                    "time": "11:00",
+                    "electricityWH": 38,
+                    "gasL": 14
+                },
+                {
+                    "time": "11:15",
+                    "electricityWH": 31,
+                    "gasL": 11
+                },
+                {
+                    "time": "11:30",
+                    "electricityWH": 38,
+                    "gasL": 10
+                },
+                {
+                    "time": "11:45",
+                    "electricityWH": 31,
+                    "gasL": 13
+                },
+                {
+                    "time": "12:00",
+                    "electricityWH": 32,
+                    "gasL": 8
+                },
+                {
+                    "time": "12:15",
+                    "electricityWH": 32,
+                    "gasL": 8
+                },
+                {
+                    "time": "12:30",
+                    "electricityWH": 30,
+                    "gasL": 6
+                },
+                {
+                    "time": "12:45",
+                    "electricityWH": 31,
+                    "gasL": 14
+                },
+                {
+                    "time": "13:00",
+                    "electricityWH": 30,
+                    "gasL": 8
+                },
+                {
+                    "time": "13:15",
+                    "electricityWH": 37,
+                    "gasL": 10
+                },
+                {
+                    "time": "13:30",
+                    "electricityWH": 37,
+                    "gasL": 10
+                },
+                {
+                    "time": "13:45",
+                    "electricityWH": 34,
+                    "gasL": 10
+                },
+                {
+                    "time": "14:00",
+                    "electricityWH": 32,
+                    "gasL": 10
+                },
+                {
+                    "time": "14:15",
+                    "electricityWH": 30,
+                    "gasL": 8
+                },
+                {
+                    "time": "14:30",
+                    "electricityWH": 33,
+                    "gasL": 10
+                },
+                {
+                    "time": "14:45",
+                    "electricityWH": 30,
+                    "gasL": 10
+                },
+                {
+                    "time": "15:00",
+                    "electricityWH": 34,
+                    "gasL": 12
+                },
+                {
+                    "time": "15:15",
+                    "electricityWH": 33,
+                    "gasL": 6
+                },
+                {
+                    "time": "15:30",
+                    "electricityWH": 30,
+                    "gasL": 10
+                },
+                {
+                    "time": "15:45",
+                    "electricityWH": 37,
+                    "gasL": 7
+                },
+                {
+                    "time": "16:00",
+                    "electricityWH": 36,
+                    "gasL": 8
+                },
+                {
+                    "time": "16:15",
+                    "electricityWH": 30,
+                    "gasL": 13
+                },
+                {
+                    "time": "16:30",
+                    "electricityWH": 37,
+                    "gasL": 8
+                },
+                {
+                    "time": "16:45",
+                    "electricityWH": 31,
+                    "gasL": 9
+                },
+                {
+                    "time": "17:00",
+                    "electricityWH": 30,
+                    "gasL": 11
+                },
+                {
+                    "time": "17:15",
+                    "electricityWH": 32,
+                    "gasL": 10
+                },
+                {
+                    "time": "17:30",
+                    "electricityWH": 39,
+                    "gasL": 10
+                },
+                {
+                    "time": "17:45",
+                    "electricityWH": 35,
+                    "gasL": 12
+                },
+                {
+                    "time": "18:00",
+                    "electricityWH": 31,
+                    "gasL": 6
+                },
+                {
+                    "time": "18:15",
+                    "electricityWH": 31,
+                    "gasL": 10
+                },
+                {
+                    "time": "18:30",
+                    "electricityWH": 38,
+                    "gasL": 13
+                },
+                {
+                    "time": "18:45",
+                    "electricityWH": 37,
+                    "gasL": 12
+                },
+                {
+                    "time": "19:00",
+                    "electricityWH": 31,
+                    "gasL": 11
+                },
+                {
+                    "time": "19:15",
+                    "electricityWH": 31,
+                    "gasL": 5
+                },
+                {
+                    "time": "19:30",
+                    "electricityWH": 34,
+                    "gasL": 8
+                },
+                {
+                    "time": "19:45",
+                    "electricityWH": 37,
+                    "gasL": 5
+                },
+                {
+                    "time": "20:00",
+                    "electricityWH": 36,
+                    "gasL": 10
+                },
+                {
+                    "time": "20:15",
+                    "electricityWH": 35,
+                    "gasL": 12
+                },
+                {
+                    "time": "20:30",
+                    "electricityWH": 38,
+                    "gasL": 13
+                },
+                {
+                    "time": "20:45",
+                    "electricityWH": 35,
+                    "gasL": 7
+                },
+                {
+                    "time": "21:00",
+                    "electricityWH": 33,
+                    "gasL": 14
+                },
+                {
+                    "time": "21:15",
+                    "electricityWH": 33,
+                    "gasL": 14
+                },
+                {
+                    "time": "21:30",
+                    "electricityWH": 33,
+                    "gasL": 8
+                },
+                {
+                    "time": "21:45",
+                    "electricityWH": 30,
+                    "gasL": 14
+                },
+                {
+                    "time": "22:00",
+                    "electricityWH": 35,
+                    "gasL": 12
+                },
+                {
+                    "time": "22:15",
+                    "electricityWH": 34,
+                    "gasL": 8
+                },
+                {
+                    "time": "22:30",
+                    "electricityWH": 36,
+                    "gasL": 6
+                },
+                {
+                    "time": "22:45",
+                    "electricityWH": 38,
+                    "gasL": 5
+                },
+                {
+                    "time": "23:00",
+                    "electricityWH": 34,
+                    "gasL": 10
+                },
+                {
+                    "time": "23:15",
+                    "electricityWH": 30,
+                    "gasL": 12
+                },
+                {
+                    "time": "23:30",
+                    "electricityWH": 34,
+                    "gasL": 14
+                },
+                {
+                    "time": "23:45",
+                    "electricityWH": 36,
+                    "gasL": 6
+                }
+            ]
+        },
+        "history": {
+            "year": {
+                "january": {
+                    "electricity": [
+                        436,
+                        418,
+                        294,
+                        226,
+                        288,
+                        465,
+                        353,
+                        401,
+                        229,
+                        432,
+                        406,
+                        203,
+                        427,
+                        320,
+                        219,
+                        203,
+                        353,
+                        385,
+                        449,
+                        473,
+                        499,
+                        311,
+                        493,
+                        468,
+                        487,
+                        478,
+                        206,
+                        288,
+                        268,
+                        303
+                    ],
+                    "gas": [
+                        1438,
+                        1333,
+                        1682,
+                        1462,
+                        1591,
+                        1454,
+                        1458,
+                        1523,
+                        1418,
+                        1696,
+                        1241,
+                        1166,
+                        1612,
+                        1574,
+                        1664,
+                        1311,
+                        1232,
+                        1405,
+                        1526,
+                        1594,
+                        1145,
+                        1649,
+                        1129,
+                        1296,
+                        1562,
+                        1636,
+                        1533,
+                        1616,
+                        1459,
+                        1629
+                    ]
+                },
+                "february": {
+                    "electricity": [
+                        202,
+                        345,
+                        200,
+                        314,
+                        318,
+                        490,
+                        280,
+                        361,
+                        280,
+                        336,
+                        217,
+                        427,
+                        492,
+                        466,
+                        343,
+                        278,
+                        463,
+                        487,
+                        344,
+                        412,
+                        260,
+                        237,
+                        379,
+                        312,
+                        489,
+                        304,
+                        359,
+                        261,
+                        348,
+                        446
+                    ],
+                    "gas": [
+                        1273,
+                        1607,
+                        1625,
+                        1285,
+                        1493,
+                        1535,
+                        1537,
+                        1112,
+                        1128,
+                        1345,
+                        1122,
+                        1324,
+                        1399,
+                        1649,
+                        1572,
+                        1697,
+                        1392,
+                        1268,
+                        1476,
+                        1328,
+                        1556,
+                        1502,
+                        1177,
+                        1437,
+                        1213,
+                        1168,
+                        1627,
+                        1600,
+                        1541,
+                        1515
+                    ]
+                },
+                "march": {
+                    "electricity": [
+                        340,
+                        211,
+                        400,
+                        375,
+                        415,
+                        279,
+                        236,
+                        427,
+                        301,
+                        394,
+                        329,
+                        378,
+                        452,
+                        416,
+                        462,
+                        458,
+                        360,
+                        363,
+                        345,
+                        207,
+                        233,
+                        426,
+                        368,
+                        280,
+                        496,
+                        421,
+                        486,
+                        321,
+                        238,
+                        386
+                    ],
+                    "gas": [
+                        1650,
+                        1510,
+                        1345,
+                        1525,
+                        1423,
+                        1401,
+                        1231,
+                        1498,
+                        1678,
+                        1548,
+                        1344,
+                        1511,
+                        1688,
+                        1157,
+                        1188,
+                        1248,
+                        1261,
+                        1249,
+                        1417,
+                        1488,
+                        1698,
+                        1603,
+                        1652,
+                        1482,
+                        1389,
+                        1119,
+                        1327,
+                        1414,
+                        1518,
+                        1367
+                    ]
+                },
+                "april": {
+                    "electricity": [
+                        332,
+                        272,
+                        266,
+                        494,
+                        479,
+                        209,
+                        355,
+                        306,
+                        438,
+                        323,
+                        317,
+                        428,
+                        443,
+                        255,
+                        424,
+                        365,
+                        368,
+                        275,
+                        358,
+                        306,
+                        302,
+                        496,
+                        409,
+                        323,
+                        491,
+                        428,
+                        348,
+                        359,
+                        379,
+                        384
+                    ],
+                    "gas": [
+                        1405,
+                        1515,
+                        1456,
+                        1599,
+                        1209,
+                        1158,
+                        1668,
+                        1429,
+                        1303,
+                        1270,
+                        1310,
+                        1116,
+                        1532,
+                        1300,
+                        1495,
+                        1698,
+                        1523,
+                        1225,
+                        1430,
+                        1536,
+                        1609,
+                        1234,
+                        1372,
+                        1442,
+                        1454,
+                        1169,
+                        1273,
+                        1139,
+                        1450,
+                        1532
+                    ]
+                },
+                "may": {
+                    "electricity": [
+                        464,
+                        228,
+                        481,
+                        395,
+                        311,
+                        368,
+                        486,
+                        420,
+                        245,
+                        237,
+                        474,
+                        200,
+                        467,
+                        206,
+                        287,
+                        393,
+                        426,
+                        353,
+                        311,
+                        415,
+                        236,
+                        227,
+                        214,
+                        363,
+                        442,
+                        286,
+                        247,
+                        372,
+                        285,
+                        319
+                    ],
+                    "gas": [
+                        1501,
+                        1246,
+                        1310,
+                        1176,
+                        1413,
+                        1360,
+                        1330,
+                        1534,
+                        1253,
+                        1127,
+                        1291,
+                        1653,
+                        1698,
+                        1437,
+                        1291,
+                        1312,
+                        1309,
+                        1667,
+                        1499,
+                        1486,
+                        1392,
+                        1624,
+                        1370,
+                        1605,
+                        1114,
+                        1622,
+                        1338,
+                        1552,
+                        1160,
+                        1217
+                    ]
+                },
+                "june": {
+                    "electricity": [
+                        233,
+                        223,
+                        467,
+                        488,
+                        349,
+                        273,
+                        441,
+                        453,
+                        367,
+                        348,
+                        486,
+                        313,
+                        465,
+                        470,
+                        274,
+                        468,
+                        235,
+                        490,
+                        228,
+                        464,
+                        289,
+                        353,
+                        324,
+                        491,
+                        338,
+                        476,
+                        217,
+                        442,
+                        369,
+                        225
+                    ],
+                    "gas": [
+                        1628,
+                        1168,
+                        1430,
+                        1417,
+                        1289,
+                        1630,
+                        1455,
+                        1650,
+                        1498,
+                        1255,
+                        1384,
+                        1613,
+                        1683,
+                        1640,
+                        1558,
+                        1518,
+                        1494,
+                        1509,
+                        1430,
+                        1254,
+                        1538,
+                        1607,
+                        1504,
+                        1105,
+                        1260,
+                        1579,
+                        1599,
+                        1645,
+                        1372,
+                        1233
+                    ]
+                },
+                "july": {
+                    "electricity": [
+                        459,
+                        299,
+                        479,
+                        310,
+                        440,
+                        465,
+                        440,
+                        452,
+                        225,
+                        285,
+                        498,
+                        257,
+                        358,
+                        415,
+                        476,
+                        286,
+                        260,
+                        320,
+                        357,
+                        244,
+                        369,
+                        458,
+                        215,
+                        348,
+                        316,
+                        485,
+                        238,
+                        467,
+                        306,
+                        335
+                    ],
+                    "gas": [
+                        1400,
+                        1231,
+                        1621,
+                        1638,
+                        1268,
+                        1244,
+                        1299,
+                        1465,
+                        1456,
+                        1210,
+                        1683,
+                        1649,
+                        1563,
+                        1658,
+                        1640,
+                        1451,
+                        1189,
+                        1333,
+                        1226,
+                        1213,
+                        1479,
+                        1580,
+                        1547,
+                        1603,
+                        1420,
+                        1518,
+                        1252,
+                        1596,
+                        1491,
+                        1173
+                    ]
+                },
+                "august": {
+                    "electricity": [
+                        206,
+                        414,
+                        450,
+                        312,
+                        486,
+                        447,
+                        333,
+                        228,
+                        233,
+                        240,
+                        315,
+                        219,
+                        421,
+                        325,
+                        440,
+                        359,
+                        214,
+                        266,
+                        228,
+                        207,
+                        277,
+                        487,
+                        400,
+                        475,
+                        333,
+                        417,
+                        230,
+                        301,
+                        288,
+                        366
+                    ],
+                    "gas": [
+                        1532,
+                        1521,
+                        1515,
+                        1339,
+                        1128,
+                        1439,
+                        1333,
+                        1197,
+                        1627,
+                        1273,
+                        1215,
+                        1672,
+                        1541,
+                        1505,
+                        1598,
+                        1450,
+                        1311,
+                        1219,
+                        1528,
+                        1220,
+                        1575,
+                        1522,
+                        1465,
+                        1677,
+                        1322,
+                        1388,
+                        1154,
+                        1312,
+                        1111,
+                        1356
+                    ]
+                },
+                "september": {
+                    "electricity": [
+                        249,
+                        310,
+                        366,
+                        345,
+                        417,
+                        408,
+                        449,
+                        373,
+                        316,
+                        337,
+                        416,
+                        204,
+                        451,
+                        246,
+                        322,
+                        407,
+                        368,
+                        404,
+                        416,
+                        292,
+                        308,
+                        427,
+                        422,
+                        257,
+                        485,
+                        264,
+                        308,
+                        479,
+                        458,
+                        288
+                    ],
+                    "gas": [
+                        1514,
+                        1244,
+                        1582,
+                        1457,
+                        1481,
+                        1246,
+                        1319,
+                        1462,
+                        1314,
+                        1128,
+                        1395,
+                        1618,
+                        1389,
+                        1220,
+                        1564,
+                        1206,
+                        1441,
+                        1248,
+                        1618,
+                        1309,
+                        1113,
+                        1522,
+                        1636,
+                        1453,
+                        1229,
+                        1622,
+                        1554,
+                        1394,
+                        1600,
+                        1140
+                    ]
+                },
+                "october": {
+                    "electricity": [
+                        232,
+                        445,
+                        245,
+                        236,
+                        227,
+                        407,
+                        466,
+                        426,
+                        418,
+                        495,
+                        376,
+                        445,
+                        300,
+                        371,
+                        270,
+                        494,
+                        244,
+                        296,
+                        256,
+                        307,
+                        369,
+                        266,
+                        372,
+                        305,
+                        475,
+                        454,
+                        401,
+                        320,
+                        301,
+                        275
+                    ],
+                    "gas": [
+                        1619,
+                        1315,
+                        1396,
+                        1613,
+                        1686,
+                        1352,
+                        1592,
+                        1218,
+                        1454,
+                        1104,
+                        1620,
+                        1673,
+                        1282,
+                        1117,
+                        1100,
+                        1400,
+                        1195,
+                        1394,
+                        1362,
+                        1596,
+                        1119,
+                        1551,
+                        1325,
+                        1250,
+                        1280,
+                        1239,
+                        1446,
+                        1556,
+                        1314,
+                        1243
+                    ]
+                },
+                "november": {
+                    "electricity": [
+                        269,
+                        497,
+                        371,
+                        347,
+                        367,
+                        426,
+                        241,
+                        469,
+                        306,
+                        401,
+                        463,
+                        352,
+                        401,
+                        298,
+                        298,
+                        377,
+                        390,
+                        282,
+                        336,
+                        416,
+                        206,
+                        379,
+                        346,
+                        220,
+                        279,
+                        232,
+                        487,
+                        250,
+                        291,
+                        487
+                    ],
+                    "gas": [
+                        1658,
+                        1609,
+                        1278,
+                        1164,
+                        1224,
+                        1488,
+                        1396,
+                        1579,
+                        1271,
+                        1110,
+                        1125,
+                        1163,
+                        1167,
+                        1618,
+                        1269,
+                        1471,
+                        1308,
+                        1437,
+                        1178,
+                        1285,
+                        1616,
+                        1243,
+                        1345,
+                        1556,
+                        1694,
+                        1233,
+                        1428,
+                        1397,
+                        1625,
+                        1344
+                    ]
+                },
+                "december": {
+                    "electricity": [
+                        278,
+                        411,
+                        203,
+                        287,
+                        308,
+                        356,
+                        415,
+                        464,
+                        377,
+                        358,
+                        293,
+                        456,
+                        423,
+                        382,
+                        348,
+                        485,
+                        215,
+                        384,
+                        211,
+                        334,
+                        321,
+                        261,
+                        206,
+                        405,
+                        428,
+                        453,
+                        455,
+                        373,
+                        222,
+                        413
+                    ],
+                    "gas": [
+                        1144,
+                        1598,
+                        1267,
+                        1215,
+                        1352,
+                        1689,
+                        1592,
+                        1510,
+                        1603,
+                        1234,
+                        1267,
+                        1306,
+                        1481,
+                        1444,
+                        1275,
+                        1599,
+                        1347,
+                        1434,
+                        1609,
+                        1607,
+                        1616,
+                        1384,
+                        1550,
+                        1374,
+                        1598,
+                        1496,
+                        1269,
+                        1589,
+                        1147,
+                        1303
+                    ]
+                }
+            }
+        }
+    },
+    "consumption_tips": [
+        {
+            "title": "Weatherize Your Home",
+            "text": "Weatherizing your home helps you save money by saving energy, and it can also improve the comfort of your home. Home weatherization includes sealing air leaks and adding insulation.\n\nAir Sealing\n\nAir leaks are among the greatest sources of energy loss in a home. One of the quickest energy- and money-saving tasks you can do is caulk, seal, and weatherstrip all seams, cracks, and openings to the outside. By sealing uncontrolled air leaks, you can save 10%–20% on your heating and cooling bills. Following your energy audit, you may have a number of recommended energysaving projects you are considering. Prioritize weatherization projects to quickly improve the efficiency and comfort of your home.\n\nTo identify air leaks, check around your walls, ceilings, windows, doors, lighting and plumbing fixtures, switches, and electrical outlets. Look for gaps, improperly applied caulk and weatherstripping, and doors and windows that don’t close tightly. On a windy day, carefully hold a lit incense stick or a smoke pen next to your windows, doors, electrical boxes, plumbing fixtures, electrical outlets, ceiling fixtures, attic hatches, and other places where air may leak. If the smoke stream travels horizontally, you have located an air leak.\n\n After you identify all air leaks, do the following:\n\n• Weatherstrip doors and windows.\n• Caulk and seal air leaks where plumbing, ducting, or electrical wiring comes through walls, floors, ceilings, and soffits over cabinets.\n• Install foam gaskets behind outlet and switch plates on walls.\n • Use foam sealant on larger gaps around window trims, baseboards, and other places where air may leak out.\n• Check for open fireplace dampers and make sure they properly close.\n• Consider an inflatable chimney balloon to seal your fireplace flue when not in use. Fireplace flues are made from metal, and repeated heating and cooling can cause the metal to warp or break over time, creating a channel for air loss. Inflatable chimney balloons are made from durable plastic and can be removed easily and reused hundreds of times. If you forget to remove the balloon before making a fire, the balloon will automatically deflate within seconds of coming into contact with heat."
+        },
+        {
+            "title": "Heat and Cool Your Home Efficiently",
+            "text": "Heating and cooling together are the largest energy users in your home, typically making up about 35%–40% of your energy use.\nNo matter what kind of heating and cooling system you have in your house, you can save money and increase your comfort by properly using, maintaining, and upgrading your equipment. But remember, any upgrades to heating and cooling equipment should consider the effect on all areas of the house (known as a whole-house, systems-based approach) to maximize energy savings and ensure health and safety. Most importantly, work with a contractor to ensure that the upgraded heating and cooling system is both properly sized for your house and installed to deliver its full capacity.\n<h1>Smart and Programmable Thermostats</h1>\n Being smart about how you control your temperature settings will help you save money and stay comfortable in your home. You can save as much as 10% per year on heating and cooling by turning your thermostat down 7°–10°F for 8 hours a day in the fall and winter; turn it up in the spring and summer. (If you have a heat pump, don’t do this without a smart or programmable thermostat designed for use with heat pumps.) A smart thermostat is a Wi-Fi enabled device that automatically adjusts heating and cooling temperature settings for optimal performance. Smart thermostats that earn the ENERGY STAR label have been independently certified, based on actual field data, to deliver energy savings. Smart thermostats provide convenience, insight, and control."
+        },
+        {
+            "title": "Design Your Home for Efficiency",
+            "text": "When you design a new home or a renovation, consider how any one change will affect the energy efficiency, comfort, durability, health, and safety of the whole home (known as a whole-home systems approach).\nEnergy efficient design approaches and features such as landscaping, windows, passive solar design, and cool roofs can save you energy and money while appealing to your design aesthetic.\nThe ENERGY STAR Certified New Homes or the Zero Energy Ready Home programs are good sources of information if you are designing a new home. If you are remodeling, consider the suggestions in the “No Regrets Remodeling” guide. See the References section for links to these resources.\n<h1>Landscaping</h1>\nWell-designed landscaping can deliver effective shade, act as a windbreak, and reduce your heating and cooling bills.\nThe right landscaping plan depends on your climate and your home’s microclimate—the area immediately surrounding your home. For low-maintenance, healthy, energy-saving landscaping, use plant species that are adapted to the local climate. Also consider ways to save water when planning and maintaining your landscape.\n<h3>Shade</h3>\nShading can reduce heat gain from the sun and cut air conditioning costs. Deciduous trees with high, spreading crowns planted on the south side of your home will shade your roof in the summer and allow warmth from the sun to reach your home in the winter. Trees, shrubs, and groundcover plants can shade the ground and pavement around the home, cooling the air before it reaches your home’s walls and windows. Shrubs and trellised vines can also shade walls and windows."
+        }
     ]
-  },
-  "consumption": {
-    "my_ranking_total": {
-      "electricity": 100,
-      "gas": 100
-    },
-    "recent": {
-      "today": [
-          {
-              "time": "00:00",
-              "electricityWH": 59,
-              "gasL": 48
-          },
-          {
-              "time": "00:15",
-              "electricityWH": 53,
-              "gasL": 44
-          },
-          {
-              "time": "00:30",
-              "electricityWH": 46,
-              "gasL": 51
-          },
-          {
-              "time": "00:45",
-              "electricityWH": 50,
-              "gasL": 46
-          },
-          {
-              "time": "01:00",
-              "electricityWH": 45,
-              "gasL": 44
-          },
-          {
-              "time": "01:15",
-              "electricityWH": 54,
-              "gasL": 40
-          },
-          {
-              "time": "01:30",
-              "electricityWH": 50,
-              "gasL": 41
-          },
-          {
-              "time": "01:45",
-              "electricityWH": 52,
-              "gasL": 40
-          },
-          {
-              "time": "02:00",
-              "electricityWH": 50,
-              "gasL": 47
-          },
-          {
-              "time": "02:15",
-              "electricityWH": 48,
-              "gasL": 55
-          },
-          {
-              "time": "02:30",
-              "electricityWH": 51,
-              "gasL": 54
-          },
-          {
-              "time": "02:45",
-              "electricityWH": 52,
-              "gasL": 52
-          },
-          {
-              "time": "03:00",
-              "electricityWH": 45,
-              "gasL": 51
-          },
-          {
-              "time": "03:15",
-              "electricityWH": 56,
-              "gasL": 43
-          },
-          {
-              "time": "03:30",
-              "electricityWH": 56,
-              "gasL": 51
-          },
-          {
-              "time": "03:45",
-              "electricityWH": 43,
-              "gasL": 49
-          },
-          {
-              "time": "04:00",
-              "electricityWH": 56,
-              "gasL": 51
-          },
-          {
-              "time": "04:15",
-              "electricityWH": 51,
-              "gasL": 43
-          },
-          {
-              "time": "04:30",
-              "electricityWH": 52,
-              "gasL": 46
-          },
-          {
-              "time": "04:45",
-              "electricityWH": 52,
-              "gasL": 50
-          },
-          {
-              "time": "05:00",
-              "electricityWH": 57,
-              "gasL": 50
-          },
-          {
-              "time": "05:15",
-              "electricityWH": 51,
-              "gasL": 57
-          },
-          {
-              "time": "05:30",
-              "electricityWH": 43,
-              "gasL": 40
-          },
-          {
-              "time": "05:45",
-              "electricityWH": 51,
-              "gasL": 46
-          },
-          {
-              "time": "06:00",
-              "electricityWH": 59,
-              "gasL": 55
-          },
-          {
-              "time": "06:15",
-              "electricityWH": 56,
-              "gasL": 42
-          },
-          {
-              "time": "06:30",
-              "electricityWH": 48,
-              "gasL": 45
-          },
-          {
-              "time": "06:45",
-              "electricityWH": 50,
-              "gasL": 52
-          },
-          {
-              "time": "07:00",
-              "electricityWH": 56,
-              "gasL": 46
-          },
-          {
-              "time": "07:15",
-              "electricityWH": 53,
-              "gasL": 58
-          },
-          {
-              "time": "07:30",
-              "electricityWH": 51,
-              "gasL": 48
-          },
-          {
-              "time": "07:45",
-              "electricityWH": 56,
-              "gasL": 53
-          },
-          {
-              "time": "08:00",
-              "electricityWH": 53,
-              "gasL": 45
-          },
-          {
-              "time": "08:15",
-              "electricityWH": 57,
-              "gasL": 51
-          },
-          {
-              "time": "08:30",
-              "electricityWH": 56,
-              "gasL": 58
-          },
-          {
-              "time": "08:45",
-              "electricityWH": 49,
-              "gasL": 46
-          },
-          {
-              "time": "09:00",
-              "electricityWH": 43,
-              "gasL": 43
-          },
-          {
-              "time": "09:15",
-              "electricityWH": 59,
-              "gasL": 51
-          },
-          {
-              "time": "09:30",
-              "electricityWH": 48,
-              "gasL": 48
-          },
-          {
-              "time": "09:45",
-              "electricityWH": 50,
-              "gasL": 45
-          },
-          {
-              "time": "10:00",
-              "electricityWH": 47,
-              "gasL": 49
-          },
-          {
-              "time": "10:15",
-              "electricityWH": 56,
-              "gasL": 54
-          },
-          {
-              "time": "10:30",
-              "electricityWH": 49,
-              "gasL": 40
-          },
-          {
-              "time": "10:45",
-              "electricityWH": 48,
-              "gasL": 43
-          },
-          {
-              "time": "11:00",
-              "electricityWH": 50,
-              "gasL": 58
-          },
-          {
-              "time": "11:15",
-              "electricityWH": 42,
-              "gasL": 44
-          },
-          {
-              "time": "11:30",
-              "electricityWH": 59,
-              "gasL": 46
-          },
-          {
-              "time": "11:45",
-              "electricityWH": 56,
-              "gasL": 47
-          },
-          {
-              "time": "12:00",
-              "electricityWH": 40,
-              "gasL": 55
-          },
-          {
-              "time": "12:15",
-              "electricityWH": 51,
-              "gasL": 56
-          },
-          {
-              "time": "12:30",
-              "electricityWH": 510,
-              "gasL": 57
-          },
-          {
-              "time": "12:45",
-              "electricityWH": 400,
-              "gasL": 46
-          },
-          {
-              "time": "13:00",
-              "electricityWH": 47,
-              "gasL": 42
-          },
-          {
-              "time": "13:15",
-              "electricityWH": 46,
-              "gasL": 55
-          },
-          {
-              "time": "13:30",
-              "electricityWH": 41,
-              "gasL": 41
-          },
-          {
-              "time": "13:45",
-              "electricityWH": 48,
-              "gasL": 59
-          },
-          {
-              "time": "14:00",
-              "electricityWH": 56,
-              "gasL": 54
-          },
-          {
-              "time": "14:15",
-              "electricityWH": 49,
-              "gasL": 53
-          },
-          {
-              "time": "14:30",
-              "electricityWH": 57,
-              "gasL": 55
-          },
-          {
-              "time": "14:45",
-              "electricityWH": 56,
-              "gasL": 50
-          },
-          {
-              "time": "15:00",
-              "electricityWH": 50,
-              "gasL": 59
-          },
-          {
-              "time": "15:15",
-              "electricityWH": 58,
-              "gasL": 58
-          },
-          {
-              "time": "15:30",
-              "electricityWH": 49,
-              "gasL": 40
-          },
-          {
-              "time": "15:45",
-              "electricityWH": 56,
-              "gasL": 46
-          },
-          {
-              "time": "16:00",
-              "electricityWH": 59,
-              "gasL": 56
-          },
-          {
-              "time": "16:15",
-              "electricityWH": 48,
-              "gasL": 51
-          },
-          {
-              "time": "16:30",
-              "electricityWH": 44,
-              "gasL": 42
-          },
-          {
-              "time": "16:45",
-              "electricityWH": 40,
-              "gasL": 44
-          },
-          {
-              "time": "17:00",
-              "electricityWH": 50,
-              "gasL": 58
-          },
-          {
-              "time": "17:15",
-              "electricityWH": 47,
-              "gasL": 45
-          },
-          {
-              "time": "17:30",
-              "electricityWH": 51,
-              "gasL": 55
-          },
-          {
-              "time": "17:45",
-              "electricityWH": 55,
-              "gasL": 42
-          },
-          {
-              "time": "18:00",
-              "electricityWH": 200,
-              "gasL": 53
-          },
-          {
-              "time": "18:15",
-              "electricityWH": 200,
-              "gasL": 46
-          },
-          {
-              "time": "18:30",
-              "electricityWH": 200,
-              "gasL": 49
-          },
-          {
-              "time": "18:45",
-              "electricityWH": 200,
-              "gasL": 51
-          },
-          {
-              "time": "19:00",
-              "electricityWH": 200,
-              "gasL": 46
-          },
-          {
-              "time": "19:15",
-              "electricityWH": 200,
-              "gasL": 51
-          },
-          {
-              "time": "19:30",
-              "electricityWH": 200,
-              "gasL": 51
-          },
-          {
-              "time": "19:45",
-              "electricityWH": 200,
-              "gasL": 49
-          },
-          {
-              "time": "20:00",
-              "electricityWH": 59,
-              "gasL": 47
-          },
-          {
-              "time": "20:15",
-              "electricityWH": 58,
-              "gasL": 51
-          },
-          {
-              "time": "20:30",
-              "electricityWH": 41,
-              "gasL": 59
-          },
-          {
-              "time": "20:45",
-              "electricityWH": 56,
-              "gasL": 57
-          },
-          {
-              "time": "21:00",
-              "electricityWH": 43,
-              "gasL": 59
-          },
-          {
-              "time": "21:15",
-              "electricityWH": 53,
-              "gasL": 42
-          },
-          {
-              "time": "21:30",
-              "electricityWH": 53,
-              "gasL": 48
-          },
-          {
-              "time": "21:45",
-              "electricityWH": 49,
-              "gasL": 48
-          },
-          {
-              "time": "22:00",
-              "electricityWH": 56,
-              "gasL": 55
-          },
-          {
-              "time": "22:15",
-              "electricityWH": 43,
-              "gasL": 50
-          },
-          {
-              "time": "22:30",
-              "electricityWH": 52,
-              "gasL": 40
-          },
-          {
-              "time": "22:45",
-              "electricityWH": 59,
-              "gasL": 52
-          },
-          {
-              "time": "23:00",
-              "electricityWH": 42,
-              "gasL": 47
-          },
-          {
-              "time": "23:15",
-              "electricityWH": 56,
-              "gasL": 46
-          },
-          {
-              "time": "23:30",
-              "electricityWH": 51,
-              "gasL": 58
-          },
-          {
-              "time": "23:45",
-              "electricityWH": 41,
-              "gasL": 59
-          }
-      ],
-      "yesterday": [
-          {
-              "time": "00:00",
-              "electricityWH": 46,
-              "gasL": 59
-          },
-          {
-              "time": "00:15",
-              "electricityWH": 42,
-              "gasL": 56
-          },
-          {
-              "time": "00:30",
-              "electricityWH": 48,
-              "gasL": 46
-          },
-          {
-              "time": "00:45",
-              "electricityWH": 59,
-              "gasL": 58
-          },
-          {
-              "time": "01:00",
-              "electricityWH": 43,
-              "gasL": 43
-          },
-          {
-              "time": "01:15",
-              "electricityWH": 46,
-              "gasL": 54
-          },
-          {
-              "time": "01:30",
-              "electricityWH": 41,
-              "gasL": 45
-          },
-          {
-              "time": "01:45",
-              "electricityWH": 50,
-              "gasL": 46
-          },
-          {
-              "time": "02:00",
-              "electricityWH": 40,
-              "gasL": 44
-          },
-          {
-              "time": "02:15",
-              "electricityWH": 50,
-              "gasL": 41
-          },
-          {
-              "time": "02:30",
-              "electricityWH": 51,
-              "gasL": 56
-          },
-          {
-              "time": "02:45",
-              "electricityWH": 43,
-              "gasL": 41
-          },
-          {
-              "time": "03:00",
-              "electricityWH": 54,
-              "gasL": 43
-          },
-          {
-              "time": "03:15",
-              "electricityWH": 41,
-              "gasL": 55
-          },
-          {
-              "time": "03:30",
-              "electricityWH": 50,
-              "gasL": 47
-          },
-          {
-              "time": "03:45",
-              "electricityWH": 46,
-              "gasL": 42
-          },
-          {
-              "time": "04:00",
-              "electricityWH": 45,
-              "gasL": 46
-          },
-          {
-              "time": "04:15",
-              "electricityWH": 50,
-              "gasL": 40
-          },
-          {
-              "time": "04:30",
-              "electricityWH": 55,
-              "gasL": 41
-          },
-          {
-              "time": "04:45",
-              "electricityWH": 46,
-              "gasL": 46
-          },
-          {
-              "time": "05:00",
-              "electricityWH": 48,
-              "gasL": 42
-          },
-          {
-              "time": "05:15",
-              "electricityWH": 51,
-              "gasL": 44
-          },
-          {
-              "time": "05:30",
-              "electricityWH": 56,
-              "gasL": 58
-          },
-          {
-              "time": "05:45",
-              "electricityWH": 46,
-              "gasL": 45
-          },
-          {
-              "time": "06:00",
-              "electricityWH": 54,
-              "gasL": 45
-          },
-          {
-              "time": "06:15",
-              "electricityWH": 42,
-              "gasL": 41
-          },
-          {
-              "time": "06:30",
-              "electricityWH": 51,
-              "gasL": 42
-          },
-          {
-              "time": "06:45",
-              "electricityWH": 53,
-              "gasL": 55
-          },
-          {
-              "time": "07:00",
-              "electricityWH": 49,
-              "gasL": 58
-          },
-          {
-              "time": "07:15",
-              "electricityWH": 54,
-              "gasL": 56
-          },
-          {
-              "time": "07:30",
-              "electricityWH": 41,
-              "gasL": 48
-          },
-          {
-              "time": "07:45",
-              "electricityWH": 43,
-              "gasL": 49
-          },
-          {
-              "time": "08:00",
-              "electricityWH": 44,
-              "gasL": 54
-          },
-          {
-              "time": "08:15",
-              "electricityWH": 53,
-              "gasL": 40
-          },
-          {
-              "time": "08:30",
-              "electricityWH": 59,
-              "gasL": 50
-          },
-          {
-              "time": "08:45",
-              "electricityWH": 45,
-              "gasL": 49
-          },
-          {
-              "time": "09:00",
-              "electricityWH": 54,
-              "gasL": 49
-          },
-          {
-              "time": "09:15",
-              "electricityWH": 57,
-              "gasL": 55
-          },
-          {
-              "time": "09:30",
-              "electricityWH": 43,
-              "gasL": 55
-          },
-          {
-              "time": "09:45",
-              "electricityWH": 55,
-              "gasL": 42
-          },
-          {
-              "time": "10:00",
-              "electricityWH": 40,
-              "gasL": 40
-          },
-          {
-              "time": "10:15",
-              "electricityWH": 47,
-              "gasL": 54
-          },
-          {
-              "time": "10:30",
-              "electricityWH": 44,
-              "gasL": 56
-          },
-          {
-              "time": "10:45",
-              "electricityWH": 43,
-              "gasL": 57
-          },
-          {
-              "time": "11:00",
-              "electricityWH": 46,
-              "gasL": 59
-          },
-          {
-              "time": "11:15",
-              "electricityWH": 57,
-              "gasL": 56
-          },
-          {
-              "time": "11:30",
-              "electricityWH": 52,
-              "gasL": 55
-          },
-          {
-              "time": "11:45",
-              "electricityWH": 54,
-              "gasL": 41
-          },
-          {
-              "time": "12:00",
-              "electricityWH": 56,
-              "gasL": 49
-          },
-          {
-              "time": "12:15",
-              "electricityWH": 540,
-              "gasL": 52
-          },
-          {
-              "time": "12:30",
-              "electricityWH": 440,
-              "gasL": 52
-          },
-          {
-              "time": "12:45",
-              "electricityWH": 42,
-              "gasL": 49
-          },
-          {
-              "time": "13:00",
-              "electricityWH": 51,
-              "gasL": 45
-          },
-          {
-              "time": "13:15",
-              "electricityWH": 59,
-              "gasL": 52
-          },
-          {
-              "time": "13:30",
-              "electricityWH": 42,
-              "gasL": 54
-          },
-          {
-              "time": "13:45",
-              "electricityWH": 47,
-              "gasL": 49
-          },
-          {
-              "time": "14:00",
-              "electricityWH": 59,
-              "gasL": 58
-          },
-          {
-              "time": "14:15",
-              "electricityWH": 50,
-              "gasL": 49
-          },
-          {
-              "time": "14:30",
-              "electricityWH": 43,
-              "gasL": 40
-          },
-          {
-              "time": "14:45",
-              "electricityWH": 50,
-              "gasL": 50
-          },
-          {
-              "time": "15:00",
-              "electricityWH": 40,
-              "gasL": 43
-          },
-          {
-              "time": "15:15",
-              "electricityWH": 49,
-              "gasL": 41
-          },
-          {
-              "time": "15:30",
-              "electricityWH": 56,
-              "gasL": 42
-          },
-          {
-              "time": "15:45",
-              "electricityWH": 51,
-              "gasL": 50
-          },
-          {
-              "time": "16:00",
-              "electricityWH": 53,
-              "gasL": 55
-          },
-          {
-              "time": "16:15",
-              "electricityWH": 53,
-              "gasL": 56
-          },
-          {
-              "time": "16:30",
-              "electricityWH": 51,
-              "gasL": 49
-          },
-          {
-              "time": "16:45",
-              "electricityWH": 47,
-              "gasL": 52
-          },
-          {
-              "time": "17:00",
-              "electricityWH": 58,
-              "gasL": 50
-          },
-          {
-              "time": "17:15",
-              "electricityWH": 54,
-              "gasL": 40
-          },
-          {
-              "time": "17:30",
-              "electricityWH": 47,
-              "gasL": 43
-          },
-          {
-              "time": "17:45",
-              "electricityWH": 200,
-              "gasL": 59
-          },
-          {
-              "time": "18:00",
-              "electricityWH": 200,
-              "gasL": 59
-          },
-          {
-              "time": "18:15",
-              "electricityWH": 200,
-              "gasL": 45
-          },
-          {
-              "time": "18:30",
-              "electricityWH": 200,
-              "gasL": 50
-          },
-          {
-              "time": "18:45",
-              "electricityWH": 200,
-              "gasL": 58
-          },
-          {
-              "time": "19:00",
-              "electricityWH": 200,
-              "gasL": 54
-          },
-          {
-              "time": "19:15",
-              "electricityWH": 200,
-              "gasL": 45
-          },
-          {
-              "time": "19:30",
-              "electricityWH": 200,
-              "gasL": 47
-          },
-          {
-              "time": "19:45",
-              "electricityWH": 56,
-              "gasL": 48
-          },
-          {
-              "time": "20:00",
-              "electricityWH": 56,
-              "gasL": 56
-          },
-          {
-              "time": "20:15",
-              "electricityWH": 46,
-              "gasL": 46
-          },
-          {
-              "time": "20:30",
-              "electricityWH": 45,
-              "gasL": 44
-          },
-          {
-              "time": "20:45",
-              "electricityWH": 52,
-              "gasL": 50
-          },
-          {
-              "time": "21:00",
-              "electricityWH": 47,
-              "gasL": 55
-          },
-          {
-              "time": "21:15",
-              "electricityWH": 41,
-              "gasL": 54
-          },
-          {
-              "time": "21:30",
-              "electricityWH": 40,
-              "gasL": 40
-          },
-          {
-              "time": "21:45",
-              "electricityWH": 45,
-              "gasL": 56
-          },
-          {
-              "time": "22:00",
-              "electricityWH": 41,
-              "gasL": 41
-          },
-          {
-              "time": "22:15",
-              "electricityWH": 56,
-              "gasL": 59
-          },
-          {
-              "time": "22:30",
-              "electricityWH": 56,
-              "gasL": 47
-          },
-          {
-              "time": "22:45",
-              "electricityWH": 47,
-              "gasL": 58
-          },
-          {
-              "time": "23:00",
-              "electricityWH": 53,
-              "gasL": 49
-          },
-          {
-              "time": "23:15",
-              "electricityWH": 55,
-              "gasL": 54
-          },
-          {
-              "time": "23:30",
-              "electricityWH": 43,
-              "gasL": 55
-          },
-          {
-              "time": "23:45",
-              "electricityWH": 45,
-              "gasL": 57
-          }
-      ]
-  },
-    "history": {
-      "year": {
-        "january": {"electricity":[436,418,294,226,288,465,353,401,229,432,406,203,427,320,219,203,353,385,449,473,499,311,493,468,487,478,206,288,268,303],"gas":[1438,1333,1682,1462,1591,1454,1458,1523,1418,1696,1241,1166,1612,1574,1664,1311,1232,1405,1526,1594,1145,1649,1129,1296,1562,1636,1533,1616,1459,1629]},
-        "february": {"electricity":[202,345,200,314,318,490,280,361,280,336,217,427,492,466,343,278,463,487,344,412,260,237,379,312,489,304,359,261,348,446],"gas":[1273,1607,1625,1285,1493,1535,1537,1112,1128,1345,1122,1324,1399,1649,1572,1697,1392,1268,1476,1328,1556,1502,1177,1437,1213,1168,1627,1600,1541,1515]},
-        "march": {"electricity":[340,211,400,375,415,279,236,427,301,394,329,378,452,416,462,458,360,363,345,207,233,426,368,280,496,421,486,321,238,386],"gas":[1650,1510,1345,1525,1423,1401,1231,1498,1678,1548,1344,1511,1688,1157,1188,1248,1261,1249,1417,1488,1698,1603,1652,1482,1389,1119,1327,1414,1518,1367]},
-        "april": {"electricity":[332,272,266,494,479,209,355,306,438,323,317,428,443,255,424,365,368,275,358,306,302,496,409,323,491,428,348,359,379,384],"gas":[1405,1515,1456,1599,1209,1158,1668,1429,1303,1270,1310,1116,1532,1300,1495,1698,1523,1225,1430,1536,1609,1234,1372,1442,1454,1169,1273,1139,1450,1532]},
-        "may": {"electricity":[464,228,481,395,311,368,486,420,245,237,474,200,467,206,287,393,426,353,311,415,236,227,214,363,442,286,247,372,285,319],"gas":[1501,1246,1310,1176,1413,1360,1330,1534,1253,1127,1291,1653,1698,1437,1291,1312,1309,1667,1499,1486,1392,1624,1370,1605,1114,1622,1338,1552,1160,1217]},
-        "june": {"electricity":[233,223,467,488,349,273,441,453,367,348,486,313,465,470,274,468,235,490,228,464,289,353,324,491,338,476,217,442,369,225],"gas":[1628,1168,1430,1417,1289,1630,1455,1650,1498,1255,1384,1613,1683,1640,1558,1518,1494,1509,1430,1254,1538,1607,1504,1105,1260,1579,1599,1645,1372,1233]},
-        "july": {"electricity":[459,299,479,310,440,465,440,452,225,285,498,257,358,415,476,286,260,320,357,244,369,458,215,348,316,485,238,467,306,335],"gas":[1400,1231,1621,1638,1268,1244,1299,1465,1456,1210,1683,1649,1563,1658,1640,1451,1189,1333,1226,1213,1479,1580,1547,1603,1420,1518,1252,1596,1491,1173]},
-        "august": {"electricity":[206,414,450,312,486,447,333,228,233,240,315,219,421,325,440,359,214,266,228,207,277,487,400,475,333,417,230,301,288,366],"gas":[1532,1521,1515,1339,1128,1439,1333,1197,1627,1273,1215,1672,1541,1505,1598,1450,1311,1219,1528,1220,1575,1522,1465,1677,1322,1388,1154,1312,1111,1356]},
-        "september": {"electricity":[249,310,366,345,417,408,449,373,316,337,416,204,451,246,322,407,368,404,416,292,308,427,422,257,485,264,308,479,458,288],"gas":[1514,1244,1582,1457,1481,1246,1319,1462,1314,1128,1395,1618,1389,1220,1564,1206,1441,1248,1618,1309,1113,1522,1636,1453,1229,1622,1554,1394,1600,1140]},
-        "october": {"electricity":[232,445,245,236,227,407,466,426,418,495,376,445,300,371,270,494,244,296,256,307,369,266,372,305,475,454,401,320,301,275],"gas":[1619,1315,1396,1613,1686,1352,1592,1218,1454,1104,1620,1673,1282,1117,1100,1400,1195,1394,1362,1596,1119,1551,1325,1250,1280,1239,1446,1556,1314,1243]},
-        "november": {"electricity":[269,497,371,347,367,426,241,469,306,401,463,352,401,298,298,377,390,282,336,416,206,379,346,220,279,232,487,250,291,487],"gas":[1658,1609,1278,1164,1224,1488,1396,1579,1271,1110,1125,1163,1167,1618,1269,1471,1308,1437,1178,1285,1616,1243,1345,1556,1694,1233,1428,1397,1625,1344]},
-        "december": {"electricity":[278,411,203,287,308,356,415,464,377,358,293,456,423,382,348,485,215,384,211,334,321,261,206,405,428,453,455,373,222,413],"gas":[1144,1598,1267,1215,1352,1689,1592,1510,1603,1234,1267,1306,1481,1444,1275,1599,1347,1434,1609,1607,1616,1384,1550,1374,1598,1496,1269,1589,1147,1303]}
-      }
-    }
-  },
-  "consumption_tips": [
-    {
-      "title": "Weatherize Your Home",
-      "text": "Weatherizing your home helps you save money by saving energy, and it can also improve the comfort of your home. Home weatherization includes sealing air leaks and adding insulation.\n\nAir Sealing\n\nAir leaks are among the greatest sources of energy loss in a home. One of the quickest energy- and money-saving tasks you can do is caulk, seal, and weatherstrip all seams, cracks, and openings to the outside. By sealing uncontrolled air leaks, you can save 10%–20% on your heating and cooling bills. Following your energy audit, you may have a number of recommended energysaving projects you are considering. Prioritize weatherization projects to quickly improve the efficiency and comfort of your home.\n\nTo identify air leaks, check around your walls, ceilings, windows, doors, lighting and plumbing fixtures, switches, and electrical outlets. Look for gaps, improperly applied caulk and weatherstripping, and doors and windows that don’t close tightly. On a windy day, carefully hold a lit incense stick or a smoke pen next to your windows, doors, electrical boxes, plumbing fixtures, electrical outlets, ceiling fixtures, attic hatches, and other places where air may leak. If the smoke stream travels horizontally, you have located an air leak.\n\n After you identify all air leaks, do the following:\n\n• Weatherstrip doors and windows.\n• Caulk and seal air leaks where plumbing, ducting, or electrical wiring comes through walls, floors, ceilings, and soffits over cabinets.\n• Install foam gaskets behind outlet and switch plates on walls.\n • Use foam sealant on larger gaps around window trims, baseboards, and other places where air may leak out.\n• Check for open fireplace dampers and make sure they properly close.\n• Consider an inflatable chimney balloon to seal your fireplace flue when not in use. Fireplace flues are made from metal, and repeated heating and cooling can cause the metal to warp or break over time, creating a channel for air loss. Inflatable chimney balloons are made from durable plastic and can be removed easily and reused hundreds of times. If you forget to remove the balloon before making a fire, the balloon will automatically deflate within seconds of coming into contact with heat."
-    },
-    {
-      "title": "Heat and Cool Your Home Efficiently",
-      "text": "Heating and cooling together are the largest energy users in your home, typically making up about 35%–40% of your energy use.\nNo matter what kind of heating and cooling system you have in your house, you can save money and increase your comfort by properly using, maintaining, and upgrading your equipment. But remember, any upgrades to heating and cooling equipment should consider the effect on all areas of the house (known as a whole-house, systems-based approach) to maximize energy savings and ensure health and safety. Most importantly, work with a contractor to ensure that the upgraded heating and cooling system is both properly sized for your house and installed to deliver its full capacity.\n<h1>Smart and Programmable Thermostats</h1>\n Being smart about how you control your temperature settings will help you save money and stay comfortable in your home. You can save as much as 10% per year on heating and cooling by turning your thermostat down 7°–10°F for 8 hours a day in the fall and winter; turn it up in the spring and summer. (If you have a heat pump, don’t do this without a smart or programmable thermostat designed for use with heat pumps.) A smart thermostat is a Wi-Fi enabled device that automatically adjusts heating and cooling temperature settings for optimal performance. Smart thermostats that earn the ENERGY STAR label have been independently certified, based on actual field data, to deliver energy savings. Smart thermostats provide convenience, insight, and control."
-    },
-    {
-      "title": "Design Your Home for Efficiency",
-      "text": "When you design a new home or a renovation, consider how any one change will affect the energy efficiency, comfort, durability, health, and safety of the whole home (known as a whole-home systems approach).\nEnergy efficient design approaches and features such as landscaping, windows, passive solar design, and cool roofs can save you energy and money while appealing to your design aesthetic.\nThe ENERGY STAR Certified New Homes or the Zero Energy Ready Home programs are good sources of information if you are designing a new home. If you are remodeling, consider the suggestions in the “No Regrets Remodeling” guide. See the References section for links to these resources.\n<h1>Landscaping</h1>\nWell-designed landscaping can deliver effective shade, act as a windbreak, and reduce your heating and cooling bills.\nThe right landscaping plan depends on your climate and your home’s microclimate—the area immediately surrounding your home. For low-maintenance, healthy, energy-saving landscaping, use plant species that are adapted to the local climate. Also consider ways to save water when planning and maintaining your landscape.\n<h3>Shade</h3>\nShading can reduce heat gain from the sun and cut air conditioning costs. Deciduous trees with high, spreading crowns planted on the south side of your home will shade your roof in the summer and allow warmth from the sun to reach your home in the winter. Trees, shrubs, and groundcover plants can shade the ground and pavement around the home, cooling the air before it reaches your home’s walls and windows. Shrubs and trellised vines can also shade walls and windows."
-    }
-  ]
 }
