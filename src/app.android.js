@@ -9,7 +9,11 @@ import * as colors from './res/colors.json';
 import * as strings from './res/strings.json';
 import * as dimensions from './res/dimensions.json';
 
-const store = configureStore();
+const initialState = {
+    budget: 30,
+}
+
+const store = configureStore(initialState);
 
 registerScreens(store, Provider);
 

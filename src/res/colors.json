@@ -11,5 +11,9 @@
   "backgroundColor": "#F5FCFF",
   "divider": "#CFD8DC",
 
-  "positive": "#388E3C"
+  "positive": "#388E3C",
+
+  "electricity": "#FFC107",
+  "gas": "#F44336",
+  "budget": "#4CAF50"
 }
