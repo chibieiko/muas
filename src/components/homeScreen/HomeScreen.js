@@ -36,7 +36,9 @@ class HomeScreen extends Component {
                 "Remaining budget",
             ],
             colorScale: [
-                "#D85F49",
+                colors.gas,
+                colors.electricity,
+                colors.budget,
                 "#F66D3B",
                 "#aaFFaa",
                 "#D73C4C",
