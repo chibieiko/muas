@@ -127,7 +127,7 @@ class HomeScreen extends Component {
         return (
             <ScrollView contentContainerStyle={styles.container2}>
             <Text style={styles.title}>Today's budget</Text>
-                <Svg width={400} height={400} viewBox="0 0 400 400" style={{ width: "100%", height: "auto" }}>
+                <Svg width={400} height={400} viewBox="0 0 400 400" style={styles.svg}>
                     <VictoryPie
                         standalone={false}
                         style={{
@@ -201,6 +201,12 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 30,
+    },
+    svg: {
+        width: "100%",
+        height: "auto",
+        marginTop: -35,
+        marginBottom: -40,
     }
 });
 
