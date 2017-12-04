@@ -22,7 +22,7 @@ class SvgLegend extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <View style={[styles.container, this.props.style]}>
                 {
                     this.state.items.map((item) => {
                         return <SvgLegendItem 

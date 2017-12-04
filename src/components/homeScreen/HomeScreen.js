@@ -161,6 +161,7 @@ class HomeScreen extends Component {
                     />
                 </Svg>
                 <SvgLegend
+                    style={{marginBottom: 20}}
                     size={25}
                     textStyle={styles.legendText}
                     items={this.state.legendItems}
