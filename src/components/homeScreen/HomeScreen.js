@@ -53,9 +53,9 @@ class HomeScreen extends Component {
             gasPrice: props.exampleData.prices.gasPrices[0].price,
             dailyBudget: 3,
             budgetData: [
-                { x: "1.2€", y: 1.2 },
-                { x: "4.5€", y: 4.5 },
-                { x: "3€", y: 3 }
+                { x: "", y: 0 },
+                { x: "", y: 0 },
+                { x: "", y: 0 }
             ],
         }
     }
@@ -80,7 +80,6 @@ class HomeScreen extends Component {
 
     onAdjustBudget = () => {
         console.log("Go to adjust budget");
-        console.dir(this.props);
         this.props.navigator.push({
             screen: strings.budgetEditScreen,
             title: "Edit Budget",
@@ -90,12 +89,10 @@ class HomeScreen extends Component {
     }
 
     updateDataFromTime() {
-        console.group("updateData");
         console.log("before daily: ", this.state.dailyBudget);
         console.log("before budget: ", this.state.budget);
         this.setState({dailyBudget: this.props.budget / 30});
         console.log("after daily: ", this.state.dailyBudget);
-        console.groupEnd();
         const date = new Date();
         const hours = date.getHours();
         const minutes = date.getMinutes();
@@ -145,7 +142,7 @@ class HomeScreen extends Component {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.container2}>
-            <Text style={styles.title}>Today's budget: {this.props.budget}</Text>
+            <Text style={styles.title}>Today's budget:</Text>
                 <Svg width={400} height={400} viewBox="0 0 400 400" style={styles.svg}>
                     <VictoryPie
                         standalone={false}
