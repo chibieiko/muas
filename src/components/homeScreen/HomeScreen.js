@@ -44,6 +44,14 @@ class HomeScreen extends Component {
                 "#E28300",
                 "#F6A57F"
             ],
+            electricityPrice: 20,
+            gasPrice: 50,
+            dailyBudget: 0.5,
+            budgetData: [
+                { x: "1.2€", y: 1.2 },
+                { x: "4.5€", y: 4.5 },
+                { x: "3€", y: 3 }
+            ],
         }
     }
 
@@ -70,9 +78,49 @@ class HomeScreen extends Component {
         const date = new Date();
         const hours = date.getHours();
         const minutes = date.getMinutes();
+        const time = hours + ":" + minutes;
+        // const time = "00:59";
+        let eTotal = 0;
+        let gasTotal = 0;
+        const today = this.props.exampleData.consumption.recent.today;
+        today.forEach(entry => {
+            if (entry.time <= time) {
+                eTotal += entry.electricity;
+                gasTotal += entry.gas;
+            } 
+        });
+
+        const ePrice = (eTotal / 1000) * this.state.electricityPrice;
+        const gPrice = (gasTotal / 1000) * this.state.gasPrice;
+        const remaining = this.state.dailyBudget*100 - ePrice - gPrice;
+
+        const usedElectricityEuros = Math.round(ePrice) / 100;
+        const usedGasEuros = Math.round(gPrice) / 100;
+        let remainingBudgetEuros = Math.round(remaining) / 100; 
+        remainingBudgetEuros = Math.max(remainingBudgetEuros, 0);
+
+        const budgetData = [
+            {
+                x: usedElectricityEuros + "€",
+                y: usedElectricityEuros,
+            },
+            {
+                x: usedGasEuros + "€",
+                y: usedGasEuros,
+            },
+            {
+                x: remainingBudgetEuros + "€",
+                y: remainingBudgetEuros,
+            },
+        ];
+
+        console.dir( budgetData);
+
+
         this.setState({
             hours: hours,
             minutes: minutes,
+            budgetData: budgetData,
         })   
     }
 
@@ -90,11 +138,7 @@ class HomeScreen extends Component {
                             fontWeight: "bold"
                             }
                         }}
-                        data={[
-                            { x: "1.2€", y: 1.2 },
-                            { x: "4.5€", y: 4.5 },
-                            { x: "3€", y: 3 }
-                        ]}
+                        data={this.state.budgetData}
                         innerRadius={60}
                         labelRadius={90}
                         colorScale={this.state.colorScale}
@@ -109,6 +153,9 @@ class HomeScreen extends Component {
                 <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
                 <Text>
                     {this.state.hours + ":" + this.state.minutes}
+                </Text>
+                <Text>
+                    {JSON.stringify(this.props.exampleData.consumption.recent.today)}
                 </Text>
             </ScrollView>
 <<<<<<< HEAD
