@@ -114,9 +114,6 @@ class HomeScreen extends Component {
             },
         ];
 
-        console.dir( budgetData);
-
-
         this.setState({
             hours: hours,
             minutes: minutes,
@@ -158,34 +155,7 @@ class HomeScreen extends Component {
                     {JSON.stringify(this.props.exampleData.consumption.recent.today)}
                 </Text>
             </ScrollView>
-<<<<<<< HEAD
         );
-=======
-            );
-
-
-        // <Svg width={400} height={150} viewBox="0 0 400 150" style={{ width: "100%", height: "auto"}}>
-        //     <VictoryLegend height={150}
-        //         standalone={false}
-        //         centerTitle
-        //         orientation="vertical"
-        //         style={{ labels: {fontSize: 20} }}
-        //         data={[
-        //         { name: "Used gas" }, { name: "Used electricity" }, { name: "Remaining budget" }
-        //         ]}
-        //         colorScale={[
-        //             "#D85F49",
-        //             "#F66D3B",
-        //             "#aaffaa"
-        //         ]}
-        //         labelComponent={<VictoryLabel dy={-10}/>}
-        //     />
-        // </Svg>
-        // <View style={styles.scrollFixer}></View>
-        // <Text>
-        // {JSON.stringify(this.props.exampleData.consumption.recent.today)}
-        // </Text>
->>>>>>> Add current time to local state in BudgetView
     }
 }
 
