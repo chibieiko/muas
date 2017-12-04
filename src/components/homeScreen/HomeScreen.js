@@ -151,12 +151,6 @@ class HomeScreen extends Component {
                     colorScale={this.state.colorScale}/>
          
                 <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
-                <Text>
-                    {this.state.hours + ":" + this.state.minutes}
-                </Text>
-                <Text>
-                    {JSON.stringify(this.props.exampleData.consumption.recent.today)}
-                </Text>
             </ScrollView>
         );
     }
