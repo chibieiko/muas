@@ -31,9 +31,9 @@ class HomeScreen extends Component {
             hours: 10,
             minutes: 31,
             legendItems: [
-                "Electricity",
-                "Gas",
-                "Remaining",
+                "Gas cost",
+                "Electricity cost",
+                "Remaining budget",
             ],
             colorScale: [
                 "#D85F49",
@@ -46,7 +46,7 @@ class HomeScreen extends Component {
             ],
             electricityPrice: 20,
             gasPrice: 50,
-            dailyBudget: 0.5,
+            dailyBudget: 3,
             budgetData: [
                 { x: "1.2€", y: 1.2 },
                 { x: "4.5€", y: 4.5 },
@@ -101,12 +101,12 @@ class HomeScreen extends Component {
 
         const budgetData = [
             {
-                x: usedElectricityEuros + "€",
-                y: usedElectricityEuros,
-            },
-            {
                 x: usedGasEuros + "€",
                 y: usedGasEuros,
+            },
+            {
+                x: usedElectricityEuros + "€",
+                y: usedElectricityEuros,
             },
             {
                 x: remainingBudgetEuros + "€",
