@@ -85,964 +85,964 @@
           {
               "time": "00:00",
               "electricityWH": 59,
-              "gasWH": 48
+              "gasL": 48
           },
           {
               "time": "00:15",
               "electricityWH": 53,
-              "gasWH": 44
+              "gasL": 44
           },
           {
               "time": "00:30",
               "electricityWH": 46,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "00:45",
               "electricityWH": 50,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "01:00",
               "electricityWH": 45,
-              "gasWH": 44
+              "gasL": 44
           },
           {
               "time": "01:15",
               "electricityWH": 54,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "01:30",
               "electricityWH": 50,
-              "gasWH": 41
+              "gasL": 41
           },
           {
               "time": "01:45",
               "electricityWH": 52,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "02:00",
               "electricityWH": 50,
-              "gasWH": 47
+              "gasL": 47
           },
           {
               "time": "02:15",
               "electricityWH": 48,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "02:30",
               "electricityWH": 51,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "02:45",
               "electricityWH": 52,
-              "gasWH": 52
+              "gasL": 52
           },
           {
               "time": "03:00",
               "electricityWH": 45,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "03:15",
               "electricityWH": 56,
-              "gasWH": 43
+              "gasL": 43
           },
           {
               "time": "03:30",
               "electricityWH": 56,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "03:45",
               "electricityWH": 43,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "04:00",
               "electricityWH": 56,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "04:15",
               "electricityWH": 51,
-              "gasWH": 43
+              "gasL": 43
           },
           {
               "time": "04:30",
               "electricityWH": 52,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "04:45",
               "electricityWH": 52,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "05:00",
               "electricityWH": 57,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "05:15",
               "electricityWH": 51,
-              "gasWH": 57
+              "gasL": 57
           },
           {
               "time": "05:30",
               "electricityWH": 43,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "05:45",
               "electricityWH": 51,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "06:00",
               "electricityWH": 59,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "06:15",
               "electricityWH": 56,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "06:30",
               "electricityWH": 48,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "06:45",
               "electricityWH": 50,
-              "gasWH": 52
+              "gasL": 52
           },
           {
               "time": "07:00",
               "electricityWH": 56,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "07:15",
               "electricityWH": 53,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "07:30",
               "electricityWH": 51,
-              "gasWH": 48
+              "gasL": 48
           },
           {
               "time": "07:45",
               "electricityWH": 56,
-              "gasWH": 53
+              "gasL": 53
           },
           {
               "time": "08:00",
               "electricityWH": 53,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "08:15",
               "electricityWH": 57,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "08:30",
               "electricityWH": 56,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "08:45",
               "electricityWH": 49,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "09:00",
               "electricityWH": 43,
-              "gasWH": 43
+              "gasL": 43
           },
           {
               "time": "09:15",
               "electricityWH": 59,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "09:30",
               "electricityWH": 48,
-              "gasWH": 48
+              "gasL": 48
           },
           {
               "time": "09:45",
               "electricityWH": 50,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "10:00",
               "electricityWH": 47,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "10:15",
               "electricityWH": 56,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "10:30",
               "electricityWH": 49,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "10:45",
               "electricityWH": 48,
-              "gasWH": 43
+              "gasL": 43
           },
           {
               "time": "11:00",
               "electricityWH": 50,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "11:15",
               "electricityWH": 42,
-              "gasWH": 44
+              "gasL": 44
           },
           {
               "time": "11:30",
               "electricityWH": 59,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "11:45",
               "electricityWH": 56,
-              "gasWH": 47
+              "gasL": 47
           },
           {
               "time": "12:00",
               "electricityWH": 40,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "12:15",
               "electricityWH": 51,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "12:30",
               "electricityWH": 510,
-              "gasWH": 57
+              "gasL": 57
           },
           {
               "time": "12:45",
               "electricityWH": 400,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "13:00",
               "electricityWH": 47,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "13:15",
               "electricityWH": 46,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "13:30",
               "electricityWH": 41,
-              "gasWH": 41
+              "gasL": 41
           },
           {
               "time": "13:45",
               "electricityWH": 48,
-              "gasWH": 59
+              "gasL": 59
           },
           {
               "time": "14:00",
               "electricityWH": 56,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "14:15",
               "electricityWH": 49,
-              "gasWH": 53
+              "gasL": 53
           },
           {
               "time": "14:30",
               "electricityWH": 57,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "14:45",
               "electricityWH": 56,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "15:00",
               "electricityWH": 50,
-              "gasWH": 59
+              "gasL": 59
           },
           {
               "time": "15:15",
               "electricityWH": 58,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "15:30",
               "electricityWH": 49,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "15:45",
               "electricityWH": 56,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "16:00",
               "electricityWH": 59,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "16:15",
               "electricityWH": 48,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "16:30",
               "electricityWH": 44,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "16:45",
               "electricityWH": 40,
-              "gasWH": 44
+              "gasL": 44
           },
           {
               "time": "17:00",
               "electricityWH": 50,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "17:15",
               "electricityWH": 47,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "17:30",
               "electricityWH": 51,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "17:45",
               "electricityWH": 55,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "18:00",
               "electricityWH": 200,
-              "gasWH": 53
+              "gasL": 53
           },
           {
               "time": "18:15",
               "electricityWH": 200,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "18:30",
               "electricityWH": 200,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "18:45",
               "electricityWH": 200,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "19:00",
               "electricityWH": 200,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "19:15",
               "electricityWH": 200,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "19:30",
               "electricityWH": 200,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "19:45",
               "electricityWH": 200,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "20:00",
               "electricityWH": 59,
-              "gasWH": 47
+              "gasL": 47
           },
           {
               "time": "20:15",
               "electricityWH": 58,
-              "gasWH": 51
+              "gasL": 51
           },
           {
               "time": "20:30",
               "electricityWH": 41,
-              "gasWH": 59
+              "gasL": 59
           },
           {
               "time": "20:45",
               "electricityWH": 56,
-              "gasWH": 57
+              "gasL": 57
           },
           {
               "time": "21:00",
               "electricityWH": 43,
-              "gasWH": 59
+              "gasL": 59
           },
           {
               "time": "21:15",
               "electricityWH": 53,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "21:30",
               "electricityWH": 53,
-              "gasWH": 48
+              "gasL": 48
           },
           {
               "time": "21:45",
               "electricityWH": 49,
-              "gasWH": 48
+              "gasL": 48
           },
           {
               "time": "22:00",
               "electricityWH": 56,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "22:15",
               "electricityWH": 43,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "22:30",
               "electricityWH": 52,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "22:45",
               "electricityWH": 59,
-              "gasWH": 52
+              "gasL": 52
           },
           {
               "time": "23:00",
               "electricityWH": 42,
-              "gasWH": 47
+              "gasL": 47
           },
           {
               "time": "23:15",
               "electricityWH": 56,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "23:30",
               "electricityWH": 51,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "23:45",
               "electricityWH": 41,
-              "gasWH": 59
+              "gasL": 59
           }
       ],
       "yesterday": [
           {
               "time": "00:00",
               "electricityWH": 46,
-              "gasWH": 59
+              "gasL": 59
           },
           {
               "time": "00:15",
               "electricityWH": 42,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "00:30",
               "electricityWH": 48,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "00:45",
               "electricityWH": 59,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "01:00",
               "electricityWH": 43,
-              "gasWH": 43
+              "gasL": 43
           },
           {
               "time": "01:15",
               "electricityWH": 46,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "01:30",
               "electricityWH": 41,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "01:45",
               "electricityWH": 50,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "02:00",
               "electricityWH": 40,
-              "gasWH": 44
+              "gasL": 44
           },
           {
               "time": "02:15",
               "electricityWH": 50,
-              "gasWH": 41
+              "gasL": 41
           },
           {
               "time": "02:30",
               "electricityWH": 51,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "02:45",
               "electricityWH": 43,
-              "gasWH": 41
+              "gasL": 41
           },
           {
               "time": "03:00",
               "electricityWH": 54,
-              "gasWH": 43
+              "gasL": 43
           },
           {
               "time": "03:15",
               "electricityWH": 41,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "03:30",
               "electricityWH": 50,
-              "gasWH": 47
+              "gasL": 47
           },
           {
               "time": "03:45",
               "electricityWH": 46,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "04:00",
               "electricityWH": 45,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "04:15",
               "electricityWH": 50,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "04:30",
               "electricityWH": 55,
-              "gasWH": 41
+              "gasL": 41
           },
           {
               "time": "04:45",
               "electricityWH": 46,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "05:00",
               "electricityWH": 48,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "05:15",
               "electricityWH": 51,
-              "gasWH": 44
+              "gasL": 44
           },
           {
               "time": "05:30",
               "electricityWH": 56,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "05:45",
               "electricityWH": 46,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "06:00",
               "electricityWH": 54,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "06:15",
               "electricityWH": 42,
-              "gasWH": 41
+              "gasL": 41
           },
           {
               "time": "06:30",
               "electricityWH": 51,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "06:45",
               "electricityWH": 53,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "07:00",
               "electricityWH": 49,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "07:15",
               "electricityWH": 54,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "07:30",
               "electricityWH": 41,
-              "gasWH": 48
+              "gasL": 48
           },
           {
               "time": "07:45",
               "electricityWH": 43,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "08:00",
               "electricityWH": 44,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "08:15",
               "electricityWH": 53,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "08:30",
               "electricityWH": 59,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "08:45",
               "electricityWH": 45,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "09:00",
               "electricityWH": 54,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "09:15",
               "electricityWH": 57,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "09:30",
               "electricityWH": 43,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "09:45",
               "electricityWH": 55,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "10:00",
               "electricityWH": 40,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "10:15",
               "electricityWH": 47,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "10:30",
               "electricityWH": 44,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "10:45",
               "electricityWH": 43,
-              "gasWH": 57
+              "gasL": 57
           },
           {
               "time": "11:00",
               "electricityWH": 46,
-              "gasWH": 59
+              "gasL": 59
           },
           {
               "time": "11:15",
               "electricityWH": 57,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "11:30",
               "electricityWH": 52,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "11:45",
               "electricityWH": 54,
-              "gasWH": 41
+              "gasL": 41
           },
           {
               "time": "12:00",
               "electricityWH": 56,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "12:15",
               "electricityWH": 540,
-              "gasWH": 52
+              "gasL": 52
           },
           {
               "time": "12:30",
               "electricityWH": 440,
-              "gasWH": 52
+              "gasL": 52
           },
           {
               "time": "12:45",
               "electricityWH": 42,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "13:00",
               "electricityWH": 51,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "13:15",
               "electricityWH": 59,
-              "gasWH": 52
+              "gasL": 52
           },
           {
               "time": "13:30",
               "electricityWH": 42,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "13:45",
               "electricityWH": 47,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "14:00",
               "electricityWH": 59,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "14:15",
               "electricityWH": 50,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "14:30",
               "electricityWH": 43,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "14:45",
               "electricityWH": 50,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "15:00",
               "electricityWH": 40,
-              "gasWH": 43
+              "gasL": 43
           },
           {
               "time": "15:15",
               "electricityWH": 49,
-              "gasWH": 41
+              "gasL": 41
           },
           {
               "time": "15:30",
               "electricityWH": 56,
-              "gasWH": 42
+              "gasL": 42
           },
           {
               "time": "15:45",
               "electricityWH": 51,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "16:00",
               "electricityWH": 53,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "16:15",
               "electricityWH": 53,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "16:30",
               "electricityWH": 51,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "16:45",
               "electricityWH": 47,
-              "gasWH": 52
+              "gasL": 52
           },
           {
               "time": "17:00",
               "electricityWH": 58,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "17:15",
               "electricityWH": 54,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "17:30",
               "electricityWH": 47,
-              "gasWH": 43
+              "gasL": 43
           },
           {
               "time": "17:45",
               "electricityWH": 200,
-              "gasWH": 59
+              "gasL": 59
           },
           {
               "time": "18:00",
               "electricityWH": 200,
-              "gasWH": 59
+              "gasL": 59
           },
           {
               "time": "18:15",
               "electricityWH": 200,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "18:30",
               "electricityWH": 200,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "18:45",
               "electricityWH": 200,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "19:00",
               "electricityWH": 200,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "19:15",
               "electricityWH": 200,
-              "gasWH": 45
+              "gasL": 45
           },
           {
               "time": "19:30",
               "electricityWH": 200,
-              "gasWH": 47
+              "gasL": 47
           },
           {
               "time": "19:45",
               "electricityWH": 56,
-              "gasWH": 48
+              "gasL": 48
           },
           {
               "time": "20:00",
               "electricityWH": 56,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "20:15",
               "electricityWH": 46,
-              "gasWH": 46
+              "gasL": 46
           },
           {
               "time": "20:30",
               "electricityWH": 45,
-              "gasWH": 44
+              "gasL": 44
           },
           {
               "time": "20:45",
               "electricityWH": 52,
-              "gasWH": 50
+              "gasL": 50
           },
           {
               "time": "21:00",
               "electricityWH": 47,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "21:15",
               "electricityWH": 41,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "21:30",
               "electricityWH": 40,
-              "gasWH": 40
+              "gasL": 40
           },
           {
               "time": "21:45",
               "electricityWH": 45,
-              "gasWH": 56
+              "gasL": 56
           },
           {
               "time": "22:00",
               "electricityWH": 41,
-              "gasWH": 41
+              "gasL": 41
           },
           {
               "time": "22:15",
               "electricityWH": 56,
-              "gasWH": 59
+              "gasL": 59
           },
           {
               "time": "22:30",
               "electricityWH": 56,
-              "gasWH": 47
+              "gasL": 47
           },
           {
               "time": "22:45",
               "electricityWH": 47,
-              "gasWH": 58
+              "gasL": 58
           },
           {
               "time": "23:00",
               "electricityWH": 53,
-              "gasWH": 49
+              "gasL": 49
           },
           {
               "time": "23:15",
               "electricityWH": 55,
-              "gasWH": 54
+              "gasL": 54
           },
           {
               "time": "23:30",
               "electricityWH": 43,
-              "gasWH": 55
+              "gasL": 55
           },
           {
               "time": "23:45",
               "electricityWH": 45,
-              "gasWH": 57
+              "gasL": 57
           }
       ]
   },
