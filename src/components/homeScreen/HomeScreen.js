@@ -10,6 +10,7 @@ import {connect} from "react-redux";
 import {Svg} from 'react-native-svg'
 import {VictoryChart, VictoryBar, VictoryScatter, VictoryTheme, VictoryPie, VictoryLegend, VictoryLabel} from "victory-native"
 import PrimaryButton from "../../components/primaryButton/PrimaryButton"
+import SvgLegend from '../../components/svgLegend/SvgLegend'
 
 import * as colors from '../../res/colors.json';
 
@@ -29,6 +30,20 @@ class HomeScreen extends Component {
         this.state = {
             hours: 10,
             minutes: 31,
+            legendItems: [
+                "Electricity",
+                "Gas",
+                "Remaining",
+            ],
+            colorScale: [
+                "#D85F49",
+                "#F66D3B",
+                "#aaFFaa",
+                "#D73C4C",
+                "#FFAF59",
+                "#E28300",
+                "#F6A57F"
+            ],
         }
     }
 
@@ -82,17 +97,14 @@ class HomeScreen extends Component {
                         ]}
                         innerRadius={60}
                         labelRadius={90}
-                        colorScale={[
-                            "#D85F49",
-                            "#F66D3B",
-                            "#aaFFaa",
-                            "#D73C4C",
-                            "#FFAF59",
-                            "#E28300",
-                            "#F6A57F"
-                        ]}
+                        colorScale={this.state.colorScale}
                     />
                 </Svg>
+                <SvgLegend
+                    size={25}
+                    textStyle={styles.legendText}
+                    items={this.state.legendItems}
+                    colorScale={this.state.colorScale}/>
          
                 <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
                 <Text>
@@ -161,7 +173,11 @@ const styles = StyleSheet.create({
         bottom: 0,
         right: 0,
         left: 0,
-    }
+    },
+    legendText: {
+        marginLeft: 10,
+        fontSize: 25,
+    },
 });
 
 const mapStateToProps = (state) => ({

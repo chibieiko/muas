@@ -1,19 +1,55 @@
 import React, { Component } from 'react';
-import Svg, {Circle} from 'react-native-svg';
+import {
+    Text,
+    View,
+    StyleSheet,
+} from 'react-native';
+import SvgLegendItem from './SvgLegendItem'
 
 class SvgLegend extends Component {
+    
+    constructor(props) {
+        super(props);
+
+        const items = [];
+        this.props.items.forEach((item, i) => {
+            items.push({label: item, color: this.props.colorScale[i]});
+        });
+        this.state = {
+          items: items,
+        }
+    }
+
     render() {
         return (
-                <Svg width={400} height={150} viewBox="0 0 400 150">
-                    <Circle
-                        cx='10'
-                        cy='10'
-                        r='20'
-                        fill='0xff0000'
-                    />
-                </Svg>
+            <View style={styles.container}>
+                {
+                    this.state.items.map((item) => {
+                        return <SvgLegendItem 
+                                size={this.props.size}
+                                textStyle={this.props.textStyle ? this.props.textStyle : styles.text}
+                                label={item.label}
+                                color={item.color} />
+                    })
+                }
+            </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        // backgroundColor: '#555555',
+        width: '100%',
+        padding: 5,
+    },
+    text: {
+        marginLeft: 10,
+        fontSize: 25,
+    },
+});
 
 export default SvgLegend;
