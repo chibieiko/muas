@@ -21,15 +21,6 @@ export class SideMenu extends Component {
 
     constructor(props) {
         super(props);
-        this.currentScreen = null;
-        this.listener = new ScreenVisibilityListener({
-            willCommitPreview: ({screen, startTime, endTime, commandType}) => {
-                this.currentScreen = screen;
-                console.log('screenVisibility', `Screen ${screen} displayed in ${endTime - startTime} millis after [${commandType}]`);
-            }
-        });
-
-        this.listener.register();
 
         this.state = {
             screens: [
@@ -54,7 +45,6 @@ export class SideMenu extends Component {
     }
 
     openScreen = async screen => {
-        console.log("currentScreen: ", this.currentScreen);
         switch (screen.name) {
             case strings.homeScreen:
                 this.props.navigator.resetTo({
