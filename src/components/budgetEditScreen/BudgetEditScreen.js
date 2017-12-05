@@ -16,6 +16,7 @@ import * as colors from '../../res/colors.json';
 import { PrimaryButton } from '../primaryButton/PrimaryButton';
 import {setBudget} from "../../store/actions";
 import {connect} from "react-redux";
+import * as dimensions from '../../res/dimensions.json';
 
 class BudgetEditScreen extends Component {
 
@@ -64,7 +65,7 @@ class BudgetEditScreen extends Component {
                 maximumValue={100}
                 value={this.state.budget}
                 onValueChange={ val => this.sliderChange(val)}
-            ></Slider>
+            />
             <PrimaryButton onPress={this.onSaveBudget}>Save</PrimaryButton>
           </View>
       );
@@ -102,17 +103,20 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: colors.backgroundColor,
-        padding: 10,
+        paddingHorizontal: 10,
+        paddingVertical: dimensions.verticalMargin
     },
     slider: {
         width: '100%',
-        marginBottom: 20,
+        marginTop: 20,
+        marginBottom: 40,
     },
     text: {
-        fontSize: 25,
+        fontSize: dimensions.fontBig,
         margin: 5,
     },
     budgetValue: {
         fontSize: 50,
+        marginBottom: dimensions.verticalMargin
     }
 });
