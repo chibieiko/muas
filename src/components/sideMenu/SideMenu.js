@@ -12,33 +12,49 @@ import {sideMenuStyle as styles} from "./SideMenuStyles";
 import SideMenuButton from './SideMenuButton'
 import {loggedIn} from "../../store/actions";
 import {connect} from "react-redux";
+import {ScreenVisibilityListener} from 'react-native-navigation';
 
 import * as strings from '../../res/strings.json';
 import * as colors from '../../res/colors.json';
 
 export class SideMenu extends Component {
-    state = {
-        screens: [
-            {
-                icon: 'home',
-                title: strings.drawerHomeTitle,
-                name: strings.homeScreen
-            },
-            {
-                icon: 'lightbulb-outline',
-                title: strings.drawerConsumptionTitle,
-                name: strings.tipsScreen
-            },
-            {
-                icon: 'euro-symbol',
-                title: strings.drawerPricesTitle,
-                name: strings.pricesScreen
-            }
-        ],
-        notifications: true
-    };
 
-    openScreen = screen => {
+    constructor(props) {
+        super(props);
+        this.currentScreen = null;
+        this.listener = new ScreenVisibilityListener({
+            willCommitPreview: ({screen, startTime, endTime, commandType}) => {
+                this.currentScreen = screen;
+                console.log('screenVisibility', `Screen ${screen} displayed in ${endTime - startTime} millis after [${commandType}]`);
+            }
+        });
+
+        this.listener.register();
+
+        this.state = {
+            screens: [
+                {
+                    icon: 'home',
+                    title: strings.drawerHomeTitle,
+                    name: strings.homeScreen
+                },
+                {
+                    icon: 'lightbulb-outline',
+                    title: strings.drawerConsumptionTitle,
+                    name: strings.tipsScreen
+                },
+                {
+                    icon: 'euro-symbol',
+                    title: strings.drawerPricesTitle,
+                    name: strings.pricesScreen
+                }
+            ],
+            notifications: true
+        };
+    }
+
+    openScreen = async screen => {
+        console.log("currentScreen: ", this.currentScreen);
         switch (screen.name) {
             case strings.homeScreen:
                 this.props.navigator.resetTo({

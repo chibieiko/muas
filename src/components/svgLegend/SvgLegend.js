@@ -6,6 +6,8 @@ import {
 } from 'react-native';
 import SvgLegendItem from './SvgLegendItem'
 
+import * as dimensions from '../../res/dimensions.json';
+
 class SvgLegend extends Component {
     
     constructor(props) {
@@ -42,13 +44,12 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'flex-start',
-        // backgroundColor: '#555555',
         width: '100%',
         padding: 5,
     },
     text: {
         marginLeft: 10,
-        fontSize: 25,
+        fontSize: dimensions.fontBig,
     },
 });
 

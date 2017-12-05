@@ -16,6 +16,7 @@ import {mainStyle} from "../../appStyles";
 
 import * as colors from '../../res/colors.json';
 import * as strings from '../../res/strings.json';
+import * as dimensions from '../../res/dimensions.json';
 
 class HomeScreen extends Component {
     static navigatorButtons = {
@@ -79,20 +80,16 @@ class HomeScreen extends Component {
     }
 
     onAdjustBudget = () => {
-        console.log("Go to adjust budget");
         this.props.navigator.push({
             screen: strings.budgetEditScreen,
             title: "Edit Budget",
             // passProps: {text: card.text},
             navigatorStyle: mainStyle.navigatorStyle,
         });
-    }
+    };
 
     updateDataFromTime() {
-        console.log("before daily: ", this.state.dailyBudget);
-        console.log("before budget: ", this.state.budget);
         this.setState({dailyBudget: this.props.budget / 30});
-        console.log("after daily: ", this.state.dailyBudget);
         const date = new Date();
         const hours = date.getHours();
         const minutes = date.getMinutes();
@@ -142,7 +139,7 @@ class HomeScreen extends Component {
     render() {
         return (
             <ScrollView contentContainerStyle={styles.container2}>
-            <Text style={styles.title}>Today's budget:</Text>
+            <Text style={styles.title}>Today's budget</Text>
                 <Svg width={400} height={400} viewBox="0 0 400 400" style={styles.svg}>
                     <VictoryPie
                         standalone={false}
@@ -150,7 +147,7 @@ class HomeScreen extends Component {
                             labels: {
                             fill: "white",
                             stroke: "black",
-                            fontSize: 32,
+                            fontSize: dimensions.fontBig,
                             fontWeight: "bold"
                             }
                         }}
@@ -167,7 +164,7 @@ class HomeScreen extends Component {
                     items={this.state.legendItems}
                     colorScale={this.state.colorScale}/>
          
-                <PrimaryButton onPress={this.onAdjustBudget}>Adjust budjet</PrimaryButton>
+                <PrimaryButton onPress={this.onAdjustBudget}>Adjust budget</PrimaryButton>
             </ScrollView>
         );
     }
@@ -208,10 +205,11 @@ const styles = StyleSheet.create({
     },
     legendText: {
         marginLeft: 10,
-        fontSize: 25,
+        fontSize: dimensions.fontBig,
     },
     title: {
-        fontSize: 30,
+        fontSize: dimensions.fontBig,
+        marginVertical: dimensions.verticalMargin
     },
     svg: {
         width: "100%",

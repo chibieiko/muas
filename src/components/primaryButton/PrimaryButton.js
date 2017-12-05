@@ -13,7 +13,7 @@ export class PrimaryButton extends React.Component {
             raised
             title={this.props.children}
             onPress={this.props.onPress}
-            backgroundColor={colors.primary}/>
+            backgroundColor={this.props.color ? this.props.color : colors.primary}/>
     }
 }
 
