@@ -4,21 +4,22 @@ import * as dimensions from '../../res/dimensions.json'
 export const sideMenuStyle = {
     container: {
         flex: 1,
-        backgroundColor: colors.drawerBackground,
+        backgroundColor: colors.backgroundColor,
+        width: 350
     },
 
     // Image box
     logo: {
         height: 150,
         width: 350,
-        backgroundColor: colors.logoRed,
+        backgroundColor: colors.primary,
         alignSelf: 'center',
         marginBottom: 10
     },
 
     // Divider
     divider: {
-        borderBottomColor: colors.drawerDivider,
+        borderBottomColor: colors.divider,
         borderBottomWidth: 1,
         marginVertical: 10
     },

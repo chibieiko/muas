@@ -27,5 +27,15 @@ export default StyleSheet.create({
     iconText: {
         fontSize: 20,
         fontWeight: "bold"
+    },
+    avatar: {
+        flexDirection: "row",
+        alignItems: "center"
+    },
+    ranking: {
+        fontSize: 16,
+        marginRight: 8,
+        color: colors.primary,
+        fontWeight: "bold"
     }
 });

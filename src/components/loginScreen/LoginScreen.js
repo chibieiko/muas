@@ -53,21 +53,22 @@ class LoginScreen extends Component {
             response = data;
         }
 
+        response = data;
         this.toggleLoading();
 
         return response;
     };
 
     openApp = async () => {
-        const result = await this.fetchData();
-
-        this.props.loggedIn(true);
-        this.props.setData(result);
-
         this.props.navigator.setDrawerEnabled({
             side: 'left',
             enabled: true
         });
+
+        const result = await this.fetchData();
+
+        this.props.loggedIn(true);
+        this.props.setData(result);
 
         this.props.navigator.resetTo({
             screen: strings.homeScreen,
@@ -142,8 +143,9 @@ class LoginScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginHorizontal: dimensions.horizontalMargin,
-        marginVertical: dimensions.verticalMargin
+        backgroundColor: colors.backgroundColor,
+        paddingHorizontal: dimensions.horizontalMargin,
+        paddingVertical: dimensions.verticalMargin
     },
     intro: {
         marginTop: 16,

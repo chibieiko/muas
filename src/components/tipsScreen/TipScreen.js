@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
     Platform,
@@ -11,14 +5,17 @@ import {
     Text,
     ScrollView,
 } from 'react-native';
+import HTMLView from 'react-native-htmlview';
+
+import * as colors from '../../res/colors.json';
 
 export default class TipScreen extends Component {
     render() {
         return (
             <ScrollView style={styles.container}>
-              <Text>
-                {this.props.text}
-              </Text>
+              <HTMLView
+                value={this.props.text}
+              />
             </ScrollView>
         );
     }
@@ -27,6 +24,7 @@ export default class TipScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5FCFF',
+        padding: 15,
+        backgroundColor: colors.backgroundColor,
     },
 });

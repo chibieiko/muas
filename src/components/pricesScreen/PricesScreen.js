@@ -3,55 +3,13 @@ import {
     Text,
     View
 } from 'react-native';
+import { connect } from "react-redux";
 
 import * as strings from '../../res/strings.json';
 import {PricesScreenStyles as styles} from "./PricesScreenStyles";
 import PriceBlock from './PriceBlock';
 
-export default class PricesScreen extends Component {
-    state = {
-        electricityPrices: [
-                {
-                    time: '8:00 - 20:00',
-                    price: 20.53,
-                    icon: 'wb-sunny',
-                    hasRisen: true
-                },
-                {
-                    time: '20:00 - 8:00',
-                    price: 17.73,
-                    icon: 'brightness-3',
-                    hasRisen: false
-                },
-                {
-                    time: 'weekend',
-                    price: 17.73,
-                    icon: 'star',
-                    hasRisen: false
-                }
-            ],
-        gasPrices: [
-                {
-                    time: '8:00 - 20:00',
-                    price: 53,
-                    icon: 'wb-sunny',
-                    hasRisen: false
-                },
-                {
-                    time: '20:00 - 8:00',
-                    price: 50,
-                    icon: 'brightness-3',
-                    hasRisen: true
-                },
-                {
-                    time: 'weekend',
-                    price: 50,
-                    icon: 'star',
-                    hasRisen: false
-                }
-            ]
-    };
-
+export class PricesScreen extends Component {
     componentWillMount() {
         this.props.navigator.setDrawerEnabled({
             side: 'left',
@@ -67,13 +25,14 @@ export default class PricesScreen extends Component {
     }
 
     render() {
+        const prices = this.props.exampleData.prices;
         return (
             <View style={styles.container}>
                 <Text style={styles.title}>
                     {strings.electricityPrices}
                 </Text>
                 {
-                    this.state.electricityPrices.map((item, index) => {
+                    prices.electricityPrices.map((item, index) => {
                         return <PriceBlock item={item} key={index}/>
                     })
                 }
@@ -82,7 +41,7 @@ export default class PricesScreen extends Component {
                     {strings.gasPrices}
                 </Text>
                 {
-                    this.state.gasPrices.map((item, index) =>
+                    prices.gasPrices.map((item, index) =>
                         <PriceBlock item={item} key={index} />
                     )
                 }
@@ -90,3 +49,9 @@ export default class PricesScreen extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => ({
+    exampleData: state.exampleData
+});
+
+export default connect(mapStateToProps)(PricesScreen);

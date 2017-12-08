@@ -6,6 +6,7 @@
   "rankingTab": "Ranking",
 
   "homeScreen": "app.HomeScreen",
+  "budgetEditScreen": "app.BudgetEditScreen",
   "consumptionScreen": "app.ConsumptionScreen",
   "rankingScreen": "app.RankingScreen",
   "sideMenu": "app.SideMenu",

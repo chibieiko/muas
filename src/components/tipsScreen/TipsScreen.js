@@ -1,26 +1,23 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
     Platform,
     StyleSheet,
     Text,
     View,
-    FlatList,
-    TouchableWithoutFeedback,
+    ScrollView,
+    TouchableNativeFeedback,
 } from 'react-native';
+import {List, ListItem} from 'react-native-elements';
+
 import {connect} from "react-redux";
 import * as strings from "../../res/strings.json";
 import {mainStyle} from "../../appStyles";
+import * as colors from '../../res/colors.json';
 
 class TipCard extends Component {
   render() {
     return (
-      <TouchableWithoutFeedback
+      <TouchableNativeFeedback
         onPress={this.props.onPress}>
         <View style={styles.tipCard}>
           <Text style={styles.tipCardTitle}>
@@ -32,7 +29,7 @@ class TipCard extends Component {
             {this.props.text}
           </Text>
         </View>
-      </TouchableWithoutFeedback>
+      </TouchableNativeFeedback>
     )
   }
 }
@@ -60,19 +57,22 @@ class TipsScreen extends Component {
             passProps: {text: card.text},
             navigatorStyle: mainStyle.navigatorStyle,
         });
-    }
+    };
 
     render() {
         return (
-            <FlatList
-              data={this.props.exampleData.consumption_tips}
-              renderItem={({item}) => <TipCard
-                                        title={item.title}
-                                        text={item.text}
-                                        onPress={() => this.onCardPress(item)}
-                                      />}
-            />
-        );
+          <View style={styles.container}>
+          <ScrollView>
+          {this.props.exampleData.consumption_tips.map((tip, i) => (
+            <TipCard
+              title={tip.title}
+              text={tip.text}
+              onPress={() => this.onCardPress(tip)}/>
+        ))
+        }
+          </ScrollView>
+          </View>
+      );
     }
 }
 
@@ -87,17 +87,17 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        backgroundColor: colors.backgroundColor,
     },
     tipCard: {
-      borderWidth: 2,
-      borderColor: 'black',
-      margin: 5,
-      padding: 10,
+      padding: 15,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.divider,
     },
     tipCardTitle: {
       fontSize: 20,
-      textAlign: 'right',
+      textAlign: 'left',
+      color: colors.primary,
     },
     tipCardText: {
 

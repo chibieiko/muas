@@ -12,31 +12,37 @@ import {sideMenuStyle as styles} from "./SideMenuStyles";
 import SideMenuButton from './SideMenuButton'
 import {loggedIn} from "../../store/actions";
 import {connect} from "react-redux";
+import {ScreenVisibilityListener} from 'react-native-navigation';
 
 import * as strings from '../../res/strings.json';
 import * as colors from '../../res/colors.json';
 
 export class SideMenu extends Component {
-    state = {
-        screens: [
-            {
-                icon: 'home',
-                title: strings.drawerHomeTitle,
-                name: strings.homeScreen
-            },
-            {
-                icon: 'lightbulb-outline',
-                title: strings.drawerConsumptionTitle,
-                name: strings.tipsScreen
-            },
-            {
-                icon: 'euro-symbol',
-                title: strings.drawerPricesTitle,
-                name: strings.pricesScreen
-            }
-        ],
-        notifications: true
-    };
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            screens: [
+                {
+                    icon: 'home',
+                    title: strings.drawerHomeTitle,
+                    name: strings.homeScreen
+                },
+                {
+                    icon: 'lightbulb-outline',
+                    title: strings.drawerConsumptionTitle,
+                    name: strings.tipsScreen
+                },
+                {
+                    icon: 'euro-symbol',
+                    title: strings.drawerPricesTitle,
+                    name: strings.pricesScreen
+                }
+            ],
+            notifications: true
+        };
+    }
 
     openScreen = screen => {
         switch (screen.name) {
@@ -96,7 +102,7 @@ export class SideMenu extends Component {
 
     render() {
         return (
-            <ScrollView contentContainerStyle={styles.container}>
+            <View style={styles.container}>
                 <Image
                     style={styles.logo}
                     resizeMode={'contain'}
@@ -127,7 +133,7 @@ export class SideMenu extends Component {
                                         onPress={() => this.openScreen({name: strings.loginScreen})}/>
                     </View>
                 }
-            </ScrollView>
+            </View>
         );
     }
 }
