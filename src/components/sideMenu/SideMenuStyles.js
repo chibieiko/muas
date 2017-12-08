@@ -5,6 +5,7 @@ export const sideMenuStyle = {
     container: {
         flex: 1,
         backgroundColor: colors.backgroundColor,
+        width: 350
     },
 
     // Image box

@@ -49,7 +49,7 @@ class BudgetEditScreen extends Component {
             animated: true, 
             animationType: 'fade',
           });
-    }
+    };
 
     render() {
         return (

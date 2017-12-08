@@ -44,7 +44,7 @@ export class SideMenu extends Component {
         };
     }
 
-    openScreen = async screen => {
+    openScreen = screen => {
         switch (screen.name) {
             case strings.homeScreen:
                 this.props.navigator.resetTo({
@@ -102,7 +102,7 @@ export class SideMenu extends Component {
 
     render() {
         return (
-            <ScrollView contentContainerStyle={styles.container}>
+            <View style={styles.container}>
                 <Image
                     style={styles.logo}
                     resizeMode={'contain'}
@@ -133,7 +133,7 @@ export class SideMenu extends Component {
                                         onPress={() => this.openScreen({name: strings.loginScreen})}/>
                     </View>
                 }
-            </ScrollView>
+            </View>
         );
     }
 }

@@ -60,15 +60,15 @@ class LoginScreen extends Component {
     };
 
     openApp = async () => {
-        const result = await this.fetchData();
-
-        this.props.loggedIn(true);
-        this.props.setData(result);
-
         this.props.navigator.setDrawerEnabled({
             side: 'left',
             enabled: true
         });
+
+        const result = await this.fetchData();
+
+        this.props.loggedIn(true);
+        this.props.setData(result);
 
         this.props.navigator.resetTo({
             screen: strings.homeScreen,
